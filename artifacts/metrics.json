@@ -1,0 +1,43 @@
+{
+  "test_captures": [
+    "CTU-IoT-Malware-Capture-20-1",
+    "CTU-IoT-Malware-Capture-60-1",
+    "CTU-Honeypot-Capture-7-1__Somfy-01"
+  ],
+  "n": 3584367,
+  "roc_auc": 1.0,
+  "pr_auc": 1.0,
+  "tpr_at_fpr_1%": 1.0,
+  "tpr_at_fpr_0.1%": 1.0,
+  "threshold": 0.8158020138581517,
+  "confusion_at_thr": [
+    [
+      3809,
+      1990
+    ],
+    [
+      61,
+      3578507
+    ]
+  ],
+  "per_capture": {
+    "CTU-Honeypot-Capture-7-1__Somfy-01": {
+      "n": 130,
+      "malware_rate": 0.0,
+      "roc_auc": null,
+      "family": "benign"
+    },
+    "CTU-IoT-Malware-Capture-20-1": {
+      "n": 3209,
+      "malware_rate": 0.005,
+      "roc_auc": 0.9998,
+      "family": "Torii"
+    },
+    "CTU-IoT-Malware-Capture-60-1": {
+      "n": 3581028,
+      "malware_rate": 0.9993,
+      "roc_auc": 1.0,
+      "family": "Gagfyt"
+    }
+  }
+}

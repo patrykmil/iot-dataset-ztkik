@@ -1,0 +1,94 @@
+{
+  "CTU-IoT-Malware-Capture-1-1": {
+    "flows": 1008748,
+    "malware_rate": 0.5348
+  },
+  "CTU-IoT-Malware-Capture-3-1": {
+    "flows": 156103,
+    "malware_rate": 0.9709
+  },
+  "CTU-IoT-Malware-Capture-7-1": {
+    "flows": 11454714,
+    "malware_rate": 0.9934
+  },
+  "CTU-IoT-Malware-Capture-8-1": {
+    "flows": 10403,
+    "malware_rate": 0.7903
+  },
+  "CTU-IoT-Malware-Capture-9-1": {
+    "flows": 6378293,
+    "malware_rate": 0.9965
+  },
+  "CTU-IoT-Malware-Capture-17-1": {
+    "flows": 54659855,
+    "malware_rate": 0.9994
+  },
+  "CTU-IoT-Malware-Capture-20-1": {
+    "flows": 3209,
+    "malware_rate": 0.005
+  },
+  "CTU-IoT-Malware-Capture-21-1": {
+    "flows": 3286,
+    "malware_rate": 0.0043
+  },
+  "CTU-IoT-Malware-Capture-33-1": {
+    "flows": 54454591,
+    "malware_rate": 0.9746
+  },
+  "CTU-IoT-Malware-Capture-34-1": {
+    "flows": 23145,
+    "malware_rate": 0.9169
+  },
+  "CTU-IoT-Malware-Capture-35-1": {
+    "flows": 10447787,
+    "malware_rate": 0.2092
+  },
+  "CTU-IoT-Malware-Capture-36-1": {
+    "flows": 13645098,
+    "malware_rate": 0.9998
+  },
+  "CTU-IoT-Malware-Capture-39-1": {
+    "flows": 73568981,
+    "malware_rate": 0.9999
+  },
+  "CTU-IoT-Malware-Capture-42-1": {
+    "flows": 4426,
+    "malware_rate": 0.0014
+  },
+  "CTU-IoT-Malware-Capture-43-1": {
+    "flows": 67321809,
+    "malware_rate": 0.6944
+  },
+  "CTU-IoT-Malware-Capture-44-1": {
+    "flows": 237,
+    "malware_rate": 0.1097
+  },
+  "CTU-IoT-Malware-Capture-48-1": {
+    "flows": 3394338,
+    "malware_rate": 0.9989
+  },
+  "CTU-IoT-Malware-Capture-49-1": {
+    "flows": 5410561,
+    "malware_rate": 0.9993
+  },
+  "CTU-IoT-Malware-Capture-52-1": {
+    "flows": 19781378,
+    "malware_rate": 0.9999
+  },
+  "CTU-IoT-Malware-Capture-60-1": {
+    "flows": 3581028,
+    "malware_rate": 0.9993
+  },
+  "CTU-Honeypot-Capture-4-1": {
+    "flows": 452,
+    "malware_rate": 0.0
+  },
+  "CTU-Honeypot-Capture-5-1": {
+    "flows": 1374,
+    "malware_rate": 0.0
+  },
+  "CTU-Honeypot-Capture-7-1__Somfy-01": {
+    "flows": 130,
+    "malware_rate": 0.0
+  }
+}

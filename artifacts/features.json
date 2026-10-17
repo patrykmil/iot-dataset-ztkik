@@ -1,0 +1,1 @@
+{"categorical": ["proto", "service", "conn_state", "history"], "numeric": ["duration", "orig_bytes", "resp_bytes", "orig_pkts", "resp_pkts", "orig_ip_bytes", "resp_ip_bytes", "missed_bytes", "orig_p", "resp_p", "bytes_per_pkt", "resp_orig_ratio", "bytes_total"]}
