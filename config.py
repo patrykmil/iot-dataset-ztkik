@@ -12,11 +12,7 @@ ART = ROOT / "artifacts"
 RAW_DIR = Path(os.environ.get("DETECTOR_RAW", str(ROOT / "raw")))
 PARQUET_DIR = ART / "parquet"
 MANIFEST_PATH = ART / "manifest.json"
-MODEL_PATH = ART / "model.txt"
-THRESHOLD_PATH = ART / "threshold.json"
-FEATURES_PATH = ART / "features.json"
-METRICS_PATH = ART / "metrics.json"
-ROC_PATH = ART / "roc.png"
+EXPERIMENT_PATH = ART / "experiment.json"
 
 SEED = 42
 LABEL = "label"
@@ -52,17 +48,6 @@ CAPTURES = [
     "CTU-Honeypot-Capture-5-1",  # benign Amazon Echo
     "CTU-Honeypot-Capture-7-1",  # benign Somfy (split 6x)
 ]
-STARTER_CAPTURES = [  # szybki start (małe, zróżnicowane) — pełny run bierze CAPTURES
-    "CTU-IoT-Malware-Capture-34-1",
-    "CTU-IoT-Malware-Capture-44-1",
-    "CTU-IoT-Malware-Capture-20-1",
-    "CTU-IoT-Malware-Capture-42-1",
-    "CTU-IoT-Malware-Capture-8-1",
-    "CTU-IoT-Malware-Capture-3-1",
-    "CTU-Honeypot-Capture-4-1",
-    "CTU-Honeypot-Capture-5-1",
-    "CTU-Honeypot-Capture-7-1",
-]
 # Rodziny do podziału na znane (train) vs held-out (test generalizacji).
 FAMILY_OF = {
     "CTU-IoT-Malware-Capture-1-1": "HideAndSeek",
@@ -86,28 +71,23 @@ FAMILY_OF = {
     "CTU-IoT-Malware-Capture-52-1": "Mirai",
     "CTU-IoT-Malware-Capture-60-1": "Gagfyt",
 }
-# Test: held-out rodziny (Torii, Gagfyt) + 1 benign. Ciągłość ze starterem (20-1).
-TEST_CAPTURES = [
-    "CTU-IoT-Malware-Capture-20-1",
-    "CTU-IoT-Malware-Capture-60-1",
-    "CTU-Honeypot-Capture-7-1__Somfy-01",
+# Podział jawny, niezależny od wyników modeli. Wszystkie części Somfy są razem.
+VALID_CAPTURES = [
+    "CTU-IoT-Malware-Capture-35-1",
+    "CTU-Honeypot-Capture-5-1",
 ]
+KNOWN_TEST_CAPTURES = [
+    "CTU-IoT-Malware-Capture-34-1",
+    "CTU-Honeypot-Capture-4-1",
+]
+HELD_OUT_FAMILIES = ["Torii", "Gagfyt"]
+GENERALIZATION_BENIGN = "CTU-Honeypot-Capture-7-1"
 
 TARGET_FPR = 0.01
+CAP_PER_CAPTURE = 100_000
+BATCH_ROWS = 100_000
 
-# detailed-label i IP wywalone celowo: pierwsze wynika wprost z etykiety
-# (leak), drugie to adresy labu (nie transferują się na inny ruch).
-DROP_COLS = [
-    "ts",
-    "uid",
-    "id.orig_h",
-    "id.resp_h",
-    "tunnel_parents",
-    "detailed-label",
-    "local_orig",
-    "local_resp",
-]
-
+# Tylko jawnie wybrane cechy; IP, UID, czas i detailed-label nie wchodzą do modelu.
 CATEGORICAL = ["proto", "service", "conn_state", "history"]
 NUMERIC = [
     "duration",
@@ -125,11 +105,6 @@ NUMERIC = [
     "bytes_total",
 ]
 
-RF_PARAMS = dict(
-    n_estimators=200, class_weight="balanced_subsample", min_samples_leaf=5, n_jobs=THREADS, random_state=SEED
-)
-RF_SAMPLE_ROWS = 300_000
-
 LGBM_PARAMS = dict(
     objective="binary",
     metric="auc",
@@ -144,6 +119,15 @@ LGBM_PARAMS = dict(
     verbose=-1,
     seed=SEED,
     num_threads=THREADS,
+    use_quantized_grad=False,  # CUDA z kategoriami nie obsługuje kwantyzowanych gradientów.
 )
 LGBM_ROUNDS = 500
 LGBM_EARLY_STOP = 50
+
+LOGISTIC_EPOCHS = 30
+LOGISTIC_ALPHA = 0.0001
+MLP_HIDDEN = [64, 32]
+MLP_EPOCHS = 30
+MLP_BATCH_SIZE = 4096
+MLP_LEARNING_RATE = 0.001
+EARLY_STOP_PATIENCE = 5
