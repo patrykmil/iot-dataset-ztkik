@@ -3,3 +3,5 @@ __pycache__/
 artifacts/parquet/
 artifacts/*.parquet
 raw/
+pull.sh
+push.sh

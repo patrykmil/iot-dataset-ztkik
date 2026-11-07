@@ -1,0 +1,40 @@
+{
+  "experiment_id": "15eb5ea381d74d8cb0a5a73e82ea170e",
+  "model": "mlp",
+  "training_device": "cuda",
+  "training_seconds": 9.719175337115303,
+  "threshold": 0.9152829647064209,
+  "validation": {
+    "n": 101374,
+    "benign": 80457,
+    "malicious": 20917,
+    "malware_rate": 0.2063349576814568,
+    "threshold": 0.9152829647064209,
+    "confusion_at_threshold": [
+      [
+        79694,
+        763
+      ],
+      [
+        20375,
+        542
+      ]
+    ],
+    "precision": 0.4153256704980843,
+    "recall": 0.02591193765836401,
+    "f1": 0.04878048780487805,
+    "fpr": 0.009483326497383695,
+    "roc_auc": 0.104431853698367,
+    "average_precision": 0.13659624142607774,
+    "oracle_tpr_at_fpr_1pct": 0.02591193765836401,
+    "oracle_tpr_at_fpr_0_1pct": 0.024095233542094946
+  },
+  "hidden": [
+    64,
+    32
+  ],
+  "learning_rate": 0.001,
+  "batch_size": 4096,
+  "positive_weight": 0.08059944665641561,
+  "best_epoch": 1
+}

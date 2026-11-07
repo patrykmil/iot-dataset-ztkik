@@ -1,0 +1,127 @@
+nohup: ignoring input
+[1/3] Konwersja istniejących danych raw do Parquet
+CTU-Honeypot-Capture-4-1: {'flows': 452, 'benign': 452, 'malicious': 0, 'malware_rate': 0.0, 'source_rows': 452, 'dropped_labels': 0, 'limited': False}
+CTU-Honeypot-Capture-5-1: {'flows': 1374, 'benign': 1374, 'malicious': 0, 'malware_rate': 0.0, 'source_rows': 1374, 'dropped_labels': 0, 'limited': False}
+CTU-Honeypot-Capture-7-1__Somfy-01: {'flows': 130, 'benign': 130, 'malicious': 0, 'malware_rate': 0.0, 'source_rows': 130, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-1-1: {'flows': 1008748, 'benign': 469275, 'malicious': 539473, 'malware_rate': 0.5347946166931682, 'source_rows': 1008748, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-17-1: {'flows': 54659855, 'benign': 31438, 'malicious': 54628417, 'malware_rate': 0.9994248429674758, 'source_rows': 54659855, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-20-1: {'flows': 3209, 'benign': 3193, 'malicious': 16, 'malware_rate': 0.004985976939856653, 'source_rows': 3209, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-21-1: {'flows': 3286, 'benign': 3272, 'malicious': 14, 'malware_rate': 0.00426049908703591, 'source_rows': 3286, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-3-1: {'flows': 156103, 'benign': 4536, 'malicious': 151567, 'malware_rate': 0.9709422624805417, 'source_rows': 156103, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-33-1: {'flows': 54454591, 'benign': 1380791, 'malicious': 53073800, 'malware_rate': 0.974643258269996, 'source_rows': 54454591, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-34-1: {'flows': 23145, 'benign': 1923, 'malicious': 21222, 'malware_rate': 0.9169151004536616, 'source_rows': 23145, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-35-1: {'flows': 10447787, 'benign': 8262389, 'malicious': 2185398, 'malware_rate': 0.20917329191339754, 'source_rows': 10447787, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-36-1: {'flows': 13645098, 'benign': 2663, 'malicious': 13642435, 'malware_rate': 0.9998048383382809, 'source_rows': 13645098, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-39-1: {'flows': 73568981, 'benign': 7337, 'malicious': 73561644, 'malware_rate': 0.9999002704686096, 'source_rows': 73568981, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-42-1: {'flows': 4426, 'benign': 4420, 'malicious': 6, 'malware_rate': 0.0013556258472661546, 'source_rows': 4426, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-43-1: {'flows': 67321809, 'benign': 20574934, 'malicious': 46746875, 'malware_rate': 0.6943793652366056, 'source_rows': 67321809, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-44-1: {'flows': 237, 'benign': 211, 'malicious': 26, 'malware_rate': 0.10970464135021098, 'source_rows': 237, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-48-1: {'flows': 3394338, 'benign': 3734, 'malicious': 3390604, 'malware_rate': 0.9988999327703959, 'source_rows': 3394338, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-49-1: {'flows': 5410561, 'benign': 3665, 'malicious': 5406896, 'malware_rate': 0.999322621073859, 'source_rows': 5410561, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-52-1: {'flows': 19781378, 'benign': 1794, 'malicious': 19779584, 'malware_rate': 0.9999093086437153, 'source_rows': 19781378, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-60-1: {'flows': 3581028, 'benign': 2476, 'malicious': 3578552, 'malware_rate': 0.9993085784305512, 'source_rows': 3581028, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-7-1: {'flows': 11454714, 'benign': 75955, 'malicious': 11378759, 'malware_rate': 0.993369105505384, 'source_rows': 11454714, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-8-1: {'flows': 10403, 'benign': 2181, 'malicious': 8222, 'malware_rate': 0.790348937806402, 'source_rows': 10403, 'dropped_labels': 0, 'limited': False}
+CTU-IoT-Malware-Capture-9-1: {'flows': 6378293, 'benign': 22548, 'malicious': 6355745, 'malware_rate': 0.9964648848837769, 'source_rows': 6378293, 'dropped_labels': 0, 'limited': False}
+[2/3] Domyślny trening LightGBM, logistic i MLP
+{
+  "train": [
+    "CTU-IoT-Malware-Capture-1-1",
+    "CTU-IoT-Malware-Capture-17-1",
+    "CTU-IoT-Malware-Capture-3-1",
+    "CTU-IoT-Malware-Capture-33-1",
+    "CTU-IoT-Malware-Capture-36-1",
+    "CTU-IoT-Malware-Capture-39-1",
+    "CTU-IoT-Malware-Capture-42-1",
+    "CTU-IoT-Malware-Capture-43-1",
+    "CTU-IoT-Malware-Capture-44-1",
+    "CTU-IoT-Malware-Capture-48-1",
+    "CTU-IoT-Malware-Capture-49-1",
+    "CTU-IoT-Malware-Capture-52-1",
+    "CTU-IoT-Malware-Capture-7-1",
+    "CTU-IoT-Malware-Capture-8-1",
+    "CTU-IoT-Malware-Capture-9-1"
+  ],
+  "valid": [
+    "CTU-Honeypot-Capture-5-1",
+    "CTU-IoT-Malware-Capture-35-1"
+  ],
+  "test_known": [
+    "CTU-Honeypot-Capture-4-1",
+    "CTU-IoT-Malware-Capture-34-1"
+  ],
+  "test_unknown": [
+    "CTU-Honeypot-Capture-7-1__Somfy-01",
+    "CTU-IoT-Malware-Capture-20-1",
+    "CTU-IoT-Malware-Capture-21-1",
+    "CTU-IoT-Malware-Capture-60-1"
+  ]
+}
+CTU-IoT-Malware-Capture-1-1: próbka=100000, klasy={'benign': 46521, 'malicious': 53479}
+CTU-IoT-Malware-Capture-17-1: próbka=100000, klasy={'benign': 58, 'malicious': 99942}
+CTU-IoT-Malware-Capture-3-1: próbka=100000, klasy={'benign': 2906, 'malicious': 97094}
+CTU-IoT-Malware-Capture-33-1: próbka=100000, klasy={'benign': 2536, 'malicious': 97464}
+CTU-IoT-Malware-Capture-36-1: próbka=100000, klasy={'benign': 20, 'malicious': 99980}
+CTU-IoT-Malware-Capture-39-1: próbka=100000, klasy={'benign': 10, 'malicious': 99990}
+CTU-IoT-Malware-Capture-42-1: próbka=4426, klasy={'benign': 4420, 'malicious': 6}
+CTU-IoT-Malware-Capture-43-1: próbka=100000, klasy={'benign': 30562, 'malicious': 69438}
+CTU-IoT-Malware-Capture-44-1: próbka=237, klasy={'benign': 211, 'malicious': 26}
+CTU-IoT-Malware-Capture-48-1: próbka=100000, klasy={'benign': 110, 'malicious': 99890}
+CTU-IoT-Malware-Capture-49-1: próbka=100000, klasy={'benign': 68, 'malicious': 99932}
+CTU-IoT-Malware-Capture-52-1: próbka=100000, klasy={'benign': 9, 'malicious': 99991}
+CTU-IoT-Malware-Capture-7-1: próbka=100000, klasy={'benign': 663, 'malicious': 99337}
+CTU-IoT-Malware-Capture-8-1: próbka=10403, klasy={'benign': 2181, 'malicious': 8222}
+CTU-IoT-Malware-Capture-9-1: próbka=100000, klasy={'benign': 354, 'malicious': 99646}
+CTU-Honeypot-Capture-5-1: próbka=1374, klasy={'benign': 1374, 'malicious': 0}
+CTU-IoT-Malware-Capture-35-1: próbka=100000, klasy={'benign': 79083, 'malicious': 20917}
+Trening lightgbm, backend=cuda
+Training until validation scores don't improve for 50 rounds
+[25]	valid_0's auc: 0.5
+[50]	valid_0's auc: 0.5
+Early stopping, best iteration is:
+[1]	valid_0's auc: 0.5
+lightgbm: valid ROC-AUC=0.500000, próg=1, FPR=0.000000, recall=0.000000
+Trening logistic, backend=cpu
+logistic epoch=1 valid_auc=0.238052
+logistic epoch=2 valid_auc=0.230971
+logistic epoch=3 valid_auc=0.226170
+logistic epoch=4 valid_auc=0.224526
+logistic epoch=5 valid_auc=0.223589
+logistic epoch=6 valid_auc=0.223212
+logistic: valid ROC-AUC=0.238052, próg=0.70627683, FPR=0.008887, recall=0.195057
+Trening mlp, backend=cuda
+mlp epoch=1 valid_auc=0.104432
+mlp epoch=2 valid_auc=0.082583
+mlp epoch=3 valid_auc=0.072949
+mlp epoch=4 valid_auc=0.082524
+mlp epoch=5 valid_auc=0.088164
+mlp epoch=6 valid_auc=0.065557
+mlp: valid ROC-AUC=0.104432, próg=0.91528296, FPR=0.009483, recall=0.025912
+Zapisano eksperyment: /home/inf1s-22z/miler.patryk/ztk/projekt/iot23-detector/artifacts/experiment.json. Następny krok: python evaluate.py
+[3/3] Ewaluacja i raport porównawczy
+lightgbm: oceniono CTU-Honeypot-Capture-4-1, n=452
+lightgbm: oceniono CTU-IoT-Malware-Capture-34-1, n=23145
+lightgbm: oceniono CTU-Honeypot-Capture-7-1__Somfy-01, n=130
+lightgbm: oceniono CTU-IoT-Malware-Capture-20-1, n=3209
+lightgbm: oceniono CTU-IoT-Malware-Capture-21-1, n=3286
+lightgbm: oceniono CTU-IoT-Malware-Capture-60-1, n=3581028
+logistic: oceniono CTU-Honeypot-Capture-4-1, n=452
+logistic: oceniono CTU-IoT-Malware-Capture-34-1, n=23145
+logistic: oceniono CTU-Honeypot-Capture-7-1__Somfy-01, n=130
+logistic: oceniono CTU-IoT-Malware-Capture-20-1, n=3209
+logistic: oceniono CTU-IoT-Malware-Capture-21-1, n=3286
+logistic: oceniono CTU-IoT-Malware-Capture-60-1, n=3581028
+mlp: oceniono CTU-Honeypot-Capture-4-1, n=452
+mlp: oceniono CTU-IoT-Malware-Capture-34-1, n=23145
+mlp: oceniono CTU-Honeypot-Capture-7-1__Somfy-01, n=130
+mlp: oceniono CTU-IoT-Malware-Capture-20-1, n=3209
+mlp: oceniono CTU-IoT-Malware-Capture-21-1, n=3286
+mlp: oceniono CTU-IoT-Malware-Capture-60-1, n=3581028
+   model         test  roc_auc  average_precision   recall      fpr  training_seconds  flows_per_second
+lightgbm   test_known 0.500000           0.899352 0.000000 0.000000          1.946252      7.186496e+05
+lightgbm test_unknown 0.500000           0.997472 0.000000 0.000000          1.946252      1.403010e+06
+logistic   test_known 0.632392           0.935365 0.131232 0.048000          4.231557      4.845250e+05
+logistic test_unknown 0.773475           0.995757 0.000010 0.001984          4.231557      8.175451e+05
+     mlp   test_known 0.300650           0.898822 0.004194 0.015158          9.719175      1.115885e+05
+     mlp test_unknown 0.873287           0.997509 0.000009 0.000992          9.719175      6.351515e+05
+Pipeline zakończony. Wyniki: artifacts/comparison.csv i artifacts/comparison.json

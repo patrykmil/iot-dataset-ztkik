@@ -1,0 +1,416 @@
+{
+  "id": "15eb5ea381d74d8cb0a5a73e82ea170e",
+  "status": "complete",
+  "models": [
+    "lightgbm",
+    "logistic",
+    "mlp"
+  ],
+  "device": "cuda",
+  "seed": 42,
+  "threads": 4,
+  "target_fpr": 0.01,
+  "features": [
+    "proto",
+    "service",
+    "conn_state",
+    "history",
+    "duration",
+    "orig_bytes",
+    "resp_bytes",
+    "orig_pkts",
+    "resp_pkts",
+    "orig_ip_bytes",
+    "resp_ip_bytes",
+    "missed_bytes",
+    "orig_p",
+    "resp_p",
+    "bytes_per_pkt",
+    "resp_orig_ratio",
+    "bytes_total"
+  ],
+  "split": {
+    "train": [
+      "CTU-IoT-Malware-Capture-1-1",
+      "CTU-IoT-Malware-Capture-17-1",
+      "CTU-IoT-Malware-Capture-3-1",
+      "CTU-IoT-Malware-Capture-33-1",
+      "CTU-IoT-Malware-Capture-36-1",
+      "CTU-IoT-Malware-Capture-39-1",
+      "CTU-IoT-Malware-Capture-42-1",
+      "CTU-IoT-Malware-Capture-43-1",
+      "CTU-IoT-Malware-Capture-44-1",
+      "CTU-IoT-Malware-Capture-48-1",
+      "CTU-IoT-Malware-Capture-49-1",
+      "CTU-IoT-Malware-Capture-52-1",
+      "CTU-IoT-Malware-Capture-7-1",
+      "CTU-IoT-Malware-Capture-8-1",
+      "CTU-IoT-Malware-Capture-9-1"
+    ],
+    "valid": [
+      "CTU-Honeypot-Capture-5-1",
+      "CTU-IoT-Malware-Capture-35-1"
+    ],
+    "test_known": [
+      "CTU-Honeypot-Capture-4-1",
+      "CTU-IoT-Malware-Capture-34-1"
+    ],
+    "test_unknown": [
+      "CTU-Honeypot-Capture-7-1__Somfy-01",
+      "CTU-IoT-Malware-Capture-20-1",
+      "CTU-IoT-Malware-Capture-21-1",
+      "CTU-IoT-Malware-Capture-60-1"
+    ]
+  },
+  "families": {
+    "CTU-IoT-Malware-Capture-1-1": "HideAndSeek",
+    "CTU-IoT-Malware-Capture-3-1": "Muhstik",
+    "CTU-IoT-Malware-Capture-7-1": "Mirai",
+    "CTU-IoT-Malware-Capture-8-1": "Hakai",
+    "CTU-IoT-Malware-Capture-9-1": "Hajime",
+    "CTU-IoT-Malware-Capture-17-1": "Kenjiro",
+    "CTU-IoT-Malware-Capture-20-1": "Torii",
+    "CTU-IoT-Malware-Capture-21-1": "Torii",
+    "CTU-IoT-Malware-Capture-33-1": "Kenjiro",
+    "CTU-IoT-Malware-Capture-34-1": "Mirai",
+    "CTU-IoT-Malware-Capture-35-1": "Mirai",
+    "CTU-IoT-Malware-Capture-36-1": "Okiru",
+    "CTU-IoT-Malware-Capture-39-1": "IRCBot",
+    "CTU-IoT-Malware-Capture-42-1": "Trojan",
+    "CTU-IoT-Malware-Capture-43-1": "Mirai",
+    "CTU-IoT-Malware-Capture-44-1": "Mirai",
+    "CTU-IoT-Malware-Capture-48-1": "Mirai",
+    "CTU-IoT-Malware-Capture-49-1": "Mirai",
+    "CTU-IoT-Malware-Capture-52-1": "Mirai",
+    "CTU-IoT-Malware-Capture-60-1": "Gagfyt",
+    "CTU-Honeypot-Capture-4-1": "benign",
+    "CTU-Honeypot-Capture-5-1": "benign",
+    "CTU-Honeypot-Capture-7-1__Somfy-01": "benign"
+  },
+  "files": {
+    "CTU-IoT-Malware-Capture-1-1": {
+      "bytes": 7981047,
+      "mtime_ns": 1793641890518222064,
+      "rows": 1008748
+    },
+    "CTU-IoT-Malware-Capture-3-1": {
+      "bytes": 1192451,
+      "mtime_ns": 1793642540063947613,
+      "rows": 156103
+    },
+    "CTU-IoT-Malware-Capture-7-1": {
+      "bytes": 2715755,
+      "mtime_ns": 1793645084862270610,
+      "rows": 11454714
+    },
+    "CTU-IoT-Malware-Capture-8-1": {
+      "bytes": 71132,
+      "mtime_ns": 1793645084982279758,
+      "rows": 10403
+    },
+    "CTU-IoT-Malware-Capture-9-1": {
+      "bytes": 26932174,
+      "mtime_ns": 1793645148379113623,
+      "rows": 6378293
+    },
+    "CTU-IoT-Malware-Capture-17-1": {
+      "bytes": 32375208,
+      "mtime_ns": 1793642538175803668,
+      "rows": 54659855
+    },
+    "CTU-IoT-Malware-Capture-20-1": {
+      "bytes": 31392,
+      "mtime_ns": 1793642538239808548,
+      "rows": 3209
+    },
+    "CTU-IoT-Malware-Capture-21-1": {
+      "bytes": 38296,
+      "mtime_ns": 1793642538295812817,
+      "rows": 3286
+    },
+    "CTU-IoT-Malware-Capture-33-1": {
+      "bytes": 7806434,
+      "mtime_ns": 1793643078257087624,
+      "rows": 54454591
+    },
+    "CTU-IoT-Malware-Capture-34-1": {
+      "bytes": 121776,
+      "mtime_ns": 1793643078453102636,
+      "rows": 23145
+    },
+    "CTU-IoT-Malware-Capture-35-1": {
+      "bytes": 59216704,
+      "mtime_ns": 1793643179708859059,
+      "rows": 10447787
+    },
+    "CTU-IoT-Malware-Capture-36-1": {
+      "bytes": 1668990,
+      "mtime_ns": 1793643308954763986,
+      "rows": 13645098
+    },
+    "CTU-IoT-Malware-Capture-39-1": {
+      "bytes": 223924513,
+      "mtime_ns": 1793644010120548183,
+      "rows": 73568981
+    },
+    "CTU-IoT-Malware-Capture-42-1": {
+      "bytes": 71294,
+      "mtime_ns": 1793644010228556471,
+      "rows": 4426
+    },
+    "CTU-IoT-Malware-Capture-43-1": {
+      "bytes": 42616569,
+      "mtime_ns": 1793644641664578061,
+      "rows": 67321809
+    },
+    "CTU-IoT-Malware-Capture-44-1": {
+      "bytes": 8177,
+      "mtime_ns": 1793644641700580788,
+      "rows": 237
+    },
+    "CTU-IoT-Malware-Capture-48-1": {
+      "bytes": 14905606,
+      "mtime_ns": 1793644677691308024,
+      "rows": 3394338
+    },
+    "CTU-IoT-Malware-Capture-49-1": {
+      "bytes": 9738318,
+      "mtime_ns": 1793644735079660674,
+      "rows": 5410561
+    },
+    "CTU-IoT-Malware-Capture-52-1": {
+      "bytes": 9999975,
+      "mtime_ns": 1793644943627512160,
+      "rows": 19781378
+    },
+    "CTU-IoT-Malware-Capture-60-1": {
+      "bytes": 13777251,
+      "mtime_ns": 1793644975913970146,
+      "rows": 3581028
+    },
+    "CTU-Honeypot-Capture-4-1": {
+      "bytes": 13935,
+      "mtime_ns": 1793641878125268660,
+      "rows": 452
+    },
+    "CTU-Honeypot-Capture-5-1": {
+      "bytes": 32852,
+      "mtime_ns": 1793641878157271123,
+      "rows": 1374
+    },
+    "CTU-Honeypot-Capture-7-1__Somfy-01": {
+      "bytes": 7786,
+      "mtime_ns": 1793641878177272661,
+      "rows": 130
+    }
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "pyarrow": "26.0.0",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "torch": "2.14.1+cu132"
+  },
+  "python": "3.13.5",
+  "sampling": {
+    "method": "stratified_priority_reservoir",
+    "cap_per_capture": 100000,
+    "train": {
+      "CTU-IoT-Malware-Capture-1-1": {
+        "source_counts": {
+          "benign": 469275,
+          "malicious": 539473
+        },
+        "sample_counts": {
+          "benign": 46521,
+          "malicious": 53479
+        },
+        "row_indices_sha256": "a85011b6e1799223c35ceb1365341ad11956da64efca59a367f5da6d79e9c11d"
+      },
+      "CTU-IoT-Malware-Capture-17-1": {
+        "source_counts": {
+          "benign": 31438,
+          "malicious": 54628417
+        },
+        "sample_counts": {
+          "benign": 58,
+          "malicious": 99942
+        },
+        "row_indices_sha256": "17a3fe2aab0fa717f05e521fde733cb947641d048e947688c7b77eb69e0ff235"
+      },
+      "CTU-IoT-Malware-Capture-3-1": {
+        "source_counts": {
+          "benign": 4536,
+          "malicious": 151567
+        },
+        "sample_counts": {
+          "benign": 2906,
+          "malicious": 97094
+        },
+        "row_indices_sha256": "17a4615fc1dd6f52130e28d06344c2e31259a1feaaede868ecd1c0103af8a29e"
+      },
+      "CTU-IoT-Malware-Capture-33-1": {
+        "source_counts": {
+          "benign": 1380791,
+          "malicious": 53073800
+        },
+        "sample_counts": {
+          "benign": 2536,
+          "malicious": 97464
+        },
+        "row_indices_sha256": "e9490ba33a7a67708d6ede08ebdff864f1f39336e54d3c11558546bc79a73b74"
+      },
+      "CTU-IoT-Malware-Capture-36-1": {
+        "source_counts": {
+          "benign": 2663,
+          "malicious": 13642435
+        },
+        "sample_counts": {
+          "benign": 20,
+          "malicious": 99980
+        },
+        "row_indices_sha256": "6d55c34b38824967bb3f9232d8bf3dca55616be7a31c1222f7733de7b00a7b8a"
+      },
+      "CTU-IoT-Malware-Capture-39-1": {
+        "source_counts": {
+          "benign": 7337,
+          "malicious": 73561644
+        },
+        "sample_counts": {
+          "benign": 10,
+          "malicious": 99990
+        },
+        "row_indices_sha256": "a8fd5579d7253d1efe002201512b53eae4fc72925dcce31ad2d1a5e403d07353"
+      },
+      "CTU-IoT-Malware-Capture-42-1": {
+        "source_counts": {
+          "benign": 4420,
+          "malicious": 6
+        },
+        "sample_counts": {
+          "benign": 4420,
+          "malicious": 6
+        },
+        "row_indices_sha256": "3c902c8fc18b3f3761def4bcb6c1b95ea90440c4eba7e2609decd9565e8c2512"
+      },
+      "CTU-IoT-Malware-Capture-43-1": {
+        "source_counts": {
+          "benign": 20574934,
+          "malicious": 46746875
+        },
+        "sample_counts": {
+          "benign": 30562,
+          "malicious": 69438
+        },
+        "row_indices_sha256": "ab7c09a53083054d0f91b297a155c49a7feec93d19a81467bbc13c687bce4fd3"
+      },
+      "CTU-IoT-Malware-Capture-44-1": {
+        "source_counts": {
+          "benign": 211,
+          "malicious": 26
+        },
+        "sample_counts": {
+          "benign": 211,
+          "malicious": 26
+        },
+        "row_indices_sha256": "dbc1b09009832fec8e4196c0fb52270c2feb2f3621a51cb99080b50f0aebe4a1"
+      },
+      "CTU-IoT-Malware-Capture-48-1": {
+        "source_counts": {
+          "benign": 3734,
+          "malicious": 3390604
+        },
+        "sample_counts": {
+          "benign": 110,
+          "malicious": 99890
+        },
+        "row_indices_sha256": "d062ab9de46e8d80b62c93850009e0fd15862e74d0eabff1dc11302c2a55502b"
+      },
+      "CTU-IoT-Malware-Capture-49-1": {
+        "source_counts": {
+          "benign": 3665,
+          "malicious": 5406896
+        },
+        "sample_counts": {
+          "benign": 68,
+          "malicious": 99932
+        },
+        "row_indices_sha256": "c62b0ca6b46446c2a04609ae1468309a099659f6e8ded98233531f98cf6c7ee4"
+      },
+      "CTU-IoT-Malware-Capture-52-1": {
+        "source_counts": {
+          "benign": 1794,
+          "malicious": 19779584
+        },
+        "sample_counts": {
+          "benign": 9,
+          "malicious": 99991
+        },
+        "row_indices_sha256": "e901949552f18f7605338eaf53643a108b666f39ea0caffdc30a800557216e26"
+      },
+      "CTU-IoT-Malware-Capture-7-1": {
+        "source_counts": {
+          "benign": 75955,
+          "malicious": 11378759
+        },
+        "sample_counts": {
+          "benign": 663,
+          "malicious": 99337
+        },
+        "row_indices_sha256": "721afa50a77f80f6013f343d2f0f504892f8d06d96dca5641601e0ce7f12afeb"
+      },
+      "CTU-IoT-Malware-Capture-8-1": {
+        "source_counts": {
+          "benign": 2181,
+          "malicious": 8222
+        },
+        "sample_counts": {
+          "benign": 2181,
+          "malicious": 8222
+        },
+        "row_indices_sha256": "0edf52a6d830e262e2df69b479b403a658085f2a0883f8d4233009dd7f353324"
+      },
+      "CTU-IoT-Malware-Capture-9-1": {
+        "source_counts": {
+          "benign": 22548,
+          "malicious": 6355745
+        },
+        "sample_counts": {
+          "benign": 354,
+          "malicious": 99646
+        },
+        "row_indices_sha256": "47055be337dd41f285ac31746cbf0efbd09b19c4e706a395735f2e532bb5133c"
+      }
+    },
+    "valid": {
+      "CTU-Honeypot-Capture-5-1": {
+        "source_counts": {
+          "benign": 1374,
+          "malicious": 0
+        },
+        "sample_counts": {
+          "benign": 1374,
+          "malicious": 0
+        },
+        "row_indices_sha256": "3a1d7a105acad42e61485c968c85b7cf3da5b535579fbde19d1f954790ae0956"
+      },
+      "CTU-IoT-Malware-Capture-35-1": {
+        "source_counts": {
+          "benign": 8262389,
+          "malicious": 2185398
+        },
+        "sample_counts": {
+          "benign": 79083,
+          "malicious": 20917
+        },
+        "row_indices_sha256": "2b8b64d3f1900fc9594836ff7d78251490e0435e6347a9d270b3ff16123701fc"
+      }
+    }
+  },
+  "gpu": {
+    "name": "NVIDIA L4",
+    "pytorch_cuda": "13.2"
+  },
+  "preprocessing_seconds": 5.528279106132686
+}
