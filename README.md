@@ -70,6 +70,12 @@ na torusie do czasu naprawy sterownika.
 Używamy **CUDA**, z natywnymi cechami kategorycznymi i `use_quantized_grad=False`.
 Kwantyzowane gradienty wraz z kategoriami nie są obsługiwane przez ten backend.
 
+Wagi klas przekazujemy jako wagi wierszy `Dataset`, nie `scale_pos_weight`:
+backend CUDA LightGBM 4.7.0 błędnie indeksuje wagę klasy benign w tej drugiej
+ścieżce. Oba backendy nadal używają tej samej wagi malicious `n_benign / n_malicious`.
+Włączone są ostrzeżenia treningu; stały model bez żadnego podziału zatrzymuje
+eksperyment zamiast zostać zapisany jako poprawnie wytrenowany detektor.
+
 Zwykły pakiet LightGBM nie gwarantuje obsługi CUDA. Jeśli trzeba go zbudować, poniższa
 komenda instaluje go **wyłącznie w venv**, używając dostępnego CUDA Toolkit i kompilatora C++:
 
@@ -257,6 +263,23 @@ są odczytywane partiami. Kontrola danych używa rozmiaru, mtime i liczby wiersz
 nie pełnego kryptograficznego hasha wielogigabajtowych Parquetów.
 
 ## Testy — komendy do późniejszego wykonania
+
+### Diagnostyka istniejącego eksperymentu
+
+```bash
+DETECTOR_THREADS=4 .venv/bin/python -u diagnose.py results/diagnostics_01
+```
+
+Katalog wynikowy musi być nowy i znajdować się wewnątrz projektu, poza `artifacts/`. Skrypt zachowuje
+kopię dotychczasowych modeli i raportów (bez kopiowania Parquet), odtwarza próbki
+train/valid i sprawdza ich fingerprinty. Porównuje LightGBM CPU i CUDA kolejno,
+z widocznymi ostrzeżeniami, oraz zapisuje rozkłady cech i ocen w `diagnostics.json`.
+Nie nadpisuje `artifacts/`. Wyniki rozkładów testowych dotyczą próbek do limitu
+na capture, nie zastępują pełnej ewaluacji. `samples.joblib` pozwala powtórzyć
+diagnostykę backendu bez kolejnego pełnego skanowania danych; ładuj go tylko
+z zaufanego źródła.
+
+### Testy automatyczne
 
 ```bash
 DETECTOR_THREADS=2 .venv/bin/python -m unittest discover -s tests -v

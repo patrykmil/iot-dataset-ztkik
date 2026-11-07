@@ -53,10 +53,12 @@ def train_lightgbm(Xf, yf, Xv, yv, device, directory):
     Xf = categorical_frame(Xf)
     categories = {col: Xf[col].cat.categories.tolist() for col in C.CATEGORICAL}
     Xv = categorical_frame(Xv, categories)
-    params = {**C.LGBM_PARAMS, "device_type": device, "scale_pos_weight": positive_weight(yf)}
+    weight = positive_weight(yf)
+    params = {**C.LGBM_PARAMS, "device_type": device}
     if device == "cuda":
         params["gpu_device_id"] = 0
-    fit = lgb.Dataset(Xf, label=yf, categorical_feature=C.CATEGORICAL)
+    # Wagi wierszy omijają błędne indeksowanie wag klas w backendzie CUDA LightGBM 4.7.0.
+    fit = lgb.Dataset(Xf, label=yf, weight=np.where(yf == 1, weight, 1.0), categorical_feature=C.CATEGORICAL)
     valid = lgb.Dataset(Xv, label=yv, reference=fit)
     try:
         model = lgb.train(
@@ -68,8 +70,10 @@ def train_lightgbm(Xf, yf, Xv, yv, device, directory):
             f"LightGBM ({device}) nie zakończył treningu. Dla CUDA wymagany jest działający sterownik "
             "i build USE_CUDA=ON. Nie przechodzę automatycznie na CPU."
         ) from exc
+    if not model.feature_importance().any():
+        raise RuntimeError(f"LightGBM ({device}) nie utworzył żadnego podziału; model jest stały. Sprawdź dane i log treningu.")
     model.save_model(str(directory / "model.txt"))
-    return model, {"parameters": params, "best_iteration": model.best_iteration, "categories": categories}
+    return model, {"parameters": params, "positive_weight": weight, "best_iteration": model.best_iteration, "categories": categories}
 
 
 def train_logistic(Xf, yf, Xv, yv, directory):

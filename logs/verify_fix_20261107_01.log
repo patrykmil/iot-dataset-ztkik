@@ -1,0 +1,225 @@
+[LightGBM] [Info] Number of positive: 1124437, number of negative: 90629
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.073350 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 1668
+[LightGBM] [Info] Number of data points in the train set: 1215066, number of used features: 16
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Info] Start training from score 0.000000
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+Training until validation scores don't improve for 50 rounds
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[25]	valid_0's auc: 0.0141211
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[50]	valid_0's auc: 0.0146132
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[75]	valid_0's auc: 0.0141586
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+Early stopping, best iteration is:
+[49]	valid_0's auc: 0.0147315
+lightgbm: oceniono CTU-Honeypot-Capture-4-1, n=452
+lightgbm: oceniono CTU-IoT-Malware-Capture-34-1, n=23145
+lightgbm: oceniono CTU-Honeypot-Capture-7-1__Somfy-01, n=130
+lightgbm: oceniono CTU-IoT-Malware-Capture-20-1, n=3209
+lightgbm: oceniono CTU-IoT-Malware-Capture-21-1, n=3286
+lightgbm: oceniono CTU-IoT-Malware-Capture-60-1, n=3581028
+POPRAWKA cpu: trees=49, unique_scores=542
+training {'roc_auc': 0.9993734837296794, 'average_precision': 0.9999460736816382, 'recall': 0.2639214113374071, 'fpr': 0.0}
+test_known {'roc_auc': 0.942057626395647, 'average_precision': 0.9904996547386646, 'recall': 0.004994816699651306, 'fpr': 0.0}
+test_unknown {'roc_auc': 0.9113095262757926, 'average_precision': 0.9995197199342545, 'recall': 0.0, 'fpr': 0.0}
+[LightGBM] [Warning] Using sparse features with CUDA is currently not supported.
+[LightGBM] [Info] Number of positive: 1124437, number of negative: 90629
+[LightGBM] [Warning] Metric auc is not implemented in cuda version. Fall back to evaluation on CPU.
+[LightGBM] [Info] Total Bins 1668
+[LightGBM] [Info] Number of data points in the train set: 1215066, number of used features: 16
+[LightGBM] [Warning] Metric auc is not implemented in cuda version. Fall back to evaluation on CPU.
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Info] Start training from score 0.000000
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 52 leaves.
+Training until validation scores don't improve for 50 rounds
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 72 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 58 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 52 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 54 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 33 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 35 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 35 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 76 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 39 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 89 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 67 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 40 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 74 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 74 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 67 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 71 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 69 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 78 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 70 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 75 leaves.
+[25]	valid_0's auc: 0.0117155
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 74 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 76 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 44 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 72 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 74 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 75 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 73 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 79 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 72 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 126 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 75 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 83 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 48 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 82 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 89 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 43 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 77 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 78 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 45 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 84 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 89 leaves.
+[50]	valid_0's auc: 0.0136486
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 91 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 51 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 87 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 87 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 87 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 87 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 88 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 52 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 47 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 93 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 91 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 110 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 81 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 80 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 85 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 83 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 87 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 49 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 85 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 91 leaves.
+[75]	valid_0's auc: 0.0134867
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 52 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 114 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 114 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 102 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 116 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 114 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 101 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 50 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 116 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 56 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 115 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 117 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 63 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 110 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 119 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 53 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 54 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 102 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 103 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 112 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 107 leaves.
+[100]	valid_0's auc: 0.0130939
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 56 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 110 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 111 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 111 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 54 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 54 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 114 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 110 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 57 leaves.
+Early stopping, best iteration is:
+[70]	valid_0's auc: 0.0140201
+lightgbm: oceniono CTU-Honeypot-Capture-4-1, n=452
+lightgbm: oceniono CTU-IoT-Malware-Capture-34-1, n=23145
+lightgbm: oceniono CTU-Honeypot-Capture-7-1__Somfy-01, n=130
+lightgbm: oceniono CTU-IoT-Malware-Capture-20-1, n=3209
+lightgbm: oceniono CTU-IoT-Malware-Capture-21-1, n=3286
+lightgbm: oceniono CTU-IoT-Malware-Capture-60-1, n=3581028
+POPRAWKA cuda: trees=70, unique_scores=946
+training {'roc_auc': 0.9994631670467727, 'average_precision': 0.9999532082232151, 'recall': 0.0, 'fpr': 0.0}
+test_known {'roc_auc': 0.9429750060761176, 'average_precision': 0.9905129274244289, 'recall': 0.0, 'fpr': 0.0}
+test_unknown {'roc_auc': 0.913910391365848, 'average_precision': 0.9995430582977051, 'recall': 0.0, 'fpr': 0.0}
+Weryfikacja poprawki zakończona; artifacts pozostaje bez zmian.

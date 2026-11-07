@@ -1,0 +1,1177 @@
+{
+  "experiment_id": "15eb5ea381d74d8cb0a5a73e82ea170e",
+  "weighting": "Dataset row weights",
+  "models": {
+    "cpu": {
+      "metadata": {
+        "experiment_id": "15eb5ea381d74d8cb0a5a73e82ea170e",
+        "training_device": "cpu",
+        "training_seconds": 4.935184650996234,
+        "threshold": 0.9574230649637268,
+        "validation": {
+          "n": 101374,
+          "benign": 80457,
+          "malicious": 20917,
+          "malware_rate": 0.2063349576814568,
+          "threshold": 0.9574230649637268,
+          "confusion_at_threshold": [
+            [
+              80366,
+              91
+            ],
+            [
+              20916,
+              1
+            ]
+          ],
+          "precision": 0.010869565217391304,
+          "recall": 4.780800305971219e-05,
+          "f1": 9.519729639678232e-05,
+          "fpr": 0.0011310389400549362,
+          "roc_auc": 0.014731525690496529,
+          "average_precision": 0.1166694833701293,
+          "oracle_tpr_at_fpr_1pct": 4.780800305971219e-05,
+          "oracle_tpr_at_fpr_0_1pct": 0.0
+        },
+        "parameters": {
+          "objective": "binary",
+          "metric": "auc",
+          "boosting_type": "gbdt",
+          "num_leaves": 127,
+          "min_data_in_leaf": 200,
+          "feature_fraction": 0.8,
+          "bagging_fraction": 0.8,
+          "bagging_freq": 5,
+          "lambda_l2": 1.0,
+          "learning_rate": 0.05,
+          "verbose": 1,
+          "seed": 42,
+          "num_threads": 4,
+          "use_quantized_grad": false,
+          "device_type": "cpu"
+        },
+        "positive_weight": 0.08059944665641561,
+        "best_iteration": 49,
+        "categories": {
+          "proto": [
+            "icmp",
+            "tcp",
+            "udp"
+          ],
+          "service": [
+            "-",
+            "dhcp",
+            "dns",
+            "http",
+            "irc",
+            "ssh",
+            "ssl"
+          ],
+          "conn_state": [
+            "OTH",
+            "REJ",
+            "RSTO",
+            "RSTOS0",
+            "RSTR",
+            "RSTRH",
+            "S0",
+            "S1",
+            "S2",
+            "S3",
+            "SF",
+            "SH"
+          ],
+          "history": [
+            "-",
+            "Aa",
+            "Ar",
+            "D",
+            "D^",
+            "DaFfA",
+            "Dd",
+            "DdA",
+            "DdAa",
+            "DdAaFf",
+            "F",
+            "Fa",
+            "HaDdAfF",
+            "HaDdR",
+            "R",
+            "S",
+            "SahAdDFf",
+            "SahAdDtFf",
+            "ShA",
+            "ShADF",
+            "ShADFa",
+            "ShADFaR",
+            "ShADFadfR",
+            "ShADFar",
+            "ShADFdRt",
+            "ShADFfR",
+            "ShADFr",
+            "ShADa",
+            "ShADaR",
+            "ShADad",
+            "ShADadFf",
+            "ShADadRf",
+            "ShADadf",
+            "ShADadfF",
+            "ShADadfR",
+            "ShADadfrr",
+            "ShADadtFf",
+            "ShADadtfF",
+            "ShADadttFf",
+            "ShADadttfF",
+            "ShADafF",
+            "ShADafdtF",
+            "ShADafr",
+            "ShADar",
+            "ShADard",
+            "ShADda",
+            "ShADdaf",
+            "ShADdafF",
+            "ShADdfFa",
+            "ShADdfrFr",
+            "ShADfFa",
+            "ShADfFr",
+            "ShADfdtR",
+            "ShADfdtrFr",
+            "ShADfrF",
+            "ShADfrFr",
+            "ShADr",
+            "ShAF",
+            "ShAFa",
+            "ShAFdRfR",
+            "ShAa",
+            "ShAadDFR",
+            "ShAadDFRf",
+            "ShAadDFf",
+            "ShAdDFaf",
+            "ShAdDFf",
+            "ShAdDaF",
+            "ShAdDaFR",
+            "ShAdDaFRR",
+            "ShAdDaFRRRf",
+            "ShAdDaFRRf",
+            "ShAdDaFRRfR",
+            "ShAdDaFRf",
+            "ShAdDaFRfR",
+            "ShAdDaFRfRR",
+            "ShAdDaFRr",
+            "ShAdDaFT",
+            "ShAdDaFTf",
+            "ShAdDaFf",
+            "ShAdDaFfR",
+            "ShAdDaFfRR",
+            "ShAdDaFfr",
+            "ShAdDaFr",
+            "ShAdDaFrR",
+            "ShAdDaR",
+            "ShAdDaTFRf",
+            "ShAdDaTFf",
+            "ShAdDaTR",
+            "ShAdDaTfF",
+            "ShAdDaf",
+            "ShAdDafF",
+            "ShAdDafFr",
+            "ShAdDafrR",
+            "ShAdDaft",
+            "ShAdDaftF",
+            "ShAdDar",
+            "ShAdDarfR",
+            "ShAdDatFf",
+            "ShAdDatFr",
+            "ShAdDatR",
+            "ShAdDatfF",
+            "ShAdDatrfR",
+            "ShAdDfFa",
+            "ShAdDfFr",
+            "ShAdDr",
+            "ShAdDtaFf",
+            "ShAdDtafF",
+            "ShAdDtafFr",
+            "ShAdFaf",
+            "ShAdfDr",
+            "ShAdfFa",
+            "ShAdtDaFr",
+            "ShAdtDaFrR",
+            "ShAdtDafF",
+            "ShAfFa",
+            "ShAfdtDr",
+            "ShAr",
+            "ShR",
+            "ShwA",
+            "ShwAr",
+            "Sr",
+            "^aA",
+            "^d",
+            "^hR",
+            "^r"
+          ]
+        }
+      },
+      "trees": 49,
+      "unique_scores": 542,
+      "training": {
+        "n": 1215066,
+        "benign": 90629,
+        "malicious": 1124437,
+        "malware_rate": 0.9254122821311764,
+        "threshold": 0.9574230649637268,
+        "confusion_at_threshold": [
+          [
+            90629,
+            0
+          ],
+          [
+            827674,
+            296763
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 0.2639214113374071,
+        "f1": 0.41762313537855333,
+        "fpr": 0.0,
+        "roc_auc": 0.9993734837296794,
+        "average_precision": 0.9999460736816382,
+        "oracle_tpr_at_fpr_1pct": 0.9948605390964544,
+        "oracle_tpr_at_fpr_0_1pct": 0.9939987744978154
+      },
+      "test_known": {
+        "n": 23597,
+        "benign": 2375,
+        "malicious": 21222,
+        "malware_rate": 0.8993516124931136,
+        "threshold": 0.9574230649637268,
+        "confusion_at_threshold": [
+          [
+            2375,
+            0
+          ],
+          [
+            21116,
+            106
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 0.004994816699651306,
+        "f1": 0.009939984996249063,
+        "fpr": 0.0,
+        "roc_auc": 0.942057626395647,
+        "average_precision": 0.9904996547386646,
+        "oracle_tpr_at_fpr_1pct": 0.005041937611912167,
+        "oracle_tpr_at_fpr_0_1pct": 0.005041937611912167,
+        "prediction_seconds": 0.046634684986202046,
+        "flows_per_second": 505996.7705792742,
+        "prediction_device": "cpu",
+        "per_capture": {
+          "CTU-Honeypot-Capture-4-1": {
+            "family": "benign",
+            "n": 452,
+            "benign": 452,
+            "malicious": 0,
+            "malware_rate": 0.0,
+            "threshold": 0.9574230649637268,
+            "confusion_at_threshold": [
+              [
+                452,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": null,
+            "average_precision": null,
+            "oracle_tpr_at_fpr_1pct": null,
+            "oracle_tpr_at_fpr_0_1pct": null
+          },
+          "CTU-IoT-Malware-Capture-34-1": {
+            "family": "Mirai",
+            "n": 23145,
+            "benign": 1923,
+            "malicious": 21222,
+            "malware_rate": 0.9169151004536616,
+            "threshold": 0.9574230649637268,
+            "confusion_at_threshold": [
+              [
+                1923,
+                0
+              ],
+              [
+                21116,
+                106
+              ]
+            ],
+            "precision": 1.0,
+            "recall": 0.004994816699651306,
+            "f1": 0.009939984996249063,
+            "fpr": 0.0,
+            "roc_auc": 0.9629937643081069,
+            "average_precision": 0.9945094759719126,
+            "oracle_tpr_at_fpr_1pct": 0.005041937611912167,
+            "oracle_tpr_at_fpr_0_1pct": 0.005041937611912167
+          }
+        },
+        "per_family": {
+          "benign": {
+            "n": 452,
+            "benign": 452,
+            "malicious": 0,
+            "malware_rate": 0.0,
+            "threshold": 0.9574230649637268,
+            "confusion_at_threshold": [
+              [
+                452,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": null,
+            "average_precision": null,
+            "oracle_tpr_at_fpr_1pct": null,
+            "oracle_tpr_at_fpr_0_1pct": null
+          },
+          "Mirai": {
+            "n": 23145,
+            "benign": 1923,
+            "malicious": 21222,
+            "malware_rate": 0.9169151004536616,
+            "threshold": 0.9574230649637268,
+            "confusion_at_threshold": [
+              [
+                1923,
+                0
+              ],
+              [
+                21116,
+                106
+              ]
+            ],
+            "precision": 1.0,
+            "recall": 0.004994816699651306,
+            "f1": 0.009939984996249063,
+            "fpr": 0.0,
+            "roc_auc": 0.9629937643081069,
+            "average_precision": 0.9945094759719126,
+            "oracle_tpr_at_fpr_1pct": 0.005041937611912167,
+            "oracle_tpr_at_fpr_0_1pct": 0.005041937611912167
+          }
+        },
+        "macro_capture_fpr": 0.0,
+        "macro_capture_recall": 0.004994816699651306
+      },
+      "test_unknown": {
+        "n": 3587653,
+        "benign": 9071,
+        "malicious": 3578582,
+        "malware_rate": 0.9974716060889947,
+        "threshold": 0.9574230649637268,
+        "confusion_at_threshold": [
+          [
+            9071,
+            0
+          ],
+          [
+            3578582,
+            0
+          ]
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "roc_auc": 0.9113095262757926,
+        "average_precision": 0.9995197199342545,
+        "oracle_tpr_at_fpr_1pct": 1.117761169088762e-05,
+        "oracle_tpr_at_fpr_0_1pct": 0.0,
+        "prediction_seconds": 3.7616344580310397,
+        "flows_per_second": 953748.4410109038,
+        "prediction_device": "cpu",
+        "per_capture": {
+          "CTU-Honeypot-Capture-7-1__Somfy-01": {
+            "family": "benign",
+            "n": 130,
+            "benign": 130,
+            "malicious": 0,
+            "malware_rate": 0.0,
+            "threshold": 0.9574230649637268,
+            "confusion_at_threshold": [
+              [
+                130,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": null,
+            "average_precision": null,
+            "oracle_tpr_at_fpr_1pct": null,
+            "oracle_tpr_at_fpr_0_1pct": null
+          },
+          "CTU-IoT-Malware-Capture-20-1": {
+            "family": "Torii",
+            "n": 3209,
+            "benign": 3193,
+            "malicious": 16,
+            "malware_rate": 0.004985976939856653,
+            "threshold": 0.9574230649637268,
+            "confusion_at_threshold": [
+              [
+                3193,
+                0
+              ],
+              [
+                16,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": 0.9996868149076104,
+            "average_precision": 0.8573937908496733,
+            "oracle_tpr_at_fpr_1pct": 1.0,
+            "oracle_tpr_at_fpr_0_1pct": 1.0
+          },
+          "CTU-IoT-Malware-Capture-21-1": {
+            "family": "Torii",
+            "n": 3286,
+            "benign": 3272,
+            "malicious": 14,
+            "malware_rate": 0.00426049908703591,
+            "threshold": 0.9574230649637268,
+            "confusion_at_threshold": [
+              [
+                3272,
+                0
+              ],
+              [
+                14,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": 0.9982535801606706,
+            "average_precision": 0.7777777777777777,
+            "oracle_tpr_at_fpr_1pct": 1.0,
+            "oracle_tpr_at_fpr_0_1pct": 0.5714285714285714
+          },
+          "CTU-IoT-Malware-Capture-60-1": {
+            "family": "Gagfyt",
+            "n": 3581028,
+            "benign": 2476,
+            "malicious": 3578552,
+            "malware_rate": 0.9993085784305512,
+            "threshold": 0.9574230649637268,
+            "confusion_at_threshold": [
+              [
+                2476,
+                0
+              ],
+              [
+                3578552,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": 0.6783081461273236,
+            "average_precision": 0.9995239685257779,
+            "oracle_tpr_at_fpr_1pct": 0.0,
+            "oracle_tpr_at_fpr_0_1pct": 0.0
+          }
+        },
+        "per_family": {
+          "benign": {
+            "n": 130,
+            "benign": 130,
+            "malicious": 0,
+            "malware_rate": 0.0,
+            "threshold": 0.9574230649637268,
+            "confusion_at_threshold": [
+              [
+                130,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": null,
+            "average_precision": null,
+            "oracle_tpr_at_fpr_1pct": null,
+            "oracle_tpr_at_fpr_0_1pct": null
+          },
+          "Torii": {
+            "n": 6495,
+            "benign": 6465,
+            "malicious": 30,
+            "malware_rate": 0.004618937644341801,
+            "threshold": 0.9574230649637268,
+            "confusion_at_threshold": [
+              [
+                6465,
+                0
+              ],
+              [
+                30,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": 0.9990667697860274,
+            "average_precision": 0.8026495866118508,
+            "oracle_tpr_at_fpr_1pct": 1.0,
+            "oracle_tpr_at_fpr_0_1pct": 0.8
+          },
+          "Gagfyt": {
+            "n": 3581028,
+            "benign": 2476,
+            "malicious": 3578552,
+            "malware_rate": 0.9993085784305512,
+            "threshold": 0.9574230649637268,
+            "confusion_at_threshold": [
+              [
+                2476,
+                0
+              ],
+              [
+                3578552,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": 0.6783081461273236,
+            "average_precision": 0.9995239685257779,
+            "oracle_tpr_at_fpr_1pct": 0.0,
+            "oracle_tpr_at_fpr_0_1pct": 0.0
+          }
+        },
+        "macro_capture_fpr": 0.0,
+        "macro_capture_recall": 0.0
+      }
+    },
+    "cuda": {
+      "metadata": {
+        "experiment_id": "15eb5ea381d74d8cb0a5a73e82ea170e",
+        "training_device": "cuda",
+        "training_seconds": 3.792812558996957,
+        "threshold": 1.0000000000000002,
+        "validation": {
+          "n": 101374,
+          "benign": 80457,
+          "malicious": 20917,
+          "malware_rate": 0.2063349576814568,
+          "threshold": 1.0000000000000002,
+          "confusion_at_threshold": [
+            [
+              80457,
+              0
+            ],
+            [
+              20917,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "roc_auc": 0.01402011893181537,
+          "average_precision": 0.11387982121073148,
+          "oracle_tpr_at_fpr_1pct": 0.0,
+          "oracle_tpr_at_fpr_0_1pct": 0.0
+        },
+        "parameters": {
+          "objective": "binary",
+          "metric": "auc",
+          "boosting_type": "gbdt",
+          "num_leaves": 127,
+          "min_data_in_leaf": 200,
+          "feature_fraction": 0.8,
+          "bagging_fraction": 0.8,
+          "bagging_freq": 5,
+          "lambda_l2": 1.0,
+          "learning_rate": 0.05,
+          "verbose": 1,
+          "seed": 42,
+          "num_threads": 4,
+          "use_quantized_grad": false,
+          "device_type": "cuda",
+          "gpu_device_id": 0
+        },
+        "positive_weight": 0.08059944665641561,
+        "best_iteration": 70,
+        "categories": {
+          "proto": [
+            "icmp",
+            "tcp",
+            "udp"
+          ],
+          "service": [
+            "-",
+            "dhcp",
+            "dns",
+            "http",
+            "irc",
+            "ssh",
+            "ssl"
+          ],
+          "conn_state": [
+            "OTH",
+            "REJ",
+            "RSTO",
+            "RSTOS0",
+            "RSTR",
+            "RSTRH",
+            "S0",
+            "S1",
+            "S2",
+            "S3",
+            "SF",
+            "SH"
+          ],
+          "history": [
+            "-",
+            "Aa",
+            "Ar",
+            "D",
+            "D^",
+            "DaFfA",
+            "Dd",
+            "DdA",
+            "DdAa",
+            "DdAaFf",
+            "F",
+            "Fa",
+            "HaDdAfF",
+            "HaDdR",
+            "R",
+            "S",
+            "SahAdDFf",
+            "SahAdDtFf",
+            "ShA",
+            "ShADF",
+            "ShADFa",
+            "ShADFaR",
+            "ShADFadfR",
+            "ShADFar",
+            "ShADFdRt",
+            "ShADFfR",
+            "ShADFr",
+            "ShADa",
+            "ShADaR",
+            "ShADad",
+            "ShADadFf",
+            "ShADadRf",
+            "ShADadf",
+            "ShADadfF",
+            "ShADadfR",
+            "ShADadfrr",
+            "ShADadtFf",
+            "ShADadtfF",
+            "ShADadttFf",
+            "ShADadttfF",
+            "ShADafF",
+            "ShADafdtF",
+            "ShADafr",
+            "ShADar",
+            "ShADard",
+            "ShADda",
+            "ShADdaf",
+            "ShADdafF",
+            "ShADdfFa",
+            "ShADdfrFr",
+            "ShADfFa",
+            "ShADfFr",
+            "ShADfdtR",
+            "ShADfdtrFr",
+            "ShADfrF",
+            "ShADfrFr",
+            "ShADr",
+            "ShAF",
+            "ShAFa",
+            "ShAFdRfR",
+            "ShAa",
+            "ShAadDFR",
+            "ShAadDFRf",
+            "ShAadDFf",
+            "ShAdDFaf",
+            "ShAdDFf",
+            "ShAdDaF",
+            "ShAdDaFR",
+            "ShAdDaFRR",
+            "ShAdDaFRRRf",
+            "ShAdDaFRRf",
+            "ShAdDaFRRfR",
+            "ShAdDaFRf",
+            "ShAdDaFRfR",
+            "ShAdDaFRfRR",
+            "ShAdDaFRr",
+            "ShAdDaFT",
+            "ShAdDaFTf",
+            "ShAdDaFf",
+            "ShAdDaFfR",
+            "ShAdDaFfRR",
+            "ShAdDaFfr",
+            "ShAdDaFr",
+            "ShAdDaFrR",
+            "ShAdDaR",
+            "ShAdDaTFRf",
+            "ShAdDaTFf",
+            "ShAdDaTR",
+            "ShAdDaTfF",
+            "ShAdDaf",
+            "ShAdDafF",
+            "ShAdDafFr",
+            "ShAdDafrR",
+            "ShAdDaft",
+            "ShAdDaftF",
+            "ShAdDar",
+            "ShAdDarfR",
+            "ShAdDatFf",
+            "ShAdDatFr",
+            "ShAdDatR",
+            "ShAdDatfF",
+            "ShAdDatrfR",
+            "ShAdDfFa",
+            "ShAdDfFr",
+            "ShAdDr",
+            "ShAdDtaFf",
+            "ShAdDtafF",
+            "ShAdDtafFr",
+            "ShAdFaf",
+            "ShAdfDr",
+            "ShAdfFa",
+            "ShAdtDaFr",
+            "ShAdtDaFrR",
+            "ShAdtDafF",
+            "ShAfFa",
+            "ShAfdtDr",
+            "ShAr",
+            "ShR",
+            "ShwA",
+            "ShwAr",
+            "Sr",
+            "^aA",
+            "^d",
+            "^hR",
+            "^r"
+          ]
+        }
+      },
+      "trees": 70,
+      "unique_scores": 946,
+      "training": {
+        "n": 1215066,
+        "benign": 90629,
+        "malicious": 1124437,
+        "malware_rate": 0.9254122821311764,
+        "threshold": 1.0000000000000002,
+        "confusion_at_threshold": [
+          [
+            90629,
+            0
+          ],
+          [
+            1124437,
+            0
+          ]
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "roc_auc": 0.9994631670467727,
+        "average_precision": 0.9999532082232151,
+        "oracle_tpr_at_fpr_1pct": 0.9951193352762315,
+        "oracle_tpr_at_fpr_0_1pct": 0.9947618230278797
+      },
+      "test_known": {
+        "n": 23597,
+        "benign": 2375,
+        "malicious": 21222,
+        "malware_rate": 0.8993516124931136,
+        "threshold": 1.0000000000000002,
+        "confusion_at_threshold": [
+          [
+            2375,
+            0
+          ],
+          [
+            21222,
+            0
+          ]
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "roc_auc": 0.9429750060761176,
+        "average_precision": 0.9905129274244289,
+        "oracle_tpr_at_fpr_1pct": 0.005041937611912167,
+        "oracle_tpr_at_fpr_0_1pct": 0.0037696729808689095,
+        "prediction_seconds": 0.0509481779881753,
+        "flows_per_second": 463156.89651309396,
+        "prediction_device": "cpu",
+        "per_capture": {
+          "CTU-Honeypot-Capture-4-1": {
+            "family": "benign",
+            "n": 452,
+            "benign": 452,
+            "malicious": 0,
+            "malware_rate": 0.0,
+            "threshold": 1.0000000000000002,
+            "confusion_at_threshold": [
+              [
+                452,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": null,
+            "average_precision": null,
+            "oracle_tpr_at_fpr_1pct": null,
+            "oracle_tpr_at_fpr_0_1pct": null
+          },
+          "CTU-IoT-Malware-Capture-34-1": {
+            "family": "Mirai",
+            "n": 23145,
+            "benign": 1923,
+            "malicious": 21222,
+            "malware_rate": 0.9169151004536616,
+            "threshold": 1.0000000000000002,
+            "confusion_at_threshold": [
+              [
+                1923,
+                0
+              ],
+              [
+                21222,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": 0.9614156180609678,
+            "average_precision": 0.99380626343093,
+            "oracle_tpr_at_fpr_1pct": 0.005041937611912167,
+            "oracle_tpr_at_fpr_0_1pct": 0.0037696729808689095
+          }
+        },
+        "per_family": {
+          "benign": {
+            "n": 452,
+            "benign": 452,
+            "malicious": 0,
+            "malware_rate": 0.0,
+            "threshold": 1.0000000000000002,
+            "confusion_at_threshold": [
+              [
+                452,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": null,
+            "average_precision": null,
+            "oracle_tpr_at_fpr_1pct": null,
+            "oracle_tpr_at_fpr_0_1pct": null
+          },
+          "Mirai": {
+            "n": 23145,
+            "benign": 1923,
+            "malicious": 21222,
+            "malware_rate": 0.9169151004536616,
+            "threshold": 1.0000000000000002,
+            "confusion_at_threshold": [
+              [
+                1923,
+                0
+              ],
+              [
+                21222,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": 0.9614156180609678,
+            "average_precision": 0.99380626343093,
+            "oracle_tpr_at_fpr_1pct": 0.005041937611912167,
+            "oracle_tpr_at_fpr_0_1pct": 0.0037696729808689095
+          }
+        },
+        "macro_capture_fpr": 0.0,
+        "macro_capture_recall": 0.0
+      },
+      "test_unknown": {
+        "n": 3587653,
+        "benign": 9071,
+        "malicious": 3578582,
+        "malware_rate": 0.9974716060889947,
+        "threshold": 1.0000000000000002,
+        "confusion_at_threshold": [
+          [
+            9071,
+            0
+          ],
+          [
+            3578582,
+            0
+          ]
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "roc_auc": 0.913910391365848,
+        "average_precision": 0.9995430582977051,
+        "oracle_tpr_at_fpr_1pct": 1.117761169088762e-05,
+        "oracle_tpr_at_fpr_0_1pct": 0.0,
+        "prediction_seconds": 3.9453654510725755,
+        "flows_per_second": 909333.5064878898,
+        "prediction_device": "cpu",
+        "per_capture": {
+          "CTU-Honeypot-Capture-7-1__Somfy-01": {
+            "family": "benign",
+            "n": 130,
+            "benign": 130,
+            "malicious": 0,
+            "malware_rate": 0.0,
+            "threshold": 1.0000000000000002,
+            "confusion_at_threshold": [
+              [
+                130,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": null,
+            "average_precision": null,
+            "oracle_tpr_at_fpr_1pct": null,
+            "oracle_tpr_at_fpr_0_1pct": null
+          },
+          "CTU-IoT-Malware-Capture-20-1": {
+            "family": "Torii",
+            "n": 3209,
+            "benign": 3193,
+            "malicious": 16,
+            "malware_rate": 0.004985976939856653,
+            "threshold": 1.0000000000000002,
+            "confusion_at_threshold": [
+              [
+                3193,
+                0
+              ],
+              [
+                16,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": 0.999217037269026,
+            "average_precision": 0.7880456349206348,
+            "oracle_tpr_at_fpr_1pct": 1.0,
+            "oracle_tpr_at_fpr_0_1pct": 0.5
+          },
+          "CTU-IoT-Malware-Capture-21-1": {
+            "family": "Torii",
+            "n": 3286,
+            "benign": 3272,
+            "malicious": 14,
+            "malware_rate": 0.00426049908703591,
+            "threshold": 1.0000000000000002,
+            "confusion_at_threshold": [
+              [
+                3272,
+                0
+              ],
+              [
+                14,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": 0.9980789381767377,
+            "average_precision": 0.6888888888888888,
+            "oracle_tpr_at_fpr_1pct": 1.0,
+            "oracle_tpr_at_fpr_0_1pct": 0.5714285714285714
+          },
+          "CTU-IoT-Malware-Capture-60-1": {
+            "family": "Gagfyt",
+            "n": 3581028,
+            "benign": 2476,
+            "malicious": 3578552,
+            "malware_rate": 0.9993085784305512,
+            "threshold": 1.0000000000000002,
+            "confusion_at_threshold": [
+              [
+                2476,
+                0
+              ],
+              [
+                3578552,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": 0.692248087119007,
+            "average_precision": 0.9995501181917121,
+            "oracle_tpr_at_fpr_1pct": 0.0,
+            "oracle_tpr_at_fpr_0_1pct": 0.0
+          }
+        },
+        "per_family": {
+          "benign": {
+            "n": 130,
+            "benign": 130,
+            "malicious": 0,
+            "malware_rate": 0.0,
+            "threshold": 1.0000000000000002,
+            "confusion_at_threshold": [
+              [
+                130,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": null,
+            "average_precision": null,
+            "oracle_tpr_at_fpr_1pct": null,
+            "oracle_tpr_at_fpr_0_1pct": null
+          },
+          "Torii": {
+            "n": 6495,
+            "benign": 6465,
+            "malicious": 30,
+            "malware_rate": 0.004618937644341801,
+            "threshold": 1.0000000000000002,
+            "confusion_at_threshold": [
+              [
+                6465,
+                0
+              ],
+              [
+                30,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": 0.9987522557360144,
+            "average_precision": 0.7236040218977402,
+            "oracle_tpr_at_fpr_1pct": 1.0,
+            "oracle_tpr_at_fpr_0_1pct": 0.5333333333333333
+          },
+          "Gagfyt": {
+            "n": 3581028,
+            "benign": 2476,
+            "malicious": 3578552,
+            "malware_rate": 0.9993085784305512,
+            "threshold": 1.0000000000000002,
+            "confusion_at_threshold": [
+              [
+                2476,
+                0
+              ],
+              [
+                3578552,
+                0
+              ]
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "roc_auc": 0.692248087119007,
+            "average_precision": 0.9995501181917121,
+            "oracle_tpr_at_fpr_1pct": 0.0,
+            "oracle_tpr_at_fpr_0_1pct": 0.0
+          }
+        },
+        "macro_capture_fpr": 0.0,
+        "macro_capture_recall": 0.0
+      }
+    }
+  }
+}

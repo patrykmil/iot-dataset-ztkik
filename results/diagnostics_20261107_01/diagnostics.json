@@ -1,0 +1,3034 @@
+{
+  "experiment_id": "15eb5ea381d74d8cb0a5a73e82ea170e",
+  "cap_per_capture": 100000,
+  "train": {
+    "0": {
+      "rows": 90629,
+      "numeric_quantiles": {
+        "duration": [
+          0.0,
+          0.0,
+          0.31029380559921094,
+          30007.123046875
+        ],
+        "orig_bytes": [
+          0.0,
+          0.0,
+          48.0,
+          8499.0
+        ],
+        "resp_bytes": [
+          0.0,
+          0.0,
+          48.0,
+          29096.0
+        ],
+        "orig_pkts": [
+          0.0,
+          1.0,
+          1.0,
+          654.0
+        ],
+        "resp_pkts": [
+          0.0,
+          0.0,
+          1.0,
+          348.0
+        ],
+        "orig_ip_bytes": [
+          0.0,
+          40.0,
+          120.0,
+          42791.0
+        ],
+        "resp_ip_bytes": [
+          0.0,
+          0.0,
+          76.0,
+          40172.0
+        ],
+        "missed_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "orig_p": [
+          3.0,
+          43763.0,
+          54580.0,
+          65506.0
+        ],
+        "resp_p": [
+          0.0,
+          4975.0,
+          58751.0,
+          65535.0
+        ],
+        "bytes_per_pkt": [
+          0.0,
+          0.0,
+          29.0,
+          348.0
+        ],
+        "resp_orig_ratio": [
+          0.0,
+          0.0,
+          1.0,
+          113.65625
+        ],
+        "bytes_total": [
+          0.0,
+          0.0,
+          96.0,
+          29352.0
+        ]
+      },
+      "top_categories": {
+        "proto": {
+          "udp": 46732,
+          "tcp": 41160,
+          "icmp": 2737
+        },
+        "service": {
+          "-": 88807,
+          "dns": 1738,
+          "ssh": 54,
+          "http": 27,
+          "ssl": 2
+        },
+        "conn_state": {
+          "S0": 79675,
+          "SF": 5323,
+          "OTH": 2751,
+          "REJ": 1642,
+          "S3": 873
+        },
+        "history": {
+          "D": 41442,
+          "S": 38231,
+          "Dd": 5288,
+          "-": 2737,
+          "Sr": 1642
+        }
+      }
+    },
+    "1": {
+      "rows": 1124437,
+      "numeric_quantiles": {
+        "duration": [
+          0.0,
+          0.0,
+          2.999891233444214,
+          22640.12109375
+        ],
+        "orig_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          1744830464.0
+        ],
+        "resp_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          171878.0
+        ],
+        "orig_pkts": [
+          0.0,
+          1.0,
+          6.0,
+          1305034.0
+        ],
+        "resp_pkts": [
+          0.0,
+          0.0,
+          0.0,
+          1454.0
+        ],
+        "orig_ip_bytes": [
+          0.0,
+          40.0,
+          320.0,
+          1781371392.0
+        ],
+        "resp_ip_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          178178.0
+        ],
+        "missed_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          20272.0
+        ],
+        "orig_p": [
+          0.0,
+          37615.0,
+          63420.0,
+          65535.0
+        ],
+        "resp_p": [
+          22.0,
+          2323.0,
+          52869.0,
+          59353.0
+        ],
+        "bytes_per_pkt": [
+          0.0,
+          0.0,
+          0.0,
+          1337.0
+        ],
+        "resp_orig_ratio": [
+          0.0,
+          0.0,
+          0.0,
+          1153.5435791015625
+        ],
+        "bytes_total": [
+          0.0,
+          0.0,
+          0.0,
+          1744830464.0
+        ]
+      },
+      "top_categories": {
+        "proto": {
+          "tcp": 1124001,
+          "udp": 436
+        },
+        "service": {
+          "-": 1120342,
+          "ssh": 3721,
+          "http": 367,
+          "irc": 7
+        },
+        "conn_state": {
+          "S0": 1119023,
+          "SF": 4591,
+          "REJ": 645,
+          "RSTR": 139,
+          "RSTO": 12
+        },
+        "history": {
+          "S": 1118587,
+          "ShAdDaFf": 3593,
+          "Sr": 645,
+          "D": 436,
+          "ShAdDafF": 289
+        }
+      }
+    }
+  },
+  "valid": {
+    "0": {
+      "rows": 80457,
+      "numeric_quantiles": {
+        "duration": [
+          0.0,
+          0.004339999984949827,
+          3.1531970500946045,
+          19576.59765625
+        ],
+        "orig_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          2886842.0
+        ],
+        "resp_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          336516352.0
+        ],
+        "orig_pkts": [
+          0.0,
+          1.0,
+          3.0,
+          123657.0
+        ],
+        "resp_pkts": [
+          0.0,
+          0.0,
+          0.0,
+          239484.0
+        ],
+        "orig_ip_bytes": [
+          0.0,
+          72.0,
+          180.0,
+          6527241.0
+        ],
+        "resp_ip_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          349618688.0
+        ],
+        "missed_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "orig_p": [
+          3.0,
+          46766.0,
+          59572.0,
+          64769.0
+        ],
+        "resp_p": [
+          0.0,
+          23.0,
+          23.0,
+          57621.0
+        ],
+        "bytes_per_pkt": [
+          0.0,
+          0.0,
+          0.0,
+          1155.6162109375
+        ],
+        "resp_orig_ratio": [
+          0.0,
+          0.0,
+          0.0,
+          500024.3125
+        ],
+        "bytes_total": [
+          0.0,
+          0.0,
+          0.0,
+          336517024.0
+        ]
+      },
+      "top_categories": {
+        "proto": {
+          "tcp": 79526,
+          "udp": 830,
+          "icmp": 101
+        },
+        "service": {
+          "-": 79530,
+          "dns": 528,
+          "http": 157,
+          "dhcp": 156,
+          "ssl": 86
+        },
+        "conn_state": {
+          "S0": 79504,
+          "SF": 615,
+          "OTH": 117,
+          "SH": 102,
+          "RSTR": 54
+        },
+        "history": {
+          "S": 79015,
+          "D": 484,
+          "Dd": 338,
+          "F": 102,
+          "-": 101
+        }
+      }
+    },
+    "1": {
+      "rows": 20917,
+      "numeric_quantiles": {
+        "duration": [
+          0.0,
+          3.4655048847198486,
+          4.954915237426758,
+          100.7664794921875
+        ],
+        "orig_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          57156247552.0
+        ],
+        "resp_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "orig_pkts": [
+          1.0,
+          3.0,
+          7.0,
+          88.0
+        ],
+        "resp_pkts": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "orig_ip_bytes": [
+          40.0,
+          120.0,
+          280.0,
+          4400.0
+        ],
+        "resp_ip_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "missed_bytes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "orig_p": [
+          1.0,
+          32644.0,
+          62277.0,
+          65535.0
+        ],
+        "resp_p": [
+          22.0,
+          80.0,
+          992.0,
+          992.0
+        ],
+        "bytes_per_pkt": [
+          0.0,
+          0.0,
+          0.0,
+          879655616.0
+        ],
+        "resp_orig_ratio": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "bytes_total": [
+          0.0,
+          0.0,
+          0.0,
+          57156247552.0
+        ]
+      },
+      "top_categories": {
+        "proto": {
+          "tcp": 20917
+        },
+        "service": {
+          "-": 20917
+        },
+        "conn_state": {
+          "RSTOS0": 20292,
+          "OTH": 617,
+          "S0": 8
+        },
+        "history": {
+          "I": 20292,
+          "DTT": 617,
+          "S": 8
+        }
+      }
+    }
+  },
+  "original_models": {
+    "lightgbm": {
+      "train": {
+        "n": 1215066,
+        "benign": 90629,
+        "malicious": 1124437,
+        "malware_rate": 0.9254122821311764,
+        "threshold": 1.0000000000000002,
+        "confusion_at_threshold": [
+          [
+            90629,
+            0
+          ],
+          [
+            1124437,
+            0
+          ]
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "roc_auc": 0.5,
+        "average_precision": 0.9254122821311764,
+        "oracle_tpr_at_fpr_1pct": 0.0,
+        "oracle_tpr_at_fpr_0_1pct": 0.0,
+        "unique_scores": 1,
+        "score_quantiles": {
+          "0": [
+            0.9254122821311765,
+            0.9254122821311765,
+            0.9254122821311765,
+            0.9254122821311765
+          ],
+          "1": [
+            0.9254122821311765,
+            0.9254122821311765,
+            0.9254122821311765,
+            0.9254122821311765
+          ]
+        }
+      },
+      "valid": {
+        "n": 101374,
+        "benign": 80457,
+        "malicious": 20917,
+        "malware_rate": 0.2063349576814568,
+        "threshold": 1.0000000000000002,
+        "confusion_at_threshold": [
+          [
+            80457,
+            0
+          ],
+          [
+            20917,
+            0
+          ]
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "roc_auc": 0.5,
+        "average_precision": 0.2063349576814568,
+        "oracle_tpr_at_fpr_1pct": 0.0,
+        "oracle_tpr_at_fpr_0_1pct": 0.0,
+        "unique_scores": 1,
+        "score_quantiles": {
+          "0": [
+            0.9254122821311765,
+            0.9254122821311765,
+            0.9254122821311765,
+            0.9254122821311765
+          ],
+          "1": [
+            0.9254122821311765,
+            0.9254122821311765,
+            0.9254122821311765,
+            0.9254122821311765
+          ]
+        }
+      }
+    },
+    "logistic": {
+      "train": {
+        "n": 1215066,
+        "benign": 90629,
+        "malicious": 1124437,
+        "malware_rate": 0.9254122821311764,
+        "threshold": 0.7062768340110779,
+        "confusion_at_threshold": [
+          [
+            86290,
+            4339
+          ],
+          [
+            332511,
+            791926
+          ]
+        ],
+        "precision": 0.9945508090899386,
+        "recall": 0.7042866785778127,
+        "f1": 0.824621414462004,
+        "fpr": 0.0478765075196681,
+        "roc_auc": 0.9371672063620318,
+        "average_precision": 0.9937672212639284,
+        "oracle_tpr_at_fpr_1pct": 0.3688912762564732,
+        "oracle_tpr_at_fpr_0_1pct": 0.16279791575695216,
+        "unique_scores": 237213,
+        "score_quantiles": {
+          "0": [
+            1.2709409618613188e-15,
+            0.011302505619823933,
+            0.6594642281532288,
+            0.9990633130073547
+          ],
+          "1": [
+            8.490282180648526e-14,
+            0.8494691252708435,
+            0.9985398054122925,
+            1.0
+          ]
+        }
+      },
+      "valid": {
+        "n": 101374,
+        "benign": 80457,
+        "malicious": 20917,
+        "malware_rate": 0.2063349576814568,
+        "threshold": 0.7062768340110779,
+        "confusion_at_threshold": [
+          [
+            79742,
+            715
+          ],
+          [
+            16837,
+            4080
+          ]
+        ],
+        "precision": 0.8508863399374348,
+        "recall": 0.19505665248362575,
+        "f1": 0.31736154324828875,
+        "fpr": 0.00888673452900307,
+        "roc_auc": 0.23805189113345296,
+        "average_precision": 0.2998780073795623,
+        "oracle_tpr_at_fpr_1pct": 0.19505665248362575,
+        "oracle_tpr_at_fpr_0_1pct": 0.07027776449777692,
+        "unique_scores": 72335,
+        "score_quantiles": {
+          "0": [
+            3.794394453317032e-26,
+            0.6000452637672424,
+            0.7024141430854798,
+            1.0
+          ],
+          "1": [
+            6.875841906619009e-20,
+            0.1774834394454956,
+            0.949315893650055,
+            0.9995866417884827
+          ]
+        }
+      }
+    },
+    "mlp": {
+      "train": {
+        "n": 1215066,
+        "benign": 90629,
+        "malicious": 1124437,
+        "malware_rate": 0.9254122821311764,
+        "threshold": 0.9152829647064209,
+        "confusion_at_threshold": [
+          [
+            90564,
+            65
+          ],
+          [
+            446210,
+            678227
+          ]
+        ],
+        "precision": 0.9999041710649691,
+        "recall": 0.6031702976689668,
+        "f1": 0.7524447656858019,
+        "fpr": 0.0007172097231570468,
+        "roc_auc": 0.9555043468023141,
+        "average_precision": 0.9961122970970632,
+        "oracle_tpr_at_fpr_1pct": 0.6795738667439795,
+        "oracle_tpr_at_fpr_0_1pct": 0.6067347481450717,
+        "unique_scores": 313149,
+        "score_quantiles": {
+          "0": [
+            9.71146505435172e-07,
+            0.0008989401394501328,
+            0.4694903790950775,
+            0.9738562703132629
+          ],
+          "1": [
+            9.058618161361665e-05,
+            0.9573915004730225,
+            0.9972615242004395,
+            1.0
+          ]
+        }
+      },
+      "valid": {
+        "n": 101374,
+        "benign": 80457,
+        "malicious": 20917,
+        "malware_rate": 0.2063349576814568,
+        "threshold": 0.9152829647064209,
+        "confusion_at_threshold": [
+          [
+            79694,
+            763
+          ],
+          [
+            20375,
+            542
+          ]
+        ],
+        "precision": 0.4153256704980843,
+        "recall": 0.02591193765836401,
+        "f1": 0.04878048780487805,
+        "fpr": 0.009483326497383695,
+        "roc_auc": 0.10443185399546982,
+        "average_precision": 0.13659623947528435,
+        "oracle_tpr_at_fpr_1pct": 0.02591193765836401,
+        "oracle_tpr_at_fpr_0_1pct": 0.024095233542094946,
+        "unique_scores": 73458,
+        "score_quantiles": {
+          "0": [
+            2.2638570840172179e-07,
+            0.7943660020828247,
+            0.9098336458206177,
+            1.0
+          ],
+          "1": [
+            0.004042122513055801,
+            0.3440302610397339,
+            0.8761060357093812,
+            0.9952310919761658
+          ]
+        }
+      }
+    }
+  },
+  "lightgbm_backends": {
+    "cpu": {
+      "details": {
+        "parameters": {
+          "objective": "binary",
+          "metric": "auc",
+          "boosting_type": "gbdt",
+          "num_leaves": 127,
+          "min_data_in_leaf": 200,
+          "feature_fraction": 0.8,
+          "bagging_fraction": 0.8,
+          "bagging_freq": 5,
+          "lambda_l2": 1.0,
+          "learning_rate": 0.05,
+          "verbose": 1,
+          "seed": 42,
+          "num_threads": 4,
+          "use_quantized_grad": false,
+          "device_type": "cpu",
+          "scale_pos_weight": 0.08059944665641561
+        },
+        "best_iteration": 3,
+        "categories": {
+          "proto": [
+            "icmp",
+            "tcp",
+            "udp"
+          ],
+          "service": [
+            "-",
+            "dhcp",
+            "dns",
+            "http",
+            "irc",
+            "ssh",
+            "ssl"
+          ],
+          "conn_state": [
+            "OTH",
+            "REJ",
+            "RSTO",
+            "RSTOS0",
+            "RSTR",
+            "RSTRH",
+            "S0",
+            "S1",
+            "S2",
+            "S3",
+            "SF",
+            "SH"
+          ],
+          "history": [
+            "-",
+            "Aa",
+            "Ar",
+            "D",
+            "D^",
+            "DaFfA",
+            "Dd",
+            "DdA",
+            "DdAa",
+            "DdAaFf",
+            "F",
+            "Fa",
+            "HaDdAfF",
+            "HaDdR",
+            "R",
+            "S",
+            "SahAdDFf",
+            "SahAdDtFf",
+            "ShA",
+            "ShADF",
+            "ShADFa",
+            "ShADFaR",
+            "ShADFadfR",
+            "ShADFar",
+            "ShADFdRt",
+            "ShADFfR",
+            "ShADFr",
+            "ShADa",
+            "ShADaR",
+            "ShADad",
+            "ShADadFf",
+            "ShADadRf",
+            "ShADadf",
+            "ShADadfF",
+            "ShADadfR",
+            "ShADadfrr",
+            "ShADadtFf",
+            "ShADadtfF",
+            "ShADadttFf",
+            "ShADadttfF",
+            "ShADafF",
+            "ShADafdtF",
+            "ShADafr",
+            "ShADar",
+            "ShADard",
+            "ShADda",
+            "ShADdaf",
+            "ShADdafF",
+            "ShADdfFa",
+            "ShADdfrFr",
+            "ShADfFa",
+            "ShADfFr",
+            "ShADfdtR",
+            "ShADfdtrFr",
+            "ShADfrF",
+            "ShADfrFr",
+            "ShADr",
+            "ShAF",
+            "ShAFa",
+            "ShAFdRfR",
+            "ShAa",
+            "ShAadDFR",
+            "ShAadDFRf",
+            "ShAadDFf",
+            "ShAdDFaf",
+            "ShAdDFf",
+            "ShAdDaF",
+            "ShAdDaFR",
+            "ShAdDaFRR",
+            "ShAdDaFRRRf",
+            "ShAdDaFRRf",
+            "ShAdDaFRRfR",
+            "ShAdDaFRf",
+            "ShAdDaFRfR",
+            "ShAdDaFRfRR",
+            "ShAdDaFRr",
+            "ShAdDaFT",
+            "ShAdDaFTf",
+            "ShAdDaFf",
+            "ShAdDaFfR",
+            "ShAdDaFfRR",
+            "ShAdDaFfr",
+            "ShAdDaFr",
+            "ShAdDaFrR",
+            "ShAdDaR",
+            "ShAdDaTFRf",
+            "ShAdDaTFf",
+            "ShAdDaTR",
+            "ShAdDaTfF",
+            "ShAdDaf",
+            "ShAdDafF",
+            "ShAdDafFr",
+            "ShAdDafrR",
+            "ShAdDaft",
+            "ShAdDaftF",
+            "ShAdDar",
+            "ShAdDarfR",
+            "ShAdDatFf",
+            "ShAdDatFr",
+            "ShAdDatR",
+            "ShAdDatfF",
+            "ShAdDatrfR",
+            "ShAdDfFa",
+            "ShAdDfFr",
+            "ShAdDr",
+            "ShAdDtaFf",
+            "ShAdDtafF",
+            "ShAdDtafFr",
+            "ShAdFaf",
+            "ShAdfDr",
+            "ShAdfFa",
+            "ShAdtDaFr",
+            "ShAdtDaFrR",
+            "ShAdtDafF",
+            "ShAfFa",
+            "ShAfdtDr",
+            "ShAr",
+            "ShR",
+            "ShwA",
+            "ShwAr",
+            "Sr",
+            "^aA",
+            "^d",
+            "^hR",
+            "^r"
+          ]
+        }
+      },
+      "validation": {
+        "n": 101374,
+        "benign": 80457,
+        "malicious": 20917,
+        "malware_rate": 0.2063349576814568,
+        "threshold": 0.9355834066634412,
+        "confusion_at_threshold": [
+          [
+            80273,
+            184
+          ],
+          [
+            19039,
+            1878
+          ]
+        ],
+        "precision": 0.9107662463627546,
+        "recall": 0.08978342974613951,
+        "f1": 0.16345358805866225,
+        "fpr": 0.0022869358787923986,
+        "roc_auc": 0.12270667782183173,
+        "average_precision": 0.20711729909228002,
+        "oracle_tpr_at_fpr_1pct": 0.08978342974613951,
+        "oracle_tpr_at_fpr_0_1pct": 0.0,
+        "unique_scores": 115,
+        "score_quantiles": {
+          "0": [
+            0.7709665641096758,
+            0.9253002255228897,
+            0.9354167789673778,
+            0.9357778112915753
+          ],
+          "1": [
+            0.8102361517953713,
+            0.8563364705040376,
+            0.9356893011902414,
+            0.9357614698212585
+          ]
+        }
+      },
+      "trees": 3,
+      "leaves": [
+        42,
+        57,
+        67
+      ]
+    },
+    "cuda": {
+      "details": {
+        "parameters": {
+          "objective": "binary",
+          "metric": "auc",
+          "boosting_type": "gbdt",
+          "num_leaves": 127,
+          "min_data_in_leaf": 200,
+          "feature_fraction": 0.8,
+          "bagging_fraction": 0.8,
+          "bagging_freq": 5,
+          "lambda_l2": 1.0,
+          "learning_rate": 0.05,
+          "verbose": 1,
+          "seed": 42,
+          "num_threads": 4,
+          "use_quantized_grad": false,
+          "device_type": "cuda",
+          "scale_pos_weight": 0.08059944665641561,
+          "gpu_device_id": 0
+        },
+        "best_iteration": 1,
+        "categories": {
+          "proto": [
+            "icmp",
+            "tcp",
+            "udp"
+          ],
+          "service": [
+            "-",
+            "dhcp",
+            "dns",
+            "http",
+            "irc",
+            "ssh",
+            "ssl"
+          ],
+          "conn_state": [
+            "OTH",
+            "REJ",
+            "RSTO",
+            "RSTOS0",
+            "RSTR",
+            "RSTRH",
+            "S0",
+            "S1",
+            "S2",
+            "S3",
+            "SF",
+            "SH"
+          ],
+          "history": [
+            "-",
+            "Aa",
+            "Ar",
+            "D",
+            "D^",
+            "DaFfA",
+            "Dd",
+            "DdA",
+            "DdAa",
+            "DdAaFf",
+            "F",
+            "Fa",
+            "HaDdAfF",
+            "HaDdR",
+            "R",
+            "S",
+            "SahAdDFf",
+            "SahAdDtFf",
+            "ShA",
+            "ShADF",
+            "ShADFa",
+            "ShADFaR",
+            "ShADFadfR",
+            "ShADFar",
+            "ShADFdRt",
+            "ShADFfR",
+            "ShADFr",
+            "ShADa",
+            "ShADaR",
+            "ShADad",
+            "ShADadFf",
+            "ShADadRf",
+            "ShADadf",
+            "ShADadfF",
+            "ShADadfR",
+            "ShADadfrr",
+            "ShADadtFf",
+            "ShADadtfF",
+            "ShADadttFf",
+            "ShADadttfF",
+            "ShADafF",
+            "ShADafdtF",
+            "ShADafr",
+            "ShADar",
+            "ShADard",
+            "ShADda",
+            "ShADdaf",
+            "ShADdafF",
+            "ShADdfFa",
+            "ShADdfrFr",
+            "ShADfFa",
+            "ShADfFr",
+            "ShADfdtR",
+            "ShADfdtrFr",
+            "ShADfrF",
+            "ShADfrFr",
+            "ShADr",
+            "ShAF",
+            "ShAFa",
+            "ShAFdRfR",
+            "ShAa",
+            "ShAadDFR",
+            "ShAadDFRf",
+            "ShAadDFf",
+            "ShAdDFaf",
+            "ShAdDFf",
+            "ShAdDaF",
+            "ShAdDaFR",
+            "ShAdDaFRR",
+            "ShAdDaFRRRf",
+            "ShAdDaFRRf",
+            "ShAdDaFRRfR",
+            "ShAdDaFRf",
+            "ShAdDaFRfR",
+            "ShAdDaFRfRR",
+            "ShAdDaFRr",
+            "ShAdDaFT",
+            "ShAdDaFTf",
+            "ShAdDaFf",
+            "ShAdDaFfR",
+            "ShAdDaFfRR",
+            "ShAdDaFfr",
+            "ShAdDaFr",
+            "ShAdDaFrR",
+            "ShAdDaR",
+            "ShAdDaTFRf",
+            "ShAdDaTFf",
+            "ShAdDaTR",
+            "ShAdDaTfF",
+            "ShAdDaf",
+            "ShAdDafF",
+            "ShAdDafFr",
+            "ShAdDafrR",
+            "ShAdDaft",
+            "ShAdDaftF",
+            "ShAdDar",
+            "ShAdDarfR",
+            "ShAdDatFf",
+            "ShAdDatFr",
+            "ShAdDatR",
+            "ShAdDatfF",
+            "ShAdDatrfR",
+            "ShAdDfFa",
+            "ShAdDfFr",
+            "ShAdDr",
+            "ShAdDtaFf",
+            "ShAdDtafF",
+            "ShAdDtafFr",
+            "ShAdFaf",
+            "ShAdfDr",
+            "ShAdfFa",
+            "ShAdtDaFr",
+            "ShAdtDaFrR",
+            "ShAdtDafF",
+            "ShAfFa",
+            "ShAfdtDr",
+            "ShAr",
+            "ShR",
+            "ShwA",
+            "ShwAr",
+            "Sr",
+            "^aA",
+            "^d",
+            "^hR",
+            "^r"
+          ]
+        }
+      },
+      "validation": {
+        "n": 101374,
+        "benign": 80457,
+        "malicious": 20917,
+        "malware_rate": 0.2063349576814568,
+        "threshold": 1.0000000000000002,
+        "confusion_at_threshold": [
+          [
+            80457,
+            0
+          ],
+          [
+            20917,
+            0
+          ]
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "roc_auc": 0.5,
+        "average_precision": 0.2063349576814568,
+        "oracle_tpr_at_fpr_1pct": 0.0,
+        "oracle_tpr_at_fpr_0_1pct": 0.0,
+        "unique_scores": 1,
+        "score_quantiles": {
+          "0": [
+            0.9254122821311765,
+            0.9254122821311765,
+            0.9254122821311765,
+            0.9254122821311765
+          ],
+          "1": [
+            0.9254122821311765,
+            0.9254122821311765,
+            0.9254122821311765,
+            0.9254122821311765
+          ]
+        }
+      },
+      "trees": 1,
+      "leaves": [
+        1
+      ]
+    }
+  },
+  "test_capture_samples": {
+    "CTU-Honeypot-Capture-4-1": {
+      "subset": "test_known",
+      "sampling": {
+        "source_counts": {
+          "benign": 452,
+          "malicious": 0
+        },
+        "sample_counts": {
+          "benign": 452,
+          "malicious": 0
+        },
+        "row_indices_sha256": "d97855299737985d270c9d2634123fde8848975638bd5636d7c9691645f30246"
+      },
+      "features": {
+        "0": {
+          "rows": 452,
+          "numeric_quantiles": {
+            "duration": [
+              0.0,
+              0.05408350005745888,
+              0.2703459858894348,
+              78840.328125
+            ],
+            "orig_bytes": [
+              0.0,
+              37.0,
+              1847.0,
+              2550936.0
+            ],
+            "resp_bytes": [
+              0.0,
+              100.0,
+              1519.1999999999996,
+              22995.0
+            ],
+            "orig_pkts": [
+              1.0,
+              1.0,
+              7.0,
+              8124.0
+            ],
+            "resp_pkts": [
+              0.0,
+              1.0,
+              7.0,
+              2667.0
+            ],
+            "orig_ip_bytes": [
+              62.0,
+              76.0,
+              2151.0,
+              2778408.0
+            ],
+            "resp_ip_bytes": [
+              0.0,
+              144.0,
+              1043.0,
+              129675.0
+            ],
+            "missed_bytes": [
+              0.0,
+              0.0,
+              0.0,
+              7363.0
+            ],
+            "orig_p": [
+              68.0,
+              52594.0,
+              60642.25,
+              60977.0
+            ],
+            "resp_p": [
+              53.0,
+              80.0,
+              443.0,
+              1900.0
+            ],
+            "bytes_per_pkt": [
+              0.0,
+              37.0,
+              307.8333435058594,
+              1470.5
+            ],
+            "resp_orig_ratio": [
+              0.0,
+              1.0,
+              9.147058486938477,
+              11.945945739746094
+            ],
+            "bytes_total": [
+              0.0,
+              169.0,
+              3386.0,
+              2550936.0
+            ]
+          },
+          "top_categories": {
+            "proto": {
+              "udp": 310,
+              "tcp": 142
+            },
+            "service": {
+              "-": 205,
+              "dns": 191,
+              "http": 54,
+              "dhcp": 2
+            },
+            "conn_state": {
+              "SF": 436,
+              "S0": 14,
+              "RSTR": 1,
+              "OTH": 1
+            },
+            "history": {
+              "Dd": 296,
+              "ShAFf": 76,
+              "ShADadfF": 23,
+              "ShADadtfF": 18,
+              "D": 14
+            }
+          }
+        },
+        "1": {
+          "rows": 0,
+          "numeric_quantiles": {
+            "duration": [],
+            "orig_bytes": [],
+            "resp_bytes": [],
+            "orig_pkts": [],
+            "resp_pkts": [],
+            "orig_ip_bytes": [],
+            "resp_ip_bytes": [],
+            "missed_bytes": [],
+            "orig_p": [],
+            "resp_p": [],
+            "bytes_per_pkt": [],
+            "resp_orig_ratio": [],
+            "bytes_total": []
+          },
+          "top_categories": {
+            "proto": {},
+            "service": {},
+            "conn_state": {},
+            "history": {}
+          }
+        }
+      },
+      "models": {
+        "lightgbm": {
+          "n": 452,
+          "benign": 452,
+          "malicious": 0,
+          "malware_rate": 0.0,
+          "threshold": 1.0000000000000002,
+          "confusion_at_threshold": [
+            [
+              452,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "roc_auc": null,
+          "average_precision": null,
+          "oracle_tpr_at_fpr_1pct": null,
+          "oracle_tpr_at_fpr_0_1pct": null,
+          "unique_scores": 1,
+          "score_quantiles": {
+            "0": [
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765
+            ]
+          }
+        },
+        "logistic": {
+          "n": 452,
+          "benign": 452,
+          "malicious": 0,
+          "malware_rate": 0.0,
+          "threshold": 0.7062768340110779,
+          "confusion_at_threshold": [
+            [
+              357,
+              95
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "fpr": 0.21017699115044247,
+          "roc_auc": null,
+          "average_precision": null,
+          "oracle_tpr_at_fpr_1pct": null,
+          "oracle_tpr_at_fpr_0_1pct": null,
+          "unique_scores": 436,
+          "score_quantiles": {
+            "0": [
+              2.88102603839685e-13,
+              2.328961468123225e-09,
+              0.9939657747745514,
+              1.0
+            ]
+          }
+        },
+        "mlp": {
+          "n": 452,
+          "benign": 452,
+          "malicious": 0,
+          "malware_rate": 0.0,
+          "threshold": 0.9152829647064209,
+          "confusion_at_threshold": [
+            [
+              437,
+              15
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "fpr": 0.033185840707964605,
+          "roc_auc": null,
+          "average_precision": null,
+          "oracle_tpr_at_fpr_1pct": null,
+          "oracle_tpr_at_fpr_0_1pct": null,
+          "unique_scores": 446,
+          "score_quantiles": {
+            "0": [
+              1.381954916723771e-06,
+              3.640462091425434e-05,
+              0.9092526257038116,
+              1.0
+            ]
+          }
+        }
+      }
+    },
+    "CTU-IoT-Malware-Capture-34-1": {
+      "subset": "test_known",
+      "sampling": {
+        "source_counts": {
+          "benign": 1923,
+          "malicious": 21222
+        },
+        "sample_counts": {
+          "benign": 1923,
+          "malicious": 21222
+        },
+        "row_indices_sha256": "21d204fb1ed0c3d1f372b90b0d75074170d853266380f9a6cb6bbf81e6c6bc7c"
+      },
+      "features": {
+        "0": {
+          "rows": 1923,
+          "numeric_quantiles": {
+            "duration": [
+              0.0,
+              0.0014929999597370625,
+              5.004160785675049,
+              502.919189453125
+            ],
+            "orig_bytes": [
+              0.0,
+              39.0,
+              78.0,
+              952.0
+            ],
+            "resp_bytes": [
+              0.0,
+              0.0,
+              48.0,
+              164266.0
+            ],
+            "orig_pkts": [
+              1.0,
+              1.0,
+              2.0,
+              5110.0
+            ],
+            "resp_pkts": [
+              0.0,
+              0.0,
+              1.0,
+              184.0
+            ],
+            "orig_ip_bytes": [
+              40.0,
+              76.0,
+              134.0,
+              204400.0
+            ],
+            "resp_ip_bytes": [
+              0.0,
+              0.0,
+              76.0,
+              168910.0
+            ],
+            "missed_bytes": [
+              0.0,
+              0.0,
+              0.0,
+              5792.0
+            ],
+            "orig_p": [
+              0.0,
+              123.0,
+              49882.8,
+              65279.0
+            ],
+            "resp_p": [
+              1.0,
+              123.0,
+              123.0,
+              123.0
+            ],
+            "bytes_per_pkt": [
+              0.0,
+              39.0,
+              48.0,
+              345.0
+            ],
+            "resp_orig_ratio": [
+              0.0,
+              0.0,
+              1.0,
+              1087.854248046875
+            ],
+            "bytes_total": [
+              0.0,
+              78.0,
+              96.0,
+              164417.0
+            ]
+          },
+          "top_categories": {
+            "proto": {
+              "udp": 1812,
+              "tcp": 111
+            },
+            "service": {
+              "-": 1717,
+              "dns": 192,
+              "http": 12,
+              "dhcp": 2
+            },
+            "conn_state": {
+              "S0": 1074,
+              "SF": 849
+            },
+            "history": {
+              "D": 976,
+              "Dd": 836,
+              "S": 98,
+              "ShADadttcfF": 3,
+              "ShADadtcfF": 3
+            }
+          }
+        },
+        "1": {
+          "rows": 21222,
+          "numeric_quantiles": {
+            "duration": [
+              0.0,
+              0.0,
+              3.1564475417137148,
+              48976.8203125
+            ],
+            "orig_bytes": [
+              0.0,
+              0.0,
+              62.0,
+              75546624.0
+            ],
+            "resp_bytes": [
+              0.0,
+              0.0,
+              243.0,
+              18031.0
+            ],
+            "orig_pkts": [
+              0.0,
+              0.0,
+              7.0,
+              18444.0
+            ],
+            "resp_pkts": [
+              0.0,
+              0.0,
+              6.0,
+              1070.0
+            ],
+            "orig_ip_bytes": [
+              0.0,
+              0.0,
+              447.0,
+              76063056.0
+            ],
+            "resp_ip_bytes": [
+              0.0,
+              0.0,
+              563.0,
+              74159.0
+            ],
+            "missed_bytes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "orig_p": [
+              0.0,
+              65279.0,
+              65279.0,
+              65279.0
+            ],
+            "resp_p": [
+              80.0,
+              80.0,
+              6667.0,
+              63798.0
+            ],
+            "bytes_per_pkt": [
+              0.0,
+              0.0,
+              8.333333015441895,
+              4096.0
+            ],
+            "resp_orig_ratio": [
+              0.0,
+              0.0,
+              3.240000009536743,
+              8.54468059539795
+            ],
+            "bytes_total": [
+              0.0,
+              0.0,
+              318.0,
+              75546624.0
+            ]
+          },
+          "top_categories": {
+            "proto": {
+              "tcp": 21220,
+              "udp": 2
+            },
+            "service": {
+              "-": 19581,
+              "irc": 1641
+            },
+            "conn_state": {
+              "OTH": 14260,
+              "S0": 5321,
+              "S3": 1584,
+              "RSTR": 53,
+              "S1": 4
+            },
+            "history": {
+              "C": 14252,
+              "S": 5319,
+              "ShAdDaf": 1477,
+              "ShAdDaft": 102,
+              "ShAdfDr": 48
+            }
+          }
+        }
+      },
+      "models": {
+        "lightgbm": {
+          "n": 23145,
+          "benign": 1923,
+          "malicious": 21222,
+          "malware_rate": 0.9169151004536616,
+          "threshold": 1.0000000000000002,
+          "confusion_at_threshold": [
+            [
+              1923,
+              0
+            ],
+            [
+              21222,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "roc_auc": 0.5,
+          "average_precision": 0.9169151004536616,
+          "oracle_tpr_at_fpr_1pct": 0.0,
+          "oracle_tpr_at_fpr_0_1pct": 0.0,
+          "unique_scores": 1,
+          "score_quantiles": {
+            "0": [
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765
+            ],
+            "1": [
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765
+            ]
+          }
+        },
+        "logistic": {
+          "n": 23145,
+          "benign": 1923,
+          "malicious": 21222,
+          "malware_rate": 0.9169151004536616,
+          "threshold": 0.7062768340110779,
+          "confusion_at_threshold": [
+            [
+              1904,
+              19
+            ],
+            [
+              18437,
+              2785
+            ]
+          ],
+          "precision": 0.9932239657631954,
+          "recall": 0.13123174064649892,
+          "f1": 0.2318321818030467,
+          "fpr": 0.009880395215808632,
+          "roc_auc": 0.6162624094257899,
+          "average_precision": 0.9563278464449783,
+          "oracle_tpr_at_fpr_1pct": 0.13123174064649892,
+          "oracle_tpr_at_fpr_0_1pct": 0.0,
+          "unique_scores": 7765,
+          "score_quantiles": {
+            "0": [
+              8.372055354749844e-14,
+              2.1361483248938384e-08,
+              0.4254237622022628,
+              1.0
+            ],
+            "1": [
+              1.4595945979634095e-11,
+              1.2335234487181879e-06,
+              0.769727098941803,
+              1.0
+            ]
+          }
+        },
+        "mlp": {
+          "n": 23145,
+          "benign": 1923,
+          "malicious": 21222,
+          "malware_rate": 0.9169151004536616,
+          "threshold": 0.9152829647064209,
+          "confusion_at_threshold": [
+            [
+              1902,
+              21
+            ],
+            [
+              21133,
+              89
+            ]
+          ],
+          "precision": 0.8090909090909091,
+          "recall": 0.004193761191216662,
+          "f1": 0.008344271516969811,
+          "fpr": 0.0109204368174727,
+          "roc_auc": 0.30861095342880723,
+          "average_precision": 0.9275019653276477,
+          "oracle_tpr_at_fpr_1pct": 0.0013665064555649798,
+          "oracle_tpr_at_fpr_0_1pct": 0.0,
+          "unique_scores": 7715,
+          "score_quantiles": {
+            "0": [
+              7.043545338092372e-06,
+              0.00013996867346577346,
+              0.3140696376562082,
+              1.0
+            ],
+            "1": [
+              1.6949250039033359e-06,
+              1.9058367115576402e-06,
+              0.7763178765773773,
+              1.0
+            ]
+          }
+        }
+      }
+    },
+    "CTU-Honeypot-Capture-7-1__Somfy-01": {
+      "subset": "test_unknown",
+      "sampling": {
+        "source_counts": {
+          "benign": 130,
+          "malicious": 0
+        },
+        "sample_counts": {
+          "benign": 130,
+          "malicious": 0
+        },
+        "row_indices_sha256": "d27961ba6788f7e9bb6d50cc564038abcbe904e5a77deb6cc22c9461c6e01cb3"
+      },
+      "features": {
+        "0": {
+          "rows": 130,
+          "numeric_quantiles": {
+            "duration": [
+              6.000000212225132e-06,
+              4.123054504394531,
+              180.40479125976563,
+              4537.4033203125
+            ],
+            "orig_bytes": [
+              0.0,
+              600.0,
+              6900.0,
+              179107.0
+            ],
+            "resp_bytes": [
+              0.0,
+              0.0,
+              70.79999999999984,
+              464134.0
+            ],
+            "orig_pkts": [
+              0.0,
+              6.0,
+              23.0,
+              2702.0
+            ],
+            "resp_pkts": [
+              0.0,
+              0.0,
+              2.0,
+              3137.0
+            ],
+            "orig_ip_bytes": [
+              0.0,
+              1164.0,
+              7544.0,
+              466302.0
+            ],
+            "resp_ip_bytes": [
+              0.0,
+              0.0,
+              126.79999999999984,
+              1075416.0
+            ],
+            "missed_bytes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "orig_p": [
+              8.0,
+              4096.0,
+              41551.0,
+              41551.0
+            ],
+            "resp_p": [
+              0.0,
+              135.0,
+              5353.0,
+              5353.0
+            ],
+            "bytes_per_pkt": [
+              0.0,
+              45.0,
+              300.0,
+              548.0
+            ],
+            "resp_orig_ratio": [
+              0.0,
+              0.0,
+              1.0,
+              3900.0
+            ],
+            "bytes_total": [
+              0.0,
+              600.0,
+              6900.0,
+              643241.0
+            ]
+          },
+          "top_categories": {
+            "proto": {
+              "udp": 71,
+              "icmp": 49,
+              "tcp": 10
+            },
+            "service": {
+              "-": 60,
+              "dns": 54,
+              "dhcp": 15,
+              "ssl": 1
+            },
+            "conn_state": {
+              "S0": 65,
+              "OTH": 49,
+              "SHR": 11,
+              "SF": 4,
+              "S1": 1
+            },
+            "history": {
+              "D": 65,
+              "-": 49,
+              "^f": 9,
+              "Dd": 4,
+              "^d": 2
+            }
+          }
+        },
+        "1": {
+          "rows": 0,
+          "numeric_quantiles": {
+            "duration": [],
+            "orig_bytes": [],
+            "resp_bytes": [],
+            "orig_pkts": [],
+            "resp_pkts": [],
+            "orig_ip_bytes": [],
+            "resp_ip_bytes": [],
+            "missed_bytes": [],
+            "orig_p": [],
+            "resp_p": [],
+            "bytes_per_pkt": [],
+            "resp_orig_ratio": [],
+            "bytes_total": []
+          },
+          "top_categories": {
+            "proto": {},
+            "service": {},
+            "conn_state": {},
+            "history": {}
+          }
+        }
+      },
+      "models": {
+        "lightgbm": {
+          "n": 130,
+          "benign": 130,
+          "malicious": 0,
+          "malware_rate": 0.0,
+          "threshold": 1.0000000000000002,
+          "confusion_at_threshold": [
+            [
+              130,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "roc_auc": null,
+          "average_precision": null,
+          "oracle_tpr_at_fpr_1pct": null,
+          "oracle_tpr_at_fpr_0_1pct": null,
+          "unique_scores": 1,
+          "score_quantiles": {
+            "0": [
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765
+            ]
+          }
+        },
+        "logistic": {
+          "n": 130,
+          "benign": 130,
+          "malicious": 0,
+          "malware_rate": 0.0,
+          "threshold": 0.7062768340110779,
+          "confusion_at_threshold": [
+            [
+              119,
+              11
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "fpr": 0.08461538461538462,
+          "roc_auc": null,
+          "average_precision": null,
+          "oracle_tpr_at_fpr_1pct": null,
+          "oracle_tpr_at_fpr_0_1pct": null,
+          "unique_scores": 123,
+          "score_quantiles": {
+            "0": [
+              1.4425925566423887e-26,
+              1.803988141091395e-07,
+              0.8215997368097304,
+              0.9999899864196777
+            ]
+          }
+        },
+        "mlp": {
+          "n": 130,
+          "benign": 130,
+          "malicious": 0,
+          "malware_rate": 0.0,
+          "threshold": 0.9152829647064209,
+          "confusion_at_threshold": [
+            [
+              128,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "fpr": 0.015384615384615385,
+          "roc_auc": null,
+          "average_precision": null,
+          "oracle_tpr_at_fpr_1pct": null,
+          "oracle_tpr_at_fpr_0_1pct": null,
+          "unique_scores": 122,
+          "score_quantiles": {
+            "0": [
+              4.4826620637650194e-08,
+              0.03851451352238655,
+              0.7694106698036194,
+              0.9990478157997131
+            ]
+          }
+        }
+      }
+    },
+    "CTU-IoT-Malware-Capture-20-1": {
+      "subset": "test_unknown",
+      "sampling": {
+        "source_counts": {
+          "benign": 3193,
+          "malicious": 16
+        },
+        "sample_counts": {
+          "benign": 3193,
+          "malicious": 16
+        },
+        "row_indices_sha256": "42a647c832a7aabc1a471ca5e2470f05054770f1c38f974208add7d8d73927df"
+      },
+      "features": {
+        "0": {
+          "rows": 3193,
+          "numeric_quantiles": {
+            "duration": [
+              0.0,
+              0.0027459999546408653,
+              5.005152606964112,
+              72.04340362548828
+            ],
+            "orig_bytes": [
+              0.0,
+              48.0,
+              78.0,
+              480.0
+            ],
+            "resp_bytes": [
+              0.0,
+              48.0,
+              48.0,
+              480.0
+            ],
+            "orig_pkts": [
+              0.0,
+              1.0,
+              2.0,
+              10.0
+            ],
+            "resp_pkts": [
+              0.0,
+              1.0,
+              1.0,
+              10.0
+            ],
+            "orig_ip_bytes": [
+              0.0,
+              76.0,
+              134.0,
+              760.0
+            ],
+            "resp_ip_bytes": [
+              0.0,
+              76.0,
+              76.0,
+              760.0
+            ],
+            "missed_bytes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "orig_p": [
+              123.0,
+              123.0,
+              53549.999999999985,
+              60974.0
+            ],
+            "resp_p": [
+              22.0,
+              123.0,
+              123.0,
+              5355.0
+            ],
+            "bytes_per_pkt": [
+              0.0,
+              48.0,
+              48.0,
+              48.0
+            ],
+            "resp_orig_ratio": [
+              0.0,
+              1.0,
+              1.0,
+              3.8717949390411377
+            ],
+            "bytes_total": [
+              0.0,
+              96.0,
+              96.0,
+              960.0
+            ]
+          },
+          "top_categories": {
+            "proto": {
+              "udp": 3192,
+              "tcp": 1
+            },
+            "service": {
+              "-": 2601,
+              "dns": 592
+            },
+            "conn_state": {
+              "SF": 2131,
+              "S0": 1061,
+              "OTH": 1
+            },
+            "history": {
+              "Dd": 2130,
+              "D": 1061,
+              "^d": 1,
+              "D^d": 1
+            }
+          }
+        },
+        "1": {
+          "rows": 16,
+          "numeric_quantiles": {
+            "duration": [
+              0.0,
+              1.0933845043182373,
+              42146.767578125,
+              44325.6171875
+            ],
+            "orig_bytes": [
+              0.0,
+              0.0,
+              18597.75,
+              19431.0
+            ],
+            "resp_bytes": [
+              0.0,
+              0.0,
+              18597.75,
+              19431.0
+            ],
+            "orig_pkts": [
+              1.0,
+              2.0,
+              8439.25,
+              8872.0
+            ],
+            "resp_pkts": [
+              0.0,
+              0.0,
+              8851.0,
+              9307.0
+            ],
+            "orig_ip_bytes": [
+              60.0,
+              120.0,
+              354829.25,
+              372893.0
+            ],
+            "resp_ip_bytes": [
+              0.0,
+              0.0,
+              372184.0,
+              388975.0
+            ],
+            "missed_bytes": [
+              0.0,
+              0.0,
+              2311.5,
+              4500.0
+            ],
+            "orig_p": [
+              38086.0,
+              38090.0,
+              38096.5,
+              38098.0
+            ],
+            "resp_p": [
+              443.0,
+              443.0,
+              443.0,
+              443.0
+            ],
+            "bytes_per_pkt": [
+              0.0,
+              0.0,
+              255.1564199924469,
+              1014.0
+            ],
+            "resp_orig_ratio": [
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "bytes_total": [
+              0.0,
+              0.0,
+              37195.5,
+              38862.0
+            ]
+          },
+          "top_categories": {
+            "proto": {
+              "tcp": 16
+            },
+            "service": {
+              "-": 16
+            },
+            "conn_state": {
+              "S0": 13,
+              "SF": 1,
+              "RSTR": 1,
+              "S1": 1
+            },
+            "history": {
+              "S": 13,
+              "ShADaCGdtfF": 1,
+              "ShADaCGr": 1,
+              "ShADCaGcgd": 1
+            }
+          }
+        }
+      },
+      "models": {
+        "lightgbm": {
+          "n": 3209,
+          "benign": 3193,
+          "malicious": 16,
+          "malware_rate": 0.004985976939856653,
+          "threshold": 1.0000000000000002,
+          "confusion_at_threshold": [
+            [
+              3193,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "roc_auc": 0.5,
+          "average_precision": 0.004985976939856653,
+          "oracle_tpr_at_fpr_1pct": 0.0,
+          "oracle_tpr_at_fpr_0_1pct": 0.0,
+          "unique_scores": 1,
+          "score_quantiles": {
+            "0": [
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765
+            ],
+            "1": [
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765
+            ]
+          }
+        },
+        "logistic": {
+          "n": 3209,
+          "benign": 3193,
+          "malicious": 16,
+          "malware_rate": 0.004985976939856653,
+          "threshold": 0.7062768340110779,
+          "confusion_at_threshold": [
+            [
+              3193,
+              0
+            ],
+            [
+              13,
+              3
+            ]
+          ],
+          "precision": 1.0,
+          "recall": 0.1875,
+          "f1": 0.3157894736842105,
+          "fpr": 0.0,
+          "roc_auc": 1.0,
+          "average_precision": 1.0,
+          "oracle_tpr_at_fpr_1pct": 1.0,
+          "oracle_tpr_at_fpr_0_1pct": 1.0,
+          "unique_scores": 1525,
+          "score_quantiles": {
+            "0": [
+              1.164241195583584e-14,
+              3.4265410508993455e-09,
+              0.0013479975750669837,
+              0.005426909774541855
+            ],
+            "1": [
+              0.5958821773529053,
+              0.6420190632343292,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "mlp": {
+          "n": 3209,
+          "benign": 3193,
+          "malicious": 16,
+          "malware_rate": 0.004985976939856653,
+          "threshold": 0.9152829647064209,
+          "confusion_at_threshold": [
+            [
+              3193,
+              0
+            ],
+            [
+              13,
+              3
+            ]
+          ],
+          "precision": 1.0,
+          "recall": 0.1875,
+          "f1": 0.3157894736842105,
+          "fpr": 0.0,
+          "roc_auc": 1.0,
+          "average_precision": 1.0,
+          "oracle_tpr_at_fpr_1pct": 1.0,
+          "oracle_tpr_at_fpr_0_1pct": 1.0,
+          "unique_scores": 1374,
+          "score_quantiles": {
+            "0": [
+              5.069285634817788e-06,
+              2.238583329017274e-05,
+              0.006239217799156904,
+              0.007952599786221981
+            ],
+            "1": [
+              0.7805583477020264,
+              0.8392493724822998,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      }
+    },
+    "CTU-IoT-Malware-Capture-21-1": {
+      "subset": "test_unknown",
+      "sampling": {
+        "source_counts": {
+          "benign": 3272,
+          "malicious": 14
+        },
+        "sample_counts": {
+          "benign": 3272,
+          "malicious": 14
+        },
+        "row_indices_sha256": "b8dcaab8450dffb71f0ad420720253f11e249cbf6adbd11404e5c1ab43f86f04"
+      },
+      "features": {
+        "0": {
+          "rows": 3272,
+          "numeric_quantiles": {
+            "duration": [
+              0.0,
+              0.000742000003810972,
+              5.005174160003662,
+              366.129638671875
+            ],
+            "orig_bytes": [
+              0.0,
+              45.0,
+              78.0,
+              3768.0
+            ],
+            "resp_bytes": [
+              0.0,
+              0.0,
+              81.59999999999854,
+              480.0
+            ],
+            "orig_pkts": [
+              1.0,
+              1.0,
+              2.0,
+              68.0
+            ],
+            "resp_pkts": [
+              0.0,
+              0.0,
+              1.0,
+              10.0
+            ],
+            "orig_ip_bytes": [
+              66.0,
+              76.0,
+              134.0,
+              5672.0
+            ],
+            "resp_ip_bytes": [
+              0.0,
+              0.0,
+              122.0,
+              760.0
+            ],
+            "missed_bytes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "orig_p": [
+              3.0,
+              37276.0,
+              58480.95,
+              60964.0
+            ],
+            "resp_p": [
+              0.0,
+              53.0,
+              123.0,
+              123.0
+            ],
+            "bytes_per_pkt": [
+              0.0,
+              39.0,
+              48.0,
+              55.411766052246094
+            ],
+            "resp_orig_ratio": [
+              0.0,
+              0.0,
+              1.0,
+              12.222222328186035
+            ],
+            "bytes_total": [
+              0.0,
+              78.0,
+              133.0,
+              3768.0
+            ]
+          },
+          "top_categories": {
+            "proto": {
+              "udp": 3270,
+              "tcp": 1,
+              "icmp": 1
+            },
+            "service": {
+              "dns": 1924,
+              "-": 1348
+            },
+            "conn_state": {
+              "S0": 1733,
+              "SF": 1537,
+              "OTH": 2
+            },
+            "history": {
+              "D": 1733,
+              "Dd": 1537,
+              "^dDA": 1,
+              "-": 1
+            }
+          }
+        },
+        "1": {
+          "rows": 14,
+          "numeric_quantiles": {
+            "duration": [
+              0.0,
+              2.1480244994163513,
+              31052.134570312497,
+              33909.41015625
+            ],
+            "orig_bytes": [
+              0.0,
+              0.0,
+              15330.4,
+              16438.0
+            ],
+            "resp_bytes": [
+              0.0,
+              0.0,
+              15330.4,
+              16438.0
+            ],
+            "orig_pkts": [
+              1.0,
+              2.5,
+              6209.299999999999,
+              6793.0
+            ],
+            "resp_pkts": [
+              0.0,
+              0.0,
+              6490.7,
+              7129.0
+            ],
+            "orig_ip_bytes": [
+              60.0,
+              150.0,
+              261378.05,
+              285885.0
+            ],
+            "resp_ip_bytes": [
+              0.0,
+              0.0,
+              273208.3,
+              301794.0
+            ],
+            "missed_bytes": [
+              0.0,
+              0.0,
+              3493.299999999999,
+              5390.0
+            ],
+            "orig_p": [
+              41174.0,
+              41180.0,
+              41184.7,
+              41186.0
+            ],
+            "resp_p": [
+              443.0,
+              443.0,
+              443.0,
+              443.0
+            ],
+            "bytes_per_pkt": [
+              0.0,
+              0.0,
+              2.5753499150276182,
+              2.716387987136841
+            ],
+            "resp_orig_ratio": [
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "bytes_total": [
+              0.0,
+              0.0,
+              30660.8,
+              32876.0
+            ]
+          },
+          "top_categories": {
+            "proto": {
+              "tcp": 14
+            },
+            "service": {
+              "-": 14
+            },
+            "conn_state": {
+              "S0": 10,
+              "SF": 1,
+              "REJ": 1,
+              "S2": 1,
+              "S1": 1
+            },
+            "history": {
+              "S": 10,
+              "ShADCaGdfF": 1,
+              "Sr": 1,
+              "ShADaCGcgdF": 1,
+              "ShADaCGdt": 1
+            }
+          }
+        }
+      },
+      "models": {
+        "lightgbm": {
+          "n": 3286,
+          "benign": 3272,
+          "malicious": 14,
+          "malware_rate": 0.00426049908703591,
+          "threshold": 1.0000000000000002,
+          "confusion_at_threshold": [
+            [
+              3272,
+              0
+            ],
+            [
+              14,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "roc_auc": 0.5,
+          "average_precision": 0.00426049908703591,
+          "oracle_tpr_at_fpr_1pct": 0.0,
+          "oracle_tpr_at_fpr_0_1pct": 0.0,
+          "unique_scores": 1,
+          "score_quantiles": {
+            "0": [
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765
+            ],
+            "1": [
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765
+            ]
+          }
+        },
+        "logistic": {
+          "n": 3286,
+          "benign": 3272,
+          "malicious": 14,
+          "malware_rate": 0.00426049908703591,
+          "threshold": 0.7062768340110779,
+          "confusion_at_threshold": [
+            [
+              3272,
+              0
+            ],
+            [
+              11,
+              3
+            ]
+          ],
+          "precision": 1.0,
+          "recall": 0.21428571428571427,
+          "f1": 0.35294117647058826,
+          "fpr": 0.0,
+          "roc_auc": 1.0,
+          "average_precision": 1.0,
+          "oracle_tpr_at_fpr_1pct": 1.0,
+          "oracle_tpr_at_fpr_0_1pct": 1.0,
+          "unique_scores": 2218,
+          "score_quantiles": {
+            "0": [
+              1.732558459763625e-14,
+              1.62132964831585e-08,
+              0.0013479975750669837,
+              0.005411782301962376
+            ],
+            "1": [
+              0.007389497943222523,
+              0.6447678208351135,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "mlp": {
+          "n": 3286,
+          "benign": 3272,
+          "malicious": 14,
+          "malware_rate": 0.00426049908703591,
+          "threshold": 0.9152829647064209,
+          "confusion_at_threshold": [
+            [
+              3272,
+              0
+            ],
+            [
+              11,
+              3
+            ]
+          ],
+          "precision": 1.0,
+          "recall": 0.21428571428571427,
+          "f1": 0.35294117647058826,
+          "fpr": 0.0,
+          "roc_auc": 0.9999781697520084,
+          "average_precision": 0.9952380952380953,
+          "oracle_tpr_at_fpr_1pct": 1.0,
+          "oracle_tpr_at_fpr_0_1pct": 1.0,
+          "unique_scores": 2192,
+          "score_quantiles": {
+            "0": [
+              7.895532689872198e-06,
+              0.00013996867346577346,
+              0.007593107456341386,
+              0.771728515625
+            ],
+            "1": [
+              0.04395005479454994,
+              0.8426933586597443,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      }
+    },
+    "CTU-IoT-Malware-Capture-60-1": {
+      "subset": "test_unknown",
+      "sampling": {
+        "source_counts": {
+          "benign": 2476,
+          "malicious": 3578552
+        },
+        "sample_counts": {
+          "benign": 69,
+          "malicious": 99931
+        },
+        "row_indices_sha256": "eaee521ba08a3b9d188943c92cb83ce81b798e04d7adf5ea371b2c9fa9b9d864"
+      },
+      "features": {
+        "0": {
+          "rows": 69,
+          "numeric_quantiles": {
+            "duration": [
+              0.0,
+              0.0,
+              0.004391999915242193,
+              0.01524600014090538
+            ],
+            "orig_bytes": [
+              0.0,
+              0.0,
+              96.0,
+              96.0
+            ],
+            "resp_bytes": [
+              0.0,
+              0.0,
+              96.0,
+              96.0
+            ],
+            "orig_pkts": [
+              0.0,
+              0.0,
+              2.0,
+              2.0
+            ],
+            "resp_pkts": [
+              0.0,
+              0.0,
+              2.0,
+              2.0
+            ],
+            "orig_ip_bytes": [
+              0.0,
+              0.0,
+              152.0,
+              152.0
+            ],
+            "resp_ip_bytes": [
+              0.0,
+              0.0,
+              152.0,
+              152.0
+            ],
+            "missed_bytes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "orig_p": [
+              123.0,
+              62336.0,
+              62336.0,
+              62336.0
+            ],
+            "resp_p": [
+              22.0,
+              563.0,
+              8080.0,
+              20000.0
+            ],
+            "bytes_per_pkt": [
+              0.0,
+              0.0,
+              48.0,
+              48.0
+            ],
+            "resp_orig_ratio": [
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "bytes_total": [
+              0.0,
+              0.0,
+              192.0,
+              192.0
+            ]
+          },
+          "top_categories": {
+            "proto": {
+              "tcp": 56,
+              "udp": 13
+            },
+            "service": {
+              "-": 69
+            },
+            "conn_state": {
+              "OTH": 56,
+              "S0": 8,
+              "SF": 5
+            },
+            "history": {
+              "^c": 56,
+              "D": 8,
+              "Dd": 5
+            }
+          }
+        },
+        "1": {
+          "rows": 99931,
+          "numeric_quantiles": {
+            "duration": [
+              0.0,
+              0.0,
+              0.0,
+              1.877776026725769
+            ],
+            "orig_bytes": [
+              0.0,
+              0.0,
+              0.0,
+              518.0
+            ],
+            "resp_bytes": [
+              0.0,
+              0.0,
+              0.0,
+              66.0
+            ],
+            "orig_pkts": [
+              0.0,
+              0.0,
+              0.0,
+              10.0
+            ],
+            "resp_pkts": [
+              0.0,
+              0.0,
+              0.0,
+              8.0
+            ],
+            "orig_ip_bytes": [
+              0.0,
+              0.0,
+              0.0,
+              1572.0
+            ],
+            "resp_ip_bytes": [
+              0.0,
+              0.0,
+              0.0,
+              540.0
+            ],
+            "missed_bytes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "orig_p": [
+              0.0,
+              32676.0,
+              62221.0,
+              65535.0
+            ],
+            "resp_p": [
+              17769.0,
+              62336.0,
+              62336.0,
+              62336.0
+            ],
+            "bytes_per_pkt": [
+              0.0,
+              0.0,
+              0.0,
+              51.79999923706055
+            ],
+            "resp_orig_ratio": [
+              0.0,
+              0.0,
+              0.0,
+              0.12741312384605408
+            ],
+            "bytes_total": [
+              0.0,
+              0.0,
+              0.0,
+              584.0
+            ]
+          },
+          "top_categories": {
+            "proto": {
+              "tcp": 99931
+            },
+            "service": {
+              "-": 99931
+            },
+            "conn_state": {
+              "OTH": 99929,
+              "RSTR": 1,
+              "REJ": 1
+            },
+            "history": {
+              "C": 99929,
+              "ShAdfDr": 1,
+              "Sr": 1
+            }
+          }
+        }
+      },
+      "models": {
+        "lightgbm": {
+          "n": 100000,
+          "benign": 69,
+          "malicious": 99931,
+          "malware_rate": 0.99931,
+          "threshold": 1.0000000000000002,
+          "confusion_at_threshold": [
+            [
+              69,
+              0
+            ],
+            [
+              99931,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "roc_auc": 0.5,
+          "average_precision": 0.99931,
+          "oracle_tpr_at_fpr_1pct": 0.0,
+          "oracle_tpr_at_fpr_0_1pct": 0.0,
+          "unique_scores": 1,
+          "score_quantiles": {
+            "0": [
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765
+            ],
+            "1": [
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765,
+              0.9254122821311765
+            ]
+          }
+        },
+        "logistic": {
+          "n": 100000,
+          "benign": 69,
+          "malicious": 99931,
+          "malware_rate": 0.99931,
+          "threshold": 0.7062768340110779,
+          "confusion_at_threshold": [
+            [
+              69,
+              0
+            ],
+            [
+              99931,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "roc_auc": 1.0,
+          "average_precision": 1.0,
+          "oracle_tpr_at_fpr_1pct": 1.0,
+          "oracle_tpr_at_fpr_0_1pct": 1.0,
+          "unique_scores": 48792,
+          "score_quantiles": {
+            "0": [
+              1.453407776352833e-07,
+              1.2643818081414793e-06,
+              5.432192665466573e-06,
+              5.432213129097363e-06
+            ],
+            "1": [
+              3.1639079679735005e-05,
+              3.3565152989467606e-05,
+              3.540753823472187e-05,
+              0.28161540627479553
+            ]
+          }
+        },
+        "mlp": {
+          "n": 100000,
+          "benign": 69,
+          "malicious": 99931,
+          "malware_rate": 0.99931,
+          "threshold": 0.9152829647064209,
+          "confusion_at_threshold": [
+            [
+              69,
+              0
+            ],
+            [
+              99931,
+              0
+            ]
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "roc_auc": 0.8840602914561773,
+          "average_precision": 0.9992722713360005,
+          "oracle_tpr_at_fpr_1pct": 2.0013809528574718e-05,
+          "oracle_tpr_at_fpr_0_1pct": 2.0013809528574718e-05,
+          "unique_scores": 50835,
+          "score_quantiles": {
+            "0": [
+              1.964935790965683e-06,
+              2.127623019987368e-06,
+              0.001556713948957622,
+              0.001556713948957622
+            ],
+            "1": [
+              0.0001991333847399801,
+              0.0003322160628158599,
+              0.0005169266951270401,
+              0.049567610025405884
+            ]
+          }
+        }
+      }
+    }
+  }
+}
