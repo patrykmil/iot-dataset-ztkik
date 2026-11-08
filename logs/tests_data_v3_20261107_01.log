@@ -1,0 +1,145 @@
+test_class_and_behavior_limits_preserve_rare_rows (test_data.SamplingTests.test_class_and_behavior_limits_preserve_rare_rows) ... ok
+test_insufficient_behavior_budget_is_rejected (test_data.SamplingTests.test_insufficient_behavior_budget_is_rejected) ... ok
+test_invalid_numeric_values_are_rejected (test_data.SamplingTests.test_invalid_numeric_values_are_rejected) ... ok
+test_old_parquet_missing_ports_is_rejected (test_data.SamplingTests.test_old_parquet_missing_ports_is_rejected) ... ok
+test_rare_class_survives_and_sampling_is_reproducible (test_data.SamplingTests.test_rare_class_survives_and_sampling_is_reproducible) ... ok
+test_small_and_single_class_capture (test_data.SamplingTests.test_small_and_single_class_capture) ... ok
+test_stratification_and_batch_boundaries (test_data.SamplingTests.test_stratification_and_batch_boundaries) ... ok
+test_training_rejects_old_parquet_without_details_but_evaluation_can_read_it (test_data.SamplingTests.test_training_rejects_old_parquet_without_details_but_evaluation_can_read_it) ... ok
+test_family_leak_is_rejected (test_data.SplitTests.test_family_leak_is_rejected) ... ok
+test_missing_required_capture_is_not_silently_ignored (test_data.SplitTests.test_missing_required_capture_is_not_silently_ignored) ... ok
+test_somfy_parts_cannot_cross_subsets (test_data.SplitTests.test_somfy_parts_cannot_cross_subsets) ... ok
+test_validation_has_separate_ddos_scanning_and_cc_captures (test_data.SplitTests.test_validation_has_separate_ddos_scanning_and_cc_captures) ... ok
+test_whole_family_and_somfy_parts_are_held_out (test_data.SplitTests.test_whole_family_and_somfy_parts_are_held_out) ... ok
+test_constant_scores_reveal_prevalence_baseline (test_diagnose.DiagnosticTests.test_constant_scores_reveal_prevalence_baseline) ... ok
+test_output_cannot_be_inside_artifacts (test_diagnose.DiagnosticTests.test_output_cannot_be_inside_artifacts) ... usage: diagnose.py [-h] output
+diagnose.py: error: katalog diagnostyki nie może znajdować się w artifacts
+ok
+test_single_class_distribution_is_valid_json (test_diagnose.DiagnosticTests.test_single_class_distribution_is_valid_json) ... ok
+test_all_benign_and_uniform_malicious_are_shared_reproducibly (test_evaluate.BenignMajorityTests.test_all_benign_and_uniform_malicious_are_shared_reproducibly) ... ok
+test_invalid_inputs_are_rejected (test_evaluate.BenignMajorityTests.test_invalid_inputs_are_rejected) ... ok
+test_no_oversampling_and_too_small_test_is_unavailable (test_evaluate.BenignMajorityTests.test_no_oversampling_and_too_small_test_is_unavailable) ... ok
+test_capture_names_for_both_somfy_layouts (test_featurize.ParserTests.test_capture_names_for_both_somfy_layouts) ... ok
+test_chunks_and_limit_are_source_row_based (test_featurize.ParserTests.test_chunks_and_limit_are_source_row_based) ... ok
+test_invalid_ports_and_zero_denominators (test_featurize.ParserTests.test_invalid_ports_and_zero_denominators) ... ok
+test_missing_header_label_and_malformed_rows_are_errors (test_featurize.ParserTests.test_missing_header_label_and_malformed_rows_are_errors) ... ok
+test_partial_conversion_merges_manifest (test_featurize.ParserTests.test_partial_conversion_merges_manifest) ... CTU-IoT-Malware-Capture-34-1: {'flows': 1, 'benign': 1, 'malicious': 0, 'malware_rate': 0.0, 'source_rows': 1, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {}}
+ok
+test_ports_labels_and_appended_annotations (test_featurize.ParserTests.test_ports_labels_and_appended_annotations) ... ok
+test_streaming_conversion_counts_and_failure_preserves_output (test_featurize.ParserTests.test_streaming_conversion_counts_and_failure_preserves_output) ... ok
+test_all_one_scores_have_finite_no_alarm_threshold (test_metrics.ThresholdTests.test_all_one_scores_have_finite_no_alarm_threshold) ... ok
+test_invalid_inputs_are_rejected (test_metrics.ThresholdTests.test_invalid_inputs_are_rejected) ... ok
+test_returned_rates_match_selected_threshold (test_metrics.ThresholdTests.test_returned_rates_match_selected_threshold) ... ok
+test_single_class_groups_still_report_operating_metrics (test_metrics.ThresholdTests.test_single_class_groups_still_report_operating_metrics) ... ok
+test_ties_cannot_be_split_to_claim_lower_fpr (test_metrics.ThresholdTests.test_ties_cannot_be_split_to_claim_lower_fpr) ... ok
+test_constant_model_is_rejected_before_saving (test_models.LightGBMTests.test_constant_model_is_rejected_before_saving) ... ok
+test_majority_malicious_uses_row_weights_and_learns (test_models.LightGBMTests.test_majority_malicious_uses_row_weights_and_learns) ... ok
+test_logistic_model_roundtrip (test_models.PreprocessingTests.test_logistic_model_roundtrip) ... [LightGBM] [Info] Number of positive: 360, number of negative: 40
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000117 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 2
+[LightGBM] [Info] Number of data points in the train set: 400, number of used features: 1
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Info] Start training from score 0.000000
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+Training until validation scores don't improve for 2 rounds
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+Early stopping, best iteration is:
+[1]	valid_0's auc: 1
+logistic epoch=1 valid_auc=1.000000
+logistic epoch=2 valid_auc=1.000000
+ok
+test_unknown_category_and_preprocessor_roundtrip (test_models.PreprocessingTests.test_unknown_category_and_preprocessor_roundtrip) ... /home/inf1s-22z/miler.patryk/ztk/projekt/iot23-detector/models.py:44: Pandas4Warning: Constructing a Categorical with a dtype and values containing non-null entries not in that dtype's categories is deprecated and will raise in a future version.
+  X[col] = X[col].astype("category") if categories is None else X[col].astype(
+ok
+test_all_three_models_train_reload_and_compare (test_pipeline.PipelineTests.test_all_three_models_train_reload_and_compare) ... {
+  "train": [
+    "CTU-IoT-Malware-Capture-43-1"
+  ],
+  "valid": [
+    "CTU-Honeypot-Capture-5-1",
+    "CTU-IoT-Malware-Capture-35-1",
+    "CTU-IoT-Malware-Capture-44-1",
+    "CTU-IoT-Malware-Capture-48-1"
+  ],
+  "test_known": [
+    "CTU-Honeypot-Capture-4-1",
+    "CTU-IoT-Malware-Capture-34-1"
+  ],
+  "test_unknown": [
+    "CTU-Honeypot-Capture-7-1__Somfy-01",
+    "CTU-IoT-Malware-Capture-20-1",
+    "CTU-IoT-Malware-Capture-21-1",
+    "CTU-IoT-Malware-Capture-60-1"
+  ]
+}
+CTU-IoT-Malware-Capture-43-1: próbka=30, klasy={'benign': 15, 'malicious': 15}
+CTU-Honeypot-Capture-5-1: próbka=30, klasy={'benign': 30, 'malicious': 0}
+CTU-IoT-Malware-Capture-35-1: próbka=30, klasy={'benign': 15, 'malicious': 15}
+CTU-IoT-Malware-Capture-44-1: próbka=30, klasy={'benign': 15, 'malicious': 15}
+CTU-IoT-Malware-Capture-48-1: próbka=30, klasy={'benign': 15, 'malicious': 15}
+Trening lightgbm, backend=cpu
+[LightGBM] [Info] Number of positive: 15, number of negative: 15
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000046 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4
+[LightGBM] [Info] Number of data points in the train set: 30, number of used features: 2
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+Training until validation scores don't improve for 2 rounds
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+Early stopping, best iteration is:
+[1]	valid_0's auc: 1
+lightgbm: valid ROC-AUC=1.000000, próg=0.51730078, FPR=0.000000, recall=1.000000
+Trening logistic, backend=cpu
+logistic epoch=1 valid_auc=1.000000
+logistic epoch=2 valid_auc=1.000000
+logistic: valid ROC-AUC=1.000000, próg=1, FPR=0.000000, recall=1.000000
+Trening mlp, backend=cpu
+mlp epoch=1 valid_auc=1.000000
+mlp epoch=2 valid_auc=1.000000
+mlp: valid ROC-AUC=1.000000, próg=0.4761813, FPR=0.000000, recall=1.000000
+Zapisano eksperyment: /home/inf1s-22z/miler.patryk/ztk/projekt/iot23-detector/results/data_v3_20261107_01/tmp/tmpfbtua1op/experiment.json. Następny krok: python evaluate.py
+lightgbm: oceniono CTU-Honeypot-Capture-4-1, n=120
+lightgbm: oceniono CTU-IoT-Malware-Capture-34-1, n=40
+lightgbm: oceniono CTU-Honeypot-Capture-7-1__Somfy-01, n=120
+lightgbm: oceniono CTU-IoT-Malware-Capture-20-1, n=40
+lightgbm: oceniono CTU-IoT-Malware-Capture-21-1, n=40
+lightgbm: oceniono CTU-IoT-Malware-Capture-60-1, n=40
+logistic: oceniono CTU-Honeypot-Capture-4-1, n=120
+logistic: oceniono CTU-IoT-Malware-Capture-34-1, n=40
+logistic: oceniono CTU-Honeypot-Capture-7-1__Somfy-01, n=120
+logistic: oceniono CTU-IoT-Malware-Capture-20-1, n=40
+logistic: oceniono CTU-IoT-Malware-Capture-21-1, n=40
+logistic: oceniono CTU-IoT-Malware-Capture-60-1, n=40
+mlp: oceniono CTU-Honeypot-Capture-4-1, n=120
+mlp: oceniono CTU-IoT-Malware-Capture-34-1, n=40
+mlp: oceniono CTU-Honeypot-Capture-7-1__Somfy-01, n=120
+mlp: oceniono CTU-IoT-Malware-Capture-20-1, n=40
+mlp: oceniono CTU-IoT-Malware-Capture-21-1, n=40
+mlp: oceniono CTU-IoT-Malware-Capture-60-1, n=40
+ok
+test_default_pipeline_runs_all_stages_from_another_directory (test_pipeline_script.PipelineScriptTests.test_default_pipeline_runs_all_stages_from_another_directory) ... ok
+test_failed_download_stops_before_training (test_pipeline_script.PipelineScriptTests.test_failed_download_stops_before_training) ... ok
+test_failure_stops_subsequent_stages_and_preserves_exit_code (test_pipeline_script.PipelineScriptTests.test_failure_stops_subsequent_stages_and_preserves_exit_code) ... ok
+test_missing_or_empty_raw_downloads_dataset_before_training (test_pipeline_script.PipelineScriptTests.test_missing_or_empty_raw_downloads_dataset_before_training) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 6.660s
+
+OK
+   model                         test  roc_auc  average_precision  recall  fpr  training_seconds  flows_per_second
+lightgbm                   test_known      1.0                1.0     1.0  0.0          0.014543      13841.892555
+lightgbm   test_known_benign_majority      1.0                1.0     1.0  0.0          0.014543               NaN
+lightgbm                 test_unknown      1.0                1.0     1.0  0.0          0.014543      11183.958536
+lightgbm test_unknown_benign_majority      1.0                1.0     1.0  0.0          0.014543               NaN
+logistic                   test_known      1.0                1.0     1.0  0.0          0.008246      12665.388209
+logistic   test_known_benign_majority      1.0                1.0     1.0  0.0          0.008246               NaN
+logistic                 test_unknown      1.0                1.0     1.0  0.0          0.008246       9876.872852
+logistic test_unknown_benign_majority      1.0                1.0     1.0  0.0          0.008246               NaN
+     mlp                   test_known      1.0                1.0     1.0  0.0          1.486244      12152.189156
+     mlp   test_known_benign_majority      1.0                1.0     1.0  0.0          1.486244               NaN
+     mlp                 test_unknown      1.0                1.0     1.0  0.0          1.486244       9650.900791
+     mlp test_unknown_benign_majority      1.0                1.0     1.0  0.0          1.486244               NaN

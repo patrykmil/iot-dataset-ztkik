@@ -83,17 +83,20 @@ def file_signature(capture):
     return {"bytes": stat.st_size, "mtime_ns": stat.st_mtime_ns, "rows": pq.ParquetFile(path).metadata.num_rows}
 
 
-def capture_batches(capture, batch_rows=C.BATCH_ROWS):
+def capture_batches(capture, batch_rows=C.BATCH_ROWS, include_details=False):
     path = C.PARQUET_DIR / f"{capture}.parquet"
     parquet = pq.ParquetFile(path)
-    missing = set(FEATURES + [C.LABEL]) - set(parquet.schema_arrow.names)
+    columns = FEATURES + [C.LABEL] + ([C.DETAILED_LABEL] if include_details else [])
+    missing = set(columns) - set(parquet.schema_arrow.names)
     if missing:
         raise ValueError(f"{capture}: brak kolumn {sorted(missing)}; powtórz featurize.py")
-    for batch in parquet.iter_batches(batch_size=batch_rows, columns=FEATURES + [C.LABEL], use_threads=False):
+    for batch in parquet.iter_batches(batch_size=batch_rows, columns=columns, use_threads=False):
         df = batch.to_pandas(use_threads=False)
         if df[C.LABEL].isna().any() or not df[C.LABEL].isin([0, 1]).all():
             raise ValueError(f"{capture}: etykiety muszą mieć wartości 0/1")
         df[C.LABEL] = df[C.LABEL].astype("int8")
+        if include_details:
+            df[C.DETAILED_LABEL] = df[C.DETAILED_LABEL].astype("string").fillna("-").str.strip().replace("", "-")
         for col in C.CATEGORICAL:
             df[col] = df[col].astype("string").fillna("-").astype(object)
         for col in C.NUMERIC:
@@ -106,47 +109,69 @@ def capture_batches(capture, batch_rows=C.BATCH_ROWS):
         yield df
 
 
-def sample_capture(capture, cap, seed=C.SEED):
+def behavior_quotas(counts, budget):
+    """Równe limity zachowań; niewykorzystany limit rzadkich etykiet trafia do pozostałych."""
+    if budget < len(counts):
+        raise ValueError(f"Limit klasy {budget} nie mieści {len(counts)} rodzajów ataku; zwiększ --cap-per-capture")
+    quotas = {}
+    for index, (label, count) in enumerate(sorted(counts.items(), key=lambda item: (item[1], item[0]))):
+        quotas[label] = min(count, budget // (len(counts) - index))
+        budget -= quotas[label]
+    return quotas
+
+
+def sample_capture(capture, cap, seed=C.SEED, balance=True):
     if cap < 2:
         raise ValueError("Limit na capture musi być >= 2")
     digest = hashlib.sha256(f"{seed}:{capture}".encode()).digest()
     rng = np.random.default_rng(int.from_bytes(digest[:8], "little"))
-    counts = [0, 0]
-    kept = [pd.DataFrame(), pd.DataFrame()]
+    counts, kept = {}, {}
+    reservoir_cap = cap // 2 if balance else cap
     offset = 0
-    for df in capture_batches(capture):
+    for df in capture_batches(capture, include_details=balance):
         df["_row"] = np.arange(offset, offset + len(df), dtype=np.int64)
         df["_key"] = rng.random(len(df))
+        df["_stratum"] = df[C.DETAILED_LABEL].where(df[C.LABEL] == 1, "-") if balance else "-"
         offset += len(df)
-        for label in (0, 1):
-            part = df[df[C.LABEL] == label]
-            counts[label] += len(part)
-            if len(part):
-                candidates = pd.concat([kept[label], part], ignore_index=True) if len(kept[label]) else part
-                kept[label] = candidates.nsmallest(cap, "_key")
-    total = sum(counts)
+        for stratum, part in df.groupby([C.LABEL, "_stratum"], sort=True):
+            counts[stratum] = counts.get(stratum, 0) + len(part)
+            candidates = pd.concat([kept[stratum], part], ignore_index=True) if stratum in kept else part
+            kept[stratum] = candidates.nsmallest(reservoir_cap, "_key")
+    class_counts = [sum(count for (label, _), count in counts.items() if label == value) for value in (0, 1)]
+    total = sum(class_counts)
     if not total:
         raise ValueError(f"{capture}: pusty Parquet")
-    size = min(cap, total)
-    positives = round(size * counts[1] / total)
-    if all(counts):
-        positives = max(1, min(size - 1, positives))
-    quotas = [size - positives, positives]
-    sample = pd.concat([kept[label].head(quotas[label]) for label in (0, 1)], ignore_index=True)
+    if balance:
+        class_quotas = [min(cap // 2, count) for count in class_counts]
+        positive_counts = {detail: count for (label, detail), count in counts.items() if label == 1}
+        quotas = {(1, detail): quota for detail, quota in behavior_quotas(positive_counts, class_quotas[1]).items()}
+        if class_counts[0]:
+            quotas[(0, "-")] = class_quotas[0]
+    else:
+        size = min(cap, total)
+        positives = round(size * class_counts[1] / total)
+        if all(class_counts):
+            positives = max(1, min(size - 1, positives))
+        class_quotas = [size - positives, positives]
+        quotas = {stratum: class_quotas[stratum[0]] for stratum in counts}
+    sample = pd.concat([kept[stratum].head(quotas[stratum]) for stratum in sorted(kept)], ignore_index=True)
     sample = sample.sort_values("_row").reset_index(drop=True)
     fingerprint = hashlib.sha256(sample["_row"].to_numpy(dtype="<i8").tobytes()).hexdigest()
     info = {
-        "source_counts": {"benign": counts[0], "malicious": counts[1]},
-        "sample_counts": {"benign": quotas[0], "malicious": quotas[1]},
+        "source_counts": {"benign": class_counts[0], "malicious": class_counts[1]},
+        "sample_counts": {"benign": class_quotas[0], "malicious": class_quotas[1]},
         "row_indices_sha256": fingerprint,
     }
-    return sample.drop(columns=["_row", "_key"]), info
+    if balance:
+        info["source_detailed_counts"] = positive_counts
+        info["sample_detailed_counts"] = {detail: quota for (label, detail), quota in quotas.items() if label == 1}
+    return sample.drop(columns=["_row", "_key", "_stratum"]), info
 
 
-def load_sample(captures, cap):
+def load_sample(captures, cap, balance=True):
     frames, info = [], {}
     for capture in captures:
-        frame, info[capture] = sample_capture(capture, cap)
+        frame, info[capture] = sample_capture(capture, cap, balance=balance)
         frames.append(frame)
         print(f"{capture}: próbka={len(frame)}, klasy={info[capture]['sample_counts']}", flush=True)
     df = pd.concat(frames, ignore_index=True)

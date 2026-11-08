@@ -1,0 +1,312 @@
+{
+  "CTU-Honeypot-Capture-4-1": {
+    "flows": 452,
+    "benign": 452,
+    "malicious": 0,
+    "malware_rate": 0.0,
+    "source_rows": 452,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {}
+  },
+  "CTU-Honeypot-Capture-5-1": {
+    "flows": 1374,
+    "benign": 1374,
+    "malicious": 0,
+    "malware_rate": 0.0,
+    "source_rows": 1374,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {}
+  },
+  "CTU-Honeypot-Capture-7-1__Somfy-01": {
+    "flows": 130,
+    "benign": 130,
+    "malicious": 0,
+    "malware_rate": 0.0,
+    "source_rows": 130,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {}
+  },
+  "CTU-IoT-Malware-Capture-1-1": {
+    "flows": 1008748,
+    "benign": 469275,
+    "malicious": 539473,
+    "malware_rate": 0.5347946166931682,
+    "source_rows": 1008748,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "PartOfAHorizontalPortScan": 539465,
+      "C&C": 8
+    }
+  },
+  "CTU-IoT-Malware-Capture-17-1": {
+    "flows": 54659855,
+    "benign": 31438,
+    "malicious": 54628417,
+    "malware_rate": 0.9994248429674758,
+    "source_rows": 54659855,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "PartOfAHorizontalPortScan": 27311187,
+      "Okiru": 13655215,
+      "DDoS": 13655172,
+      "C&C-HeartBeat": 6834,
+      "PartOfAHorizontalPortScan-Attack": 5,
+      "Attack": 4
+    }
+  },
+  "CTU-IoT-Malware-Capture-20-1": {
+    "flows": 3209,
+    "benign": 3193,
+    "malicious": 16,
+    "malware_rate": 0.004985976939856653,
+    "source_rows": 3209,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "C&C-Torii": 16
+    }
+  },
+  "CTU-IoT-Malware-Capture-21-1": {
+    "flows": 3286,
+    "benign": 3272,
+    "malicious": 14,
+    "malware_rate": 0.00426049908703591,
+    "source_rows": 3286,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "C&C-Torii": 14
+    }
+  },
+  "CTU-IoT-Malware-Capture-3-1": {
+    "flows": 156103,
+    "benign": 4536,
+    "malicious": 151567,
+    "malware_rate": 0.9709422624805417,
+    "source_rows": 156103,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "PartOfAHorizontalPortScan": 145597,
+      "Attack": 5962,
+      "C&C": 8
+    }
+  },
+  "CTU-IoT-Malware-Capture-33-1": {
+    "flows": 54454591,
+    "benign": 1380791,
+    "malicious": 53073800,
+    "malware_rate": 0.974643258269996,
+    "source_rows": 54454591,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "PartOfAHorizontalPortScan": 39459055,
+      "Okiru": 13609467,
+      "C&C-HeartBeat": 5278
+    }
+  },
+  "CTU-IoT-Malware-Capture-34-1": {
+    "flows": 23145,
+    "benign": 1923,
+    "malicious": 21222,
+    "malware_rate": 0.9169151004536616,
+    "source_rows": 23145,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "DDoS": 14394,
+      "C&C": 6706,
+      "PartOfAHorizontalPortScan": 122
+    }
+  },
+  "CTU-IoT-Malware-Capture-35-1": {
+    "flows": 10447787,
+    "benign": 8262389,
+    "malicious": 2185398,
+    "malware_rate": 0.20917329191339754,
+    "source_rows": 10447787,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "C&C": 81,
+      "C&C-FileDownload": 12,
+      "Attack": 3,
+      "DDoS": 2185302
+    }
+  },
+  "CTU-IoT-Malware-Capture-36-1": {
+    "flows": 13645098,
+    "benign": 2663,
+    "malicious": 13642435,
+    "malware_rate": 0.9998048383382809,
+    "source_rows": 13645098,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "Okiru": 13626744,
+      "C&C-HeartBeat": 15688,
+      "Okiru-Attack": 3
+    }
+  },
+  "CTU-IoT-Malware-Capture-39-1": {
+    "flows": 73568981,
+    "benign": 7337,
+    "malicious": 73561644,
+    "malware_rate": 0.9999002704686096,
+    "source_rows": 73568981,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "PartOfAHorizontalPortScan": 73559437,
+      "C&C": 1530,
+      "Attack": 677
+    }
+  },
+  "CTU-IoT-Malware-Capture-42-1": {
+    "flows": 4426,
+    "benign": 4420,
+    "malicious": 6,
+    "malware_rate": 0.0013556258472661546,
+    "source_rows": 4426,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "FileDownload": 3,
+      "C&C-FileDownload": 3
+    }
+  },
+  "CTU-IoT-Malware-Capture-43-1": {
+    "flows": 67321809,
+    "benign": 20574934,
+    "malicious": 46746875,
+    "malware_rate": 0.6943793652366056,
+    "source_rows": 67321809,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "PartOfAHorizontalPortScan": 37911674,
+      "Okiru": 8765885,
+      "C&C": 3498,
+      "C&C-FileDownload": 14,
+      "FileDownload": 1,
+      "DDoS": 65803
+    }
+  },
+  "CTU-IoT-Malware-Capture-44-1": {
+    "flows": 237,
+    "benign": 211,
+    "malicious": 26,
+    "malware_rate": 0.10970464135021098,
+    "source_rows": 237,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "C&C": 14,
+      "C&C-FileDownload": 11,
+      "DDoS": 1
+    }
+  },
+  "CTU-IoT-Malware-Capture-48-1": {
+    "flows": 3394338,
+    "benign": 3734,
+    "malicious": 3390604,
+    "malware_rate": 0.9988999327703959,
+    "source_rows": 3394338,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "PartOfAHorizontalPortScan": 3386119,
+      "Attack": 2752,
+      "C&C-HeartBeat-FileDownload": 11,
+      "C&C-PartOfAHorizontalPortScan": 888,
+      "C&C-HeartBeat-Attack": 834
+    }
+  },
+  "CTU-IoT-Malware-Capture-49-1": {
+    "flows": 5410561,
+    "benign": 3665,
+    "malicious": 5406896,
+    "malware_rate": 0.999322621073859,
+    "source_rows": 5410561,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "PartOfAHorizontalPortScan": 5404959,
+      "C&C": 1922,
+      "FileDownload": 14,
+      "C&C-FileDownload": 1
+    }
+  },
+  "CTU-IoT-Malware-Capture-52-1": {
+    "flows": 19781378,
+    "benign": 1794,
+    "malicious": 19779584,
+    "malware_rate": 0.9999093086437153,
+    "source_rows": 19781378,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "PartOfAHorizontalPortScan": 19779564,
+      "C&C-FileDownload": 12,
+      "C&C": 6,
+      "C&C-Mirai": 2
+    }
+  },
+  "CTU-IoT-Malware-Capture-60-1": {
+    "flows": 3581028,
+    "benign": 2476,
+    "malicious": 3578552,
+    "malware_rate": 0.9993085784305512,
+    "source_rows": 3581028,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "DDoS": 3578457,
+      "C&C-HeartBeat": 95
+    }
+  },
+  "CTU-IoT-Malware-Capture-7-1": {
+    "flows": 11454714,
+    "benign": 75955,
+    "malicious": 11378759,
+    "malware_rate": 0.993369105505384,
+    "source_rows": 11454714,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "Okiru": 11333397,
+      "C&C-HeartBeat": 5778,
+      "DDoS": 39584
+    }
+  },
+  "CTU-IoT-Malware-Capture-8-1": {
+    "flows": 10403,
+    "benign": 2181,
+    "malicious": 8222,
+    "malware_rate": 0.790348937806402,
+    "source_rows": 10403,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "C&C": 8222
+    }
+  },
+  "CTU-IoT-Malware-Capture-9-1": {
+    "flows": 6378293,
+    "benign": 22548,
+    "malicious": 6355745,
+    "malware_rate": 0.9964648848837769,
+    "source_rows": 6378293,
+    "dropped_labels": 0,
+    "limited": false,
+    "malicious_detailed_counts": {
+      "PartOfAHorizontalPortScan": 6355745
+    }
+  }
+}

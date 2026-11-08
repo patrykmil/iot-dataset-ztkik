@@ -1,0 +1,12 @@
+CTU-Honeypot-Capture-5-1 lightgbm {'n': 1374, 'malicious': 0, 'roc_auc': None, 'recall': None, 'fpr': 0.0}
+CTU-Honeypot-Capture-5-1 logistic {'n': 1374, 'malicious': 0, 'roc_auc': None, 'recall': None, 'fpr': 0.14992721979621543}
+CTU-Honeypot-Capture-5-1 mlp {'n': 1374, 'malicious': 0, 'roc_auc': None, 'recall': None, 'fpr': 0.039301310043668124}
+CTU-IoT-Malware-Capture-35-1 lightgbm {'n': 100000, 'malicious': 20917, 'roc_auc': 0.0007769058933546309, 'recall': 0.0, 'fpr': 0.0011633347242770253}
+CTU-IoT-Malware-Capture-35-1 logistic {'n': 100000, 'malicious': 20917, 'roc_auc': 0.030214146804082076, 'recall': 0.029497537887842425, 'fpr': 0.0}
+CTU-IoT-Malware-Capture-35-1 mlp {'n': 100000, 'malicious': 20917, 'roc_auc': 0.04540242679923433, 'recall': 0.029497537887842425, 'fpr': 0.004779788323659952}
+CTU-IoT-Malware-Capture-44-1 lightgbm {'n': 237, 'malicious': 26, 'roc_auc': 0.9998177178271965, 'recall': 0.0, 'fpr': 0.0}
+CTU-IoT-Malware-Capture-44-1 logistic {'n': 237, 'malicious': 26, 'roc_auc': 0.9598979219832302, 'recall': 0.46153846153846156, 'fpr': 0.0}
+CTU-IoT-Malware-Capture-44-1 mlp {'n': 237, 'malicious': 26, 'roc_auc': 0.99635435654393, 'recall': 0.5, 'fpr': 0.0}
+CTU-IoT-Malware-Capture-48-1 lightgbm {'n': 100000, 'malicious': 99890, 'roc_auc': 1.0, 'recall': 0.9987886675342877, 'fpr': 0.0}
+CTU-IoT-Malware-Capture-48-1 logistic {'n': 100000, 'malicious': 99890, 'roc_auc': 0.9999381137432994, 'recall': 0.9987886675342877, 'fpr': 0.0}
+CTU-IoT-Malware-Capture-48-1 mlp {'n': 100000, 'malicious': 99890, 'roc_auc': 0.9999798869665724, 'recall': 0.9987886675342877, 'fpr': 0.0}

@@ -93,10 +93,17 @@ i skonsultuj zgodny zestaw z administracją, zamiast zmieniać systemowy Toolkit
 
 ## Przygotowanie danych bez pobierania
 
-**Dotychczasowy parser pomijał porty** (`id.orig_p`/`id.resp_p`). Przed nowym treningiem
-ponownie wygeneruj Parquet z istniejących plików raw na serwerze:
+**Nowy trening wymaga kolumny `detailed-label` w Parquet.** Zachowujemy ją
+wyłącznie jako metadane próbkowania; nie trafia do modelu. Przed treningiem
+ponownie wygeneruj Parquet z istniejących raw.
+
+Niektóre oryginalne pliki IoT-23 (m.in. `34-1`) nazywają tę kolumnę `det_label`;
+parser mapuje ją na `detailed-label`, zachowując jej wartości.
+
+Aby zachować stary eksperyment:
 
 ```bash
+export DETECTOR_ARTIFACTS=results/data_v3/artifacts
 DETECTOR_THREADS=4 .venv/bin/python -u featurize.py raw/
 ```
 
@@ -110,7 +117,8 @@ raw/CTU-Honeypot-Capture-7-1/CTU-Honeypot-Capture-7-1__Somfy-01.conn.log.labeled
 ```
 
 Konwersja i zapis odbywają się partiami. Błąd parsera pozostawia poprzedni Parquet.
-Manifest jest aktualizowany po każdym capture, zawiera liczebności obu klas i liczbę
+Manifest jest aktualizowany po każdym capture, zawiera liczebności obu klas,
+rodzajów ataku (`malicious_detailed_counts`) i liczbę
 wierszy odrzuconych z powodu etykiety. Nieznane etykiety są pomijane, brak wymaganych
 kolumn, niepoprawne liczby i uszkodzone wiersze zatrzymują konwersję.
 Braki wartości liczbowych są zastępowane zerem, kategorii — `-`, jak w poprzednim pipeline.
@@ -133,9 +141,11 @@ mogą być niekompletne — sprawdź je przed konwersją.
 
 ## Podział i uczciwe porównanie
 
-Jawny podział w `config.py`, niezależny od wyników i kolejności manifestu:
+Jawny podział w `config.py`, ustalony przed nowym treningiem na podstawie
+rodzajów zachowań, nie przez dobieranie capture'ów pod wynik:
 
-- **Walidacja:** Mirai `35-1` + benign Amazon Echo `5-1`.
+- **Walidacja:** Mirai `35-1` (DDoS), `48-1` (skanowanie), `44-1`
+  (C&C/pobieranie plików) + benign Amazon Echo `5-1`.
 - **Test znanych rodzin:** Mirai `34-1` + benign Philips HUE `4-1`.
 - **Test nieznanych rodzin:** oba Torii (`20-1`, `21-1`), Gagfyt `60-1` i wszystkie
   dostępne części benign Somfy `7-1`.
@@ -146,10 +156,28 @@ Części Somfy należą do jednej grupy. Rodziny testu generalizacji nie mogą t
 treningu ani walidacji. Przed raportowaniem wyników zadbaj o kompletność całego datasetu;
 program dopuszcza brak innych, niewymaganych capture'ów treningowych i zapisuje ich listę.
 
-Train i valid są próbkowane stratyfikacyjnie do domyślnie **100 tys. flowów na capture**,
-z zachowaniem co najmniej jednego wiersza każdej obecnej klasy. Próbkowanie odczytuje
-cały plik partiami, utrzymując w pamięci ograniczony rezerwuar. Nadal oznacza to pełny
-skan dużego datasetu i może długo trwać. Test obejmuje **wszystkie flowy** odłożonych capture'ów.
+**Train:** domyślnie do **50 tys. benign i 50 tys. malicious na capture**
+(połowa `--cap-per-capture` na klasę). Nie uzupełniamy brakującej klasy kopiami
+ani dodatkowymi wierszami klasy dominującej. Limit malicious dzielimy równomiernie
+między szczegółowe etykiety; niewykorzystany limit rzadkiego rodzaju trafia do
+pozostałych. Zbyt mały limit, który nie mieści wszystkich obecnych rodzajów ataku,
+jest odrzucany. To zwiększa reprezentację rzadkich zachowań, ale nie gwarantuje
+balansu klas w całym treningu ani przewagi benign.
+
+**Valid:** zachowuje proporcje klas wewnątrz capture, do 100 tys. flowów na capture,
+z co najmniej jednym wierszem każdej obecnej klasy. Nie równoważymy rodzajów
+ataków na walidacji. Metoda i fingerprinty próbek są zapisane w `experiment.json`.
+
+Próbkowanie odczytuje cały plik partiami. Rezerwuar treningu utrzymuje do połowy
+limitu na szczegółową etykietę, więc pamięć rośnie z liczbą rodzajów zachowań,
+nie liczbą wierszy źródłowych. Pełny skan dużego datasetu może długo trwać.
+Test nadal obejmuje **wszystkie flowy** odłożonych capture'ów.
+
+Obecne testy zostały już użyte do diagnostyki. Nowy protokół jest oznaczony jako
+**rozwojowy** (`protocol.evaluation_role=development`), a nie niezależna ocena końcowa.
+Nie przenosimy capture'ów testowych do treningu. Do oceny końcowej i lepszego
+pokrycia benign potrzebne są nowe niezależne sesje czystych urządzeń oraz
+nieoglądany test. Nie generujemy ani nie powielamy benign zamiast takich danych.
 
 Preprocessing jest dopasowany tylko na treningu:
 - LightGBM: natywne kategorie, nowe wartości traktowane jako brak.
@@ -185,7 +213,9 @@ już istnieją, używa ich bez pobierania; częściowego datasetu nie uzupełnia
 Do jego uzupełnienia użyj opisanego wyżej `featurize.py --download`. Zatrzymuje
 się przy pierwszym błędzie. Działa również uruchomiony przez pełną ścieżkę z innego
 katalogu. Domyślnie używa `raw/` i 4 wątków; istniejące `DETECTOR_RAW` oraz
-`DETECTOR_THREADS` są respektowane. Nowy trening nadpisuje poprzedni eksperyment.
+`DETECTOR_THREADS` są respektowane. `DETECTOR_ARTIFACTS` wybiera osobny katalog
+Parquet, manifestu, modeli i raportów (ścieżka względna względem repozytorium).
+Nowy trening nadpisuje poprzedni eksperyment tylko w wybranym katalogu.
 
 Mniejszy eksperyment na początek:
 
@@ -225,6 +255,11 @@ Nie uruchamiaj kilku eksperymentów jednocześnie w tym samym katalogu artifacts
 
 ## Wyniki
 
+Ukończony przebieg rozwojowy v3 i jego ograniczenia opisano w
+[`results/data_v3_20261107_01/README.md`](results/data_v3_20261107_01/README.md).
+Modele i raporty tego przebiegu są w `results/data_v3_20261107_01/artifacts/`;
+dotychczasowe `artifacts/` nie zostało nadpisane.
+
 ```text
 artifacts/experiment.json          # podział, seed, liczebności, wersje, fingerprint próbki
 artifacts/preprocessor.joblib      # współdzielony preprocessing logistic/MLP
@@ -248,11 +283,24 @@ Próg każdego modelu jest wybierany **wyłącznie na walidacji**, maksymalizuj�
 FPR ≤ 1%, z uwzględnieniem remisów. Gdy żaden alarm nie spełnia limitu, wybierany jest
 próg ponad 1. Limit FPR nie jest gwarantowany na teście.
 
+Dla każdego pełnego testu raport zawiera także **kontrolowany wariant z co najmniej
+99% benign** (`benign_majority` w JSON, dodatkowe wiersze `_benign_majority` w CSV).
+Zachowuje wszystkie benign i losuje bez zwracania do `n_benign // 99` malicious,
+jednorodnie z całego testu, niezależnie od ocen modelu. Seed i fingerprint wyboru
+są wspólne dla wszystkich modeli. Próg pozostaje ten sam co na pełnym teście.
+Jeżeli brakuje danych do choć jednego malicious, wariant jest oznaczony jako
+niedostępny zamiast powielać wiersze. Złośliwe flowy rzadkich rodzin mogą nie trafić do tej małej
+próbki; ich pełne wyniki nadal są raportowane osobno. To kontrola proporcji,
+nie symulacja rzeczywistej sieci. Nie podajemy osobnej przepustowości dla wariantu,
+ponieważ wykorzystuje już obliczone oceny. Przykład: 9 071 benign pozwala na
+tylko 91 malicious, więc wyniki takiego testu mają dużą niepewność.
+
 Raport zawiera ROC-AUC, **Average Precision** (nie trapezową PR-AUC), precision, recall,
 F1, FPR i macierz `[[TN, FP], [FN, TP]]` przy zapisanym progu, a także wyniki per capture,
 per rodzina oraz średnie FPR/recall po capture'ach. AUC/AP dla grup jednoklasowych są
 `null`, ale ich FPR lub recall nadal są mierzone. `oracle_tpr_at_fpr_*` to diagnostyka
 krzywej testowej, **nie** wynik operacyjny progu ustalonego na walidacji.
+`average_precision_baseline` podaje udział malicious jako punkt odniesienia dla AP.
 
 Czas treningu obejmuje przygotowanie danych specyficzne dla modelu i zapis modelu,
 bez wspólnego próbkowania. Czas wspólnego preprocessingu jest osobno w experiment.json.

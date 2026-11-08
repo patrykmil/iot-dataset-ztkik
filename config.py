@@ -8,7 +8,7 @@ from pathlib import Path
 from threadcap import THREADS  # noqa: F401  (re-eksport, threadcap leci pierwszy)
 
 ROOT = Path(__file__).resolve().parent
-ART = ROOT / "artifacts"
+ART = ROOT / os.environ.get("DETECTOR_ARTIFACTS", "artifacts")
 RAW_DIR = Path(os.environ.get("DETECTOR_RAW", str(ROOT / "raw")))
 PARQUET_DIR = ART / "parquet"
 MANIFEST_PATH = ART / "manifest.json"
@@ -16,6 +16,7 @@ EXPERIMENT_PATH = ART / "experiment.json"
 
 SEED = 42
 LABEL = "label"
+DETAILED_LABEL = "detailed-label"  # metadane próbkowania, nigdy cecha modelu
 CAPTURE = "_capture"  # grupa anty-wyciekowa: jeden scenariusz = jedna grupa
 FAMILY = "_family"  # rodzina malware do ewaluacji generalizacji
 
@@ -73,7 +74,9 @@ FAMILY_OF = {
 }
 # Podział jawny, niezależny od wyników modeli. Wszystkie części Somfy są razem.
 VALID_CAPTURES = [
-    "CTU-IoT-Malware-Capture-35-1",
+    "CTU-IoT-Malware-Capture-35-1",  # DDoS
+    "CTU-IoT-Malware-Capture-48-1",  # skanowanie
+    "CTU-IoT-Malware-Capture-44-1",  # C&C / pobieranie plików
     "CTU-Honeypot-Capture-5-1",
 ]
 KNOWN_TEST_CAPTURES = [
@@ -86,6 +89,7 @@ GENERALIZATION_BENIGN = "CTU-Honeypot-Capture-7-1"
 TARGET_FPR = 0.01
 CAP_PER_CAPTURE = 100_000
 BATCH_ROWS = 100_000
+BENIGN_PER_MALICIOUS = 99  # dodatkowy kontrolowany test, bez powielania benign
 
 # Tylko jawnie wybrane cechy; IP, UID, czas i detailed-label nie wchodzą do modelu.
 CATEGORICAL = ["proto", "service", "conn_state", "history"]

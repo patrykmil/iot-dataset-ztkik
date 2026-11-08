@@ -1,0 +1,235 @@
+CTU-IoT-Malware-Capture-34-1: {'flows': 23145, 'benign': 1923, 'malicious': 21222, 'malware_rate': 0.9169151004536616, 'source_rows': 23145, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'DDoS': 14394, 'C&C': 6706, 'PartOfAHorizontalPortScan': 122}}
+CTU-IoT-Malware-Capture-35-1: {'flows': 10447787, 'benign': 8262389, 'malicious': 2185398, 'malware_rate': 0.20917329191339754, 'source_rows': 10447787, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'C&C': 81, 'C&C-FileDownload': 12, 'Attack': 3, 'DDoS': 2185302}}
+CTU-IoT-Malware-Capture-36-1: {'flows': 13645098, 'benign': 2663, 'malicious': 13642435, 'malware_rate': 0.9998048383382809, 'source_rows': 13645098, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'Okiru': 13626744, 'C&C-HeartBeat': 15688, 'Okiru-Attack': 3}}
+CTU-IoT-Malware-Capture-39-1: {'flows': 73568981, 'benign': 7337, 'malicious': 73561644, 'malware_rate': 0.9999002704686096, 'source_rows': 73568981, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'PartOfAHorizontalPortScan': 73559437, 'C&C': 1530, 'Attack': 677}}
+CTU-IoT-Malware-Capture-42-1: {'flows': 4426, 'benign': 4420, 'malicious': 6, 'malware_rate': 0.0013556258472661546, 'source_rows': 4426, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'FileDownload': 3, 'C&C-FileDownload': 3}}
+CTU-IoT-Malware-Capture-43-1: {'flows': 67321809, 'benign': 20574934, 'malicious': 46746875, 'malware_rate': 0.6943793652366056, 'source_rows': 67321809, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'PartOfAHorizontalPortScan': 37911674, 'Okiru': 8765885, 'C&C': 3498, 'C&C-FileDownload': 14, 'FileDownload': 1, 'DDoS': 65803}}
+CTU-IoT-Malware-Capture-44-1: {'flows': 237, 'benign': 211, 'malicious': 26, 'malware_rate': 0.10970464135021098, 'source_rows': 237, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'C&C': 14, 'C&C-FileDownload': 11, 'DDoS': 1}}
+CTU-IoT-Malware-Capture-48-1: {'flows': 3394338, 'benign': 3734, 'malicious': 3390604, 'malware_rate': 0.9988999327703959, 'source_rows': 3394338, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'PartOfAHorizontalPortScan': 3386119, 'Attack': 2752, 'C&C-HeartBeat-FileDownload': 11, 'C&C-PartOfAHorizontalPortScan': 888, 'C&C-HeartBeat-Attack': 834}}
+CTU-IoT-Malware-Capture-49-1: {'flows': 5410561, 'benign': 3665, 'malicious': 5406896, 'malware_rate': 0.999322621073859, 'source_rows': 5410561, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'PartOfAHorizontalPortScan': 5404959, 'C&C': 1922, 'FileDownload': 14, 'C&C-FileDownload': 1}}
+CTU-IoT-Malware-Capture-52-1: {'flows': 19781378, 'benign': 1794, 'malicious': 19779584, 'malware_rate': 0.9999093086437153, 'source_rows': 19781378, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'PartOfAHorizontalPortScan': 19779564, 'C&C-FileDownload': 12, 'C&C': 6, 'C&C-Mirai': 2}}
+CTU-IoT-Malware-Capture-60-1: {'flows': 3581028, 'benign': 2476, 'malicious': 3578552, 'malware_rate': 0.9993085784305512, 'source_rows': 3581028, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'DDoS': 3578457, 'C&C-HeartBeat': 95}}
+CTU-IoT-Malware-Capture-7-1: {'flows': 11454714, 'benign': 75955, 'malicious': 11378759, 'malware_rate': 0.993369105505384, 'source_rows': 11454714, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'Okiru': 11333397, 'C&C-HeartBeat': 5778, 'DDoS': 39584}}
+CTU-IoT-Malware-Capture-8-1: {'flows': 10403, 'benign': 2181, 'malicious': 8222, 'malware_rate': 0.790348937806402, 'source_rows': 10403, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'C&C': 8222}}
+CTU-IoT-Malware-Capture-9-1: {'flows': 6378293, 'benign': 22548, 'malicious': 6355745, 'malware_rate': 0.9964648848837769, 'source_rows': 6378293, 'dropped_labels': 0, 'limited': False, 'malicious_detailed_counts': {'PartOfAHorizontalPortScan': 6355745}}
+{
+  "train": [
+    "CTU-IoT-Malware-Capture-1-1",
+    "CTU-IoT-Malware-Capture-17-1",
+    "CTU-IoT-Malware-Capture-3-1",
+    "CTU-IoT-Malware-Capture-33-1",
+    "CTU-IoT-Malware-Capture-36-1",
+    "CTU-IoT-Malware-Capture-39-1",
+    "CTU-IoT-Malware-Capture-42-1",
+    "CTU-IoT-Malware-Capture-43-1",
+    "CTU-IoT-Malware-Capture-49-1",
+    "CTU-IoT-Malware-Capture-52-1",
+    "CTU-IoT-Malware-Capture-7-1",
+    "CTU-IoT-Malware-Capture-8-1",
+    "CTU-IoT-Malware-Capture-9-1"
+  ],
+  "valid": [
+    "CTU-Honeypot-Capture-5-1",
+    "CTU-IoT-Malware-Capture-35-1",
+    "CTU-IoT-Malware-Capture-44-1",
+    "CTU-IoT-Malware-Capture-48-1"
+  ],
+  "test_known": [
+    "CTU-Honeypot-Capture-4-1",
+    "CTU-IoT-Malware-Capture-34-1"
+  ],
+  "test_unknown": [
+    "CTU-Honeypot-Capture-7-1__Somfy-01",
+    "CTU-IoT-Malware-Capture-20-1",
+    "CTU-IoT-Malware-Capture-21-1",
+    "CTU-IoT-Malware-Capture-60-1"
+  ]
+}
+CTU-IoT-Malware-Capture-1-1: próbka=100000, klasy={'benign': 50000, 'malicious': 50000}
+CTU-IoT-Malware-Capture-17-1: próbka=81438, klasy={'benign': 31438, 'malicious': 50000}
+CTU-IoT-Malware-Capture-3-1: próbka=54536, klasy={'benign': 4536, 'malicious': 50000}
+CTU-IoT-Malware-Capture-33-1: próbka=100000, klasy={'benign': 50000, 'malicious': 50000}
+CTU-IoT-Malware-Capture-36-1: próbka=52663, klasy={'benign': 2663, 'malicious': 50000}
+CTU-IoT-Malware-Capture-39-1: próbka=57337, klasy={'benign': 7337, 'malicious': 50000}
+CTU-IoT-Malware-Capture-42-1: próbka=4426, klasy={'benign': 4420, 'malicious': 6}
+CTU-IoT-Malware-Capture-43-1: próbka=100000, klasy={'benign': 50000, 'malicious': 50000}
+CTU-IoT-Malware-Capture-49-1: próbka=53665, klasy={'benign': 3665, 'malicious': 50000}
+CTU-IoT-Malware-Capture-52-1: próbka=51794, klasy={'benign': 1794, 'malicious': 50000}
+CTU-IoT-Malware-Capture-7-1: próbka=100000, klasy={'benign': 50000, 'malicious': 50000}
+CTU-IoT-Malware-Capture-8-1: próbka=10403, klasy={'benign': 2181, 'malicious': 8222}
+CTU-IoT-Malware-Capture-9-1: próbka=72548, klasy={'benign': 22548, 'malicious': 50000}
+CTU-Honeypot-Capture-5-1: próbka=1374, klasy={'benign': 1374, 'malicious': 0}
+CTU-IoT-Malware-Capture-35-1: próbka=100000, klasy={'benign': 79083, 'malicious': 20917}
+CTU-IoT-Malware-Capture-44-1: próbka=237, klasy={'benign': 211, 'malicious': 26}
+CTU-IoT-Malware-Capture-48-1: próbka=100000, klasy={'benign': 110, 'malicious': 99890}
+Trening lightgbm, backend=cuda
+[LightGBM] [Warning] Using sparse features with CUDA is currently not supported.
+[LightGBM] [Info] Number of positive: 558228, number of negative: 280582
+[LightGBM] [Warning] Metric auc is not implemented in cuda version. Fall back to evaluation on CPU.
+[LightGBM] [Info] Total Bins 2540
+[LightGBM] [Info] Number of data points in the train set: 838810, number of used features: 16
+[LightGBM] [Warning] Metric auc is not implemented in cuda version. Fall back to evaluation on CPU.
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Info] Start training from score 0.000000
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 76 leaves.
+Training until validation scores don't improve for 50 rounds
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 83 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 83 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 78 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 74 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 78 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 52 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 54 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 81 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 57 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 92 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 78 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 92 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 54 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 100 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 84 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 57 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 82 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 103 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 83 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 82 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 88 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 86 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 85 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 82 leaves.
+[25]	valid_0's auc: 0.722097
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 94 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 88 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 114 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 43 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 90 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 108 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 90 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 99 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 83 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 95 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 95 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 80 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 114 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 100 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 67 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 120 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 99 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 65 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 91 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 94 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 67 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 112 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 87 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 87 leaves.
+[50]	valid_0's auc: 0.828165
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 116 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 116 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 61 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 88 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 119 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 88 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 110 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 116 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 95 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 97 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 73 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 60 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 96 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 92 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 122 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 110 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 92 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 95 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 93 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 93 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 97 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 68 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 97 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 100 leaves.
+[75]	valid_0's auc: 0.818318
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 73 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 95 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 93 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 96 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 125 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 96 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 105 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 111 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 72 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 96 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 68 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 102 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 100 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 70 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 104 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 110 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 78 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 83 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 117 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 100 leaves.
+[LightGBM] [Warning] No further splits with positive gain, training stopped with 100 leaves.
+Early stopping, best iteration is:
+[49]	valid_0's auc: 0.828167
+lightgbm: valid ROC-AUC=0.828167, próg=0.95710429, FPR=0.001139, recall=0.825677
+Trening logistic, backend=cpu
+logistic epoch=1 valid_auc=0.830961
+logistic epoch=2 valid_auc=0.830962
+logistic epoch=3 valid_auc=0.830965
+logistic epoch=4 valid_auc=0.831449
+logistic epoch=5 valid_auc=0.831707
+logistic epoch=6 valid_auc=0.831727
+logistic epoch=7 valid_auc=0.831733
+logistic epoch=8 valid_auc=0.831738
+logistic epoch=9 valid_auc=0.831739
+logistic epoch=10 valid_auc=0.831739
+logistic epoch=11 valid_auc=0.831740
+logistic epoch=12 valid_auc=0.831744
+logistic epoch=13 valid_auc=0.831752
+logistic epoch=14 valid_auc=0.831756
+logistic epoch=15 valid_auc=0.831754
+logistic epoch=16 valid_auc=0.831750
+logistic epoch=17 valid_auc=0.831743
+logistic epoch=18 valid_auc=0.831739
+logistic epoch=19 valid_auc=0.831738
+logistic: valid ROC-AUC=0.831756, próg=0.99049991, FPR=0.002550, recall=0.830882
+Trening mlp, backend=cuda
+mlp epoch=1 valid_auc=0.835778
+mlp epoch=2 valid_auc=0.833358
+mlp epoch=3 valid_auc=0.833314
+mlp epoch=4 valid_auc=0.833133
+mlp epoch=5 valid_auc=0.833220
+mlp epoch=6 valid_auc=0.832455
+mlp: valid ROC-AUC=0.835778, próg=0.98502499, FPR=0.005348, recall=0.830891
+Zapisano eksperyment: /home/inf1s-22z/miler.patryk/ztk/projekt/iot23-detector/results/data_v3_20261107_01/artifacts/experiment.json. Następny krok: python evaluate.py
+lightgbm: oceniono CTU-Honeypot-Capture-4-1, n=452
+lightgbm: oceniono CTU-IoT-Malware-Capture-34-1, n=23145
+lightgbm: oceniono CTU-Honeypot-Capture-7-1__Somfy-01, n=130
+lightgbm: oceniono CTU-IoT-Malware-Capture-20-1, n=3209
+lightgbm: oceniono CTU-IoT-Malware-Capture-21-1, n=3286
+lightgbm: oceniono CTU-IoT-Malware-Capture-60-1, n=3581028
+logistic: oceniono CTU-Honeypot-Capture-4-1, n=452
+logistic: oceniono CTU-IoT-Malware-Capture-34-1, n=23145
+logistic: oceniono CTU-Honeypot-Capture-7-1__Somfy-01, n=130
+logistic: oceniono CTU-IoT-Malware-Capture-20-1, n=3209
+logistic: oceniono CTU-IoT-Malware-Capture-21-1, n=3286
+logistic: oceniono CTU-IoT-Malware-Capture-60-1, n=3581028
+mlp: oceniono CTU-Honeypot-Capture-4-1, n=452
+mlp: oceniono CTU-IoT-Malware-Capture-34-1, n=23145
+mlp: oceniono CTU-Honeypot-Capture-7-1__Somfy-01, n=130
+mlp: oceniono CTU-IoT-Malware-Capture-20-1, n=3209
+mlp: oceniono CTU-IoT-Malware-Capture-21-1, n=3286
+mlp: oceniono CTU-IoT-Malware-Capture-60-1, n=3581028
+   model                         test  roc_auc  average_precision   recall      fpr  training_seconds  flows_per_second
+lightgbm                   test_known 0.960746           0.990516 0.005560 0.000842          3.904566     440956.178737
+lightgbm   test_known_benign_majority 0.963277           0.158725 0.000000 0.000842          3.904566               NaN
+lightgbm                 test_unknown 0.927738           0.999590 0.000000 0.000000          3.904566     934032.274275
+lightgbm test_unknown_benign_majority 0.929061           0.075885 0.000000 0.000000          3.904566               NaN
+logistic                   test_known 0.311200           0.912530 0.001131 0.034947          9.221326     509746.446156
+logistic   test_known_benign_majority 0.291588           0.017643 0.000000 0.034947          9.221326               NaN
+logistic                 test_unknown 0.218859           0.987712 0.000008 0.007937          9.221326     860819.916833
+logistic test_unknown_benign_majority 0.218829           0.006436 0.000000 0.007937          9.221326               NaN
+     mlp                   test_known 0.325795           0.911987 0.003016 0.033684          9.343010     140889.878206
+     mlp   test_known_benign_majority 0.304659           0.014820 0.000000 0.033684          9.343010               NaN
+     mlp                 test_unknown 0.292423           0.988977 0.000008 0.001323          9.343010     604201.566395
+     mlp test_unknown_benign_majority 0.294369           0.007016 0.000000 0.001323          9.343010               NaN

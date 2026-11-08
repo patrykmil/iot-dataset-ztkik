@@ -74,8 +74,9 @@ def main():
 
     cap = experiment["sampling"]["cap_per_capture"]
     print(f"Odtwarzam oryginalne próbki: cap={cap}", flush=True)
-    Xf, yf, fit_info = load_sample(experiment["split"]["train"], cap)
-    Xv, yv, valid_info = load_sample(experiment["split"]["valid"], cap)
+    balance = experiment["sampling"]["method"] == "class_behavior_priority_reservoir"
+    Xf, yf, fit_info = load_sample(experiment["split"]["train"], cap, balance=balance)
+    Xv, yv, valid_info = load_sample(experiment["split"]["valid"], cap, balance=False)
     # Samokontrola: oba backendy dostają dokładnie wiersze oryginalnego eksperymentu.
     assert fit_info == experiment["sampling"]["train"], "inna próbka treningowa"
     assert valid_info == experiment["sampling"]["valid"], "inna próbka walidacyjna"
@@ -125,7 +126,7 @@ def main():
     report["test_capture_samples"] = {}
     for subset in ("test_known", "test_unknown"):
         for capture in experiment["split"][subset]:
-            frame, info = sample_capture(capture, cap)
+            frame, info = sample_capture(capture, cap, balance=False)
             y = frame.pop(C.LABEL).to_numpy()
             capture_report = {"subset": subset, "sampling": info, "features": distribution(frame, y), "models": {}}
             for name in experiment["models"]:

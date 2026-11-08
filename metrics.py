@@ -52,6 +52,7 @@ def score_metrics(y, proba, threshold):
         "benign": int((y == 0).sum()),
         "malicious": int((y == 1).sum()),
         "malware_rate": float(y.mean()),
+        "average_precision_baseline": float(y.mean()),
         "threshold": threshold,
         **threshold_rates(y, proba, threshold),
         "roc_auc": None,

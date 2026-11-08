@@ -25,10 +25,11 @@ from data import FEATURES, family_of, write_json
 HREF_DIR = re.compile(r'href="([A-Za-z0-9._-]+/)"')
 DERIVED = ["bytes_per_pkt", "resp_orig_ratio", "bytes_total"]
 SOURCE_NUMERIC = [col for col in C.NUMERIC if col not in DERIVED]
+FIELD_NAMES = {"id.orig_p": "orig_p", "id.resp_p": "resp_p", "det_label": C.DETAILED_LABEL}
 SCHEMA = pa.schema(
     [(col, pa.string()) for col in C.CATEGORICAL]
     + [(col, pa.float32()) for col in C.NUMERIC]
-    + [(C.LABEL, pa.int8()), (C.CAPTURE, pa.string()), (C.FAMILY, pa.string())]
+    + [(C.LABEL, pa.int8()), (C.DETAILED_LABEL, pa.string()), (C.CAPTURE, pa.string()), (C.FAMILY, pa.string())]
 )
 
 
@@ -94,16 +95,16 @@ def download_capture(name, dest):
 def validate_fields(fields):
     if not fields or len(fields) != len(set(fields)):
         raise ValueError("Brak lub powielone pola w nagłówku #fields")
-    renamed = ["orig_p" if col == "id.orig_p" else "resp_p" if col == "id.resp_p" else col for col in fields]
+    renamed = [FIELD_NAMES.get(col, col) for col in fields]
     if len(renamed) != len(set(renamed)):
-        raise ValueError("Powielone pola po mapowaniu portów Zeek")
-    missing = set(C.CATEGORICAL + SOURCE_NUMERIC + [C.LABEL]) - set(renamed)
+        raise ValueError("Powielone pola po mapowaniu nazw Zeek")
+    missing = set(C.CATEGORICAL + SOURCE_NUMERIC + [C.LABEL, C.DETAILED_LABEL]) - set(renamed)
     if missing:
         raise ValueError(f"Brak wymaganych pól Zeek: {sorted(missing)}")
 
 
 def engineer(df):
-    df = df.rename(columns={"id.orig_p": "orig_p", "id.resp_p": "resp_p"}).copy()
+    df = df.rename(columns=FIELD_NAMES).copy()
     missing = set(C.CATEGORICAL + SOURCE_NUMERIC) - set(df.columns)
     if missing:
         raise ValueError(f"Brak cech: {sorted(missing)}")
@@ -143,9 +144,10 @@ def parse_block(lines, fields, sep, capture):
     y[labels.eq("benign").fillna(False)] = 0
     df = engineer(df.loc[y != -1].copy())
     df[C.LABEL] = y[y != -1]
+    df[C.DETAILED_LABEL] = df[C.DETAILED_LABEL].astype("string").fillna("-").str.strip().replace("", "-")
     df[C.CAPTURE] = capture
     df[C.FAMILY] = family_of(capture)
-    return df[FEATURES + [C.LABEL, C.CAPTURE, C.FAMILY]]
+    return df[FEATURES + [C.LABEL, C.DETAILED_LABEL, C.CAPTURE, C.FAMILY]]
 
 
 def parse_zeek(path, capture, limit=None, block=C.BATCH_ROWS):
@@ -190,13 +192,15 @@ def parse_zeek(path, capture, limit=None, block=C.BATCH_ROWS):
 def convert(path, capture, out_path, limit=None):
     out_path.parent.mkdir(parents=True, exist_ok=True)
     temporary = out_path.with_name(out_path.name + ".tmp")
-    counts, source_rows = [0, 0], 0
+    counts, source_rows, detailed_counts = [0, 0], 0, {}
     try:
         with pq.ParquetWriter(temporary, SCHEMA, compression="snappy") as writer:
             for df, read in parse_zeek(path, capture, limit):
                 source_rows += read
                 for label in (0, 1):
                     counts[label] += int((df[C.LABEL] == label).sum())
+                for label, count in df.loc[df[C.LABEL] == 1, C.DETAILED_LABEL].value_counts().items():
+                    detailed_counts[label] = detailed_counts.get(label, 0) + int(count)
                 if len(df):
                     writer.write_table(pa.Table.from_pandas(df, schema=SCHEMA, preserve_index=False))
         if not sum(counts):
@@ -208,6 +212,7 @@ def convert(path, capture, out_path, limit=None):
         "flows": sum(counts), "benign": counts[0], "malicious": counts[1],
         "malware_rate": counts[1] / sum(counts), "source_rows": source_rows,
         "dropped_labels": source_rows - sum(counts), "limited": limit is not None,
+        "malicious_detailed_counts": detailed_counts,
     }
 
 

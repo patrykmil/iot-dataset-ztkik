@@ -1,0 +1,42 @@
+{
+  "experiment_id": "a6eefe68d97e45dfbac9855f450e0c2f",
+  "model": "logistic",
+  "training_device": "cpu",
+  "training_seconds": 9.221326430997578,
+  "threshold": 0.9904999136924744,
+  "validation": {
+    "n": 201611,
+    "benign": 80778,
+    "malicious": 120833,
+    "malware_rate": 0.5993373377444683,
+    "average_precision_baseline": 0.5993373377444683,
+    "threshold": 0.9904999136924744,
+    "confusion_at_threshold": [
+      [
+        80572,
+        206
+      ],
+      [
+        20435,
+        100398
+      ]
+    ],
+    "precision": 0.9979523676990975,
+    "recall": 0.8308822920890816,
+    "f1": 0.9067861287860656,
+    "fpr": 0.002550199311693778,
+    "roc_auc": 0.8317557933602433,
+    "average_precision": 0.9263415399073234,
+    "oracle_tpr_at_fpr_1pct": 0.8308822920890816,
+    "oracle_tpr_at_fpr_0_1pct": 0.41390183145332815
+  },
+  "parameters": {
+    "loss": "log_loss",
+    "alpha": 0.0001,
+    "average": true,
+    "random_state": 42,
+    "n_jobs": 1
+  },
+  "positive_weight": 0.5026297498513153,
+  "best_epoch": 14
+}

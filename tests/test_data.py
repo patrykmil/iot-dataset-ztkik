@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 
 import config as C
-from data import FEATURES, capture_batches, make_split, sample_capture, validate_split
+from data import FEATURES, behavior_quotas, capture_batches, make_split, sample_capture, validate_split
 
 
 def available_captures():
@@ -22,10 +22,18 @@ def feature_frame(labels):
     for col in C.CATEGORICAL:
         frame[col] = "tcp"
     frame[C.LABEL] = np.asarray(labels, dtype=np.int8)
-    return frame[FEATURES + [C.LABEL]]
+    frame[C.DETAILED_LABEL] = np.where(frame[C.LABEL] == 1, "DDoS", "-")
+    return frame[FEATURES + [C.LABEL, C.DETAILED_LABEL]]
 
 
 class SplitTests(unittest.TestCase):
+    def test_validation_has_separate_ddos_scanning_and_cc_captures(self):
+        split = make_split(available_captures())
+        for suffix in ("35-1", "48-1", "44-1"):
+            capture = "CTU-IoT-Malware-Capture-" + suffix
+            self.assertIn(capture, split["valid"])
+            self.assertNotIn(capture, split["train"])
+
     def test_whole_family_and_somfy_parts_are_held_out(self):
         split = make_split(available_captures())
         for suffix in ("20-1", "21-1", "60-1"):
@@ -60,7 +68,7 @@ class SamplingTests(unittest.TestCase):
         frame = feature_frame([0] * 99 + [1])
         frame["duration"] = np.arange(100, dtype=np.float32)
         batches = [frame.iloc[:40].copy(), frame.iloc[40:].copy()]
-        with patch("data.capture_batches", side_effect=lambda _: (b.copy() for b in batches)):
+        with patch("data.capture_batches", side_effect=lambda _, **kwargs: (b.copy() for b in batches)):
             first, info = sample_capture("fixture", 2)
             second, second_info = sample_capture("fixture", 2)
         pd.testing.assert_frame_equal(first, second)
@@ -71,7 +79,7 @@ class SamplingTests(unittest.TestCase):
 
     def test_small_and_single_class_capture(self):
         frame = feature_frame([1, 1, 1])
-        with patch("data.capture_batches", side_effect=lambda _: iter([frame.copy()])):
+        with patch("data.capture_batches", side_effect=lambda _, **kwargs: iter([frame.copy()])):
             sample, info = sample_capture("fixture", 10)
         self.assertEqual(len(sample), 3)
         self.assertEqual(info["sample_counts"], {"benign": 0, "malicious": 3})
@@ -79,13 +87,39 @@ class SamplingTests(unittest.TestCase):
     def test_stratification_and_batch_boundaries(self):
         frame = feature_frame([0] * 75 + [1] * 25)
         frame["duration"] = np.arange(100, dtype=np.float32)
-        with patch("data.capture_batches", side_effect=lambda _: iter([frame.copy()])):
-            first, first_info = sample_capture("fixture", 20)
-        with patch("data.capture_batches", side_effect=lambda _: (frame.iloc[start:start + 7].copy() for start in range(0, 100, 7))):
-            second, second_info = sample_capture("fixture", 20)
+        with patch("data.capture_batches", side_effect=lambda _, **kwargs: iter([frame.copy()])):
+            first, first_info = sample_capture("fixture", 20, balance=False)
+        with patch("data.capture_batches", side_effect=lambda _, **kwargs: (frame.iloc[start:start + 7].copy() for start in range(0, 100, 7))):
+            second, second_info = sample_capture("fixture", 20, balance=False)
         self.assertEqual(first_info["sample_counts"], {"benign": 15, "malicious": 5})
         self.assertEqual(first_info, second_info)
         pd.testing.assert_frame_equal(first, second)
+
+    def test_class_and_behavior_limits_preserve_rare_rows(self):
+        frame = feature_frame([0] * 4 + [1] * 1011)
+        frame.loc[4:4, C.DETAILED_LABEL] = "FileDownload"
+        frame.loc[5:14, C.DETAILED_LABEL] = "C&C"
+        frame["duration"] = np.arange(len(frame), dtype=np.float32)
+        with patch("data.capture_batches", side_effect=lambda _, **kwargs: iter([frame.copy()])):
+            first, info = sample_capture("fixture", 20)
+        with patch("data.capture_batches", side_effect=lambda _, **kwargs: (frame.iloc[start:start + 7].copy() for start in range(0, len(frame), 7))):
+            second, second_info = sample_capture("fixture", 20)
+        self.assertEqual(info["sample_counts"], {"benign": 4, "malicious": 10})
+        self.assertEqual(info["sample_detailed_counts"], {"FileDownload": 1, "C&C": 4, "DDoS": 5})
+        self.assertEqual(info, second_info)
+        pd.testing.assert_frame_equal(first, second)
+        self.assertNotIn(C.DETAILED_LABEL, FEATURES)
+
+    def test_insufficient_behavior_budget_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "rodzajów ataku"):
+            behavior_quotas({"C&C": 5, "DDoS": 100}, 1)
+
+    def test_training_rejects_old_parquet_without_details_but_evaluation_can_read_it(self):
+        with tempfile.TemporaryDirectory() as directory, patch.object(C, "PARQUET_DIR", Path(directory)):
+            feature_frame([0, 1]).drop(columns=C.DETAILED_LABEL).to_parquet(Path(directory) / "fixture.parquet", index=False)
+            self.assertEqual(sum(len(batch) for batch in capture_batches("fixture")), 2)
+            with self.assertRaisesRegex(ValueError, "detailed-label"):
+                sample_capture("fixture", 10)
 
     def test_old_parquet_missing_ports_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory, patch.object(C, "PARQUET_DIR", Path(directory)):

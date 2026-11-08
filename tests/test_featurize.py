@@ -8,19 +8,20 @@ from unittest.mock import patch
 import pandas as pd
 
 import config as C
+from data import FEATURES
 from featurize import SOURCE_NUMERIC, capture_name, convert, main, parse_block, parse_zeek
 
 CAPTURE = "CTU-IoT-Malware-Capture-34-1"
 FIELDS = ["id.orig_p" if c == "orig_p" else "id.resp_p" if c == "resp_p" else c for c in C.CATEGORICAL + SOURCE_NUMERIC] + ["label", "detailed-label"]
 
 
-def zeek_row(label="Benign", suffix_spaces=False):
+def zeek_row(label="Benign", suffix_spaces=False, detail="-"):
     row = ["tcp", "-", "SF", "ShADad"] + ["1"] * len(SOURCE_NUMERIC)
     row[FIELDS.index("id.orig_p")] = "12345"
     row[FIELDS.index("id.resp_p")] = "443"
     if suffix_spaces:
-        return "\t".join(row) + f"   {label}   -\n"
-    return "\t".join(row + [label, "-"]) + "\n"
+        return "\t".join(row) + f"   {label}   {detail}\n"
+    return "\t".join(row + [label, detail]) + "\n"
 
 
 def zeek_text(rows):
@@ -29,12 +30,13 @@ def zeek_text(rows):
 
 class ParserTests(unittest.TestCase):
     def test_ports_labels_and_appended_annotations(self):
-        frame = parse_block([zeek_row(), zeek_row("Malicious", True), zeek_row("-")], FIELDS, "\t", CAPTURE)
+        frame = parse_block([zeek_row(), zeek_row("Malicious", True, "C&C"), zeek_row("-")], FIELDS, "\t", CAPTURE)
         self.assertEqual(frame[C.LABEL].tolist(), [0, 1])
         self.assertEqual(frame["orig_p"].tolist(), [12345, 12345])
         self.assertEqual(frame["resp_p"].tolist(), [443, 443])
         self.assertEqual(frame["bytes_total"].tolist(), [2, 2])
-        self.assertNotIn("detailed-label", frame)
+        self.assertEqual(frame[C.DETAILED_LABEL].tolist(), ["-", "C&C"])
+        self.assertNotIn(C.DETAILED_LABEL, FEATURES)
 
     def test_missing_header_label_and_malformed_rows_are_errors(self):
         with self.assertRaisesRegex(ValueError, "label"):
@@ -46,6 +48,14 @@ class ParserTests(unittest.TestCase):
             source.write_text(zeek_row())
             with self.assertRaisesRegex(ValueError, "przed #fields"):
                 list(parse_zeek(source, CAPTURE))
+
+    def test_det_label_alias_is_preserved_and_duplicate_aliases_are_rejected(self):
+        fields = ["det_label" if col == C.DETAILED_LABEL else col for col in FIELDS]
+        frame = parse_block([zeek_row("Malicious", detail="DDoS")], fields, "\t", CAPTURE)
+        self.assertEqual(frame[C.DETAILED_LABEL].tolist(), ["DDoS"])
+        self.assertNotIn("det_label", frame.columns)
+        with self.assertRaisesRegex(ValueError, "Powielone pola"):
+            parse_block([], fields + [C.DETAILED_LABEL], "\t", CAPTURE)
 
     def test_invalid_ports_and_zero_denominators(self):
         values = zeek_row().rstrip().split("\t")
@@ -62,12 +72,14 @@ class ParserTests(unittest.TestCase):
     def test_streaming_conversion_counts_and_failure_preserves_output(self):
         with tempfile.TemporaryDirectory() as directory:
             source, output = Path(directory) / "conn.log.labeled", Path(directory) / "capture.parquet"
-            source.write_text(zeek_text([zeek_row(), zeek_row("Malicious"), zeek_row("unknown")]))
+            source.write_text(zeek_text([zeek_row(), zeek_row("Malicious", detail="DDoS"), zeek_row("unknown")]))
             info = convert(source, CAPTURE, output)
             self.assertEqual(info["flows"], 2)
             self.assertEqual(info["dropped_labels"], 1)
             self.assertEqual(info["benign"], 1)
             self.assertEqual(info["malicious"], 1)
+            self.assertEqual(info["malicious_detailed_counts"], {"DDoS": 1})
+            self.assertEqual(pd.read_parquet(output)[C.DETAILED_LABEL].tolist(), ["-", "DDoS"])
             previous = output.read_bytes()
             source.write_text("broken\n")
             with self.assertRaises(ValueError):

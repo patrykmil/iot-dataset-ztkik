@@ -41,7 +41,7 @@ def main():
     signatures = {capture: file_signature(capture) for capture in manifest}
     print(json.dumps(split, indent=2), flush=True)
     Xf, yf, fit_sampling = load_sample(split["train"], args.cap_per_capture)
-    Xv, yv, valid_sampling = load_sample(split["valid"], args.cap_per_capture)
+    Xv, yv, valid_sampling = load_sample(split["valid"], args.cap_per_capture, balance=False)
     experiment_id = uuid.uuid4().hex
     versions = {name: importlib.metadata.version(name) for name in ("numpy", "pandas", "pyarrow", "scikit-learn")}
     for model, package in (("lightgbm", "lightgbm"), ("mlp", "torch")):
@@ -51,9 +51,12 @@ def main():
         "id": experiment_id, "status": "running", "models": args.models, "device": args.device,
         "seed": C.SEED, "threads": C.THREADS, "target_fpr": C.TARGET_FPR,
         "features": FEATURES, "split": split,
+        "protocol": {"name": "behavior-balanced-development-v3", "evaluation_role": "development",
+                     "benign_per_malicious": C.BENIGN_PER_MALICIOUS},
         "families": {capture: family_of(capture) for capture in manifest},
         "files": signatures, "versions": versions, "python": platform.python_version(),
-        "sampling": {"method": "stratified_priority_reservoir", "cap_per_capture": args.cap_per_capture,
+        "sampling": {"method": "class_behavior_priority_reservoir", "validation_method": "stratified_priority_reservoir",
+                     "cap_per_class": args.cap_per_capture // 2, "cap_per_capture": args.cap_per_capture,
                      "train": fit_sampling, "valid": valid_sampling},
     }
     if torch is not None and args.device == "cuda":

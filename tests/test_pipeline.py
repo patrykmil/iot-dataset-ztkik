@@ -34,7 +34,7 @@ class PipelineTests(unittest.TestCase):
             parquet.mkdir()
             manifest = {}
             for capture in captures:
-                labels = [0] * 40 if "Honeypot" in capture else [0, 1] * 20
+                labels = [0] * 120 if "Honeypot" in capture else [0, 1] * 20
                 frame = feature_frame(labels)
                 frame["duration"] = np.asarray(labels, dtype=np.float32) * 10
                 frame["orig_bytes"] = np.asarray(labels, dtype=np.float32) * 100
@@ -56,6 +56,9 @@ class PipelineTests(unittest.TestCase):
             experiment = json.loads(C.EXPERIMENT_PATH.read_text())
             self.assertEqual(experiment["status"], "complete")
             self.assertEqual(set(experiment["models"]), {"lightgbm", "logistic", "mlp"})
+            self.assertNotIn(C.DETAILED_LABEL, experiment["features"])
+            self.assertEqual(experiment["protocol"]["evaluation_role"], "development")
+            self.assertEqual(experiment["sampling"]["method"], "class_behavior_priority_reservoir")
             with patch("sys.argv", ["evaluate.py", "--device", "cpu"]):
                 evaluate.main()
             comparison = json.loads((root / "comparison.json").read_text())
@@ -66,8 +69,15 @@ class PipelineTests(unittest.TestCase):
                 for subset in ("test_known", "test_unknown"):
                     metrics = comparison["models"][name][subset]
                     self.assertEqual(metrics["threshold"], metadata["threshold"])
-                    self.assertEqual(metrics["n"], 40 * len(experiment["split"][subset]))
-            self.assertEqual(len(pd.read_csv(root / "comparison.csv")), 6)
+                    self.assertEqual(metrics["n"], sum(manifest[capture]["flows"] for capture in experiment["split"][subset]))
+                    majority = metrics["benign_majority"]
+                    self.assertTrue(majority["available"])
+                    self.assertLessEqual(majority["malware_rate"], 0.01)
+                    self.assertEqual(majority["benign"], metrics["benign"])
+                    self.assertEqual(majority["threshold"], metadata["threshold"])
+                    reference = comparison["models"]["lightgbm"][subset]["benign_majority"]
+                    self.assertEqual(majority["row_indices_sha256"], reference["row_indices_sha256"])
+            self.assertEqual(len(pd.read_csv(root / "comparison.csv")), 12)
             self.assertTrue((root / "test_known_curves.png").exists())
             experiment["status"] = "running"
             C.EXPERIMENT_PATH.write_text(json.dumps(experiment))
